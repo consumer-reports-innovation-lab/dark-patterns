@@ -1,0 +1,20 @@
+// React Select
+.react-select-container {
+  .react-select__control {
+    border-color: $mid;
+    &:hover {
+      border-color: $mid;
+      border-width: 1px;
+    }
+  }
+  .react-select__control--is-focused {
+    border-color: $mid;
+    box-shadow: 0 0 0 0.2rem rgba($primary, 0.25);
+  }
+  .react-select__input {
+    padding: 3px;
+  }
+  .react-select__single-value {
+    color: $dark;
+  }
+}

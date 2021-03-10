@@ -1,0 +1,23 @@
+#pageHeader {
+  position: relative;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: $white;
+  box-shadow: 0 0 10px rgba($black, 0.2);
+  z-index: 99;
+
+  @include media-breakpoint-down(lg) {
+    .container {
+      max-width: 100%;
+    }
+  }
+}
+
+#pageContent {
+  padding-top: $page-header-height-xs;
+  overflow: hidden;
+}
+
+#pageFooter {
+}

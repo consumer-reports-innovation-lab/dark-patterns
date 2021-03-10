@@ -1,0 +1,19 @@
+@import "settings";
+@import "~bootstrap/scss/bootstrap.scss";
+
+// Global
+@import "global/mixins";
+@import "global/utilities";
+@import "global/base";
+@import "global/layout";
+@import "global/nav";
+@import "global/typography";
+@import "global/animations";
+@import "global/forms";
+
+// Pages
+@import "pages/home";
+
+// Vendor Overrides
+@import "vendor/bootstrap";
+@import "vendor/react-select";
