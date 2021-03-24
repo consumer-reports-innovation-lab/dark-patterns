@@ -71,6 +71,38 @@ module.exports = {
         icon: `src/common/assets/logo-icon.png` // This path is relative to the root of the site.
       }
     },
+    {
+      resolve: 'gatsby-source-gravityforms',
+      options: {
+          // Base URL needs to include protocol (http/https)
+          baseUrl: 'http://ocupop.paulstroot.com',
+          // Gravity Forms API
+
+          api: {
+              key: 'ck_1c965e6f15c73f087f85fa6b6a7b4a29b191661d',
+              secret: 'cs_3056eebc1e83f13804225ff472c04e22d08ec9f6'
+          },          
+          
+          // Set to true to enable selfsigned certs in development mode
+          allowSelfSigned: true,
+
+          // Basic Auth
+          /*
+          basicAuth: {
+              username: 'ocupop',
+              password: '36NE XJao CWK1 PGRf JBon hh6h',
+          },
+          ignoreFields: [
+              // Top level fields within the Gravity Forms return
+              // to ignore.
+              // Default ignore is 'notifications'. To keep this
+              // as set, remove the ignoreFields setting from here.
+              // If adding more fields, you will need to include
+              // notifications to ensure it is ignored.
+          ],
+          */
+      },
+    },
 
     // {
     //   resolve: `gatsby-plugin-google-analytics`,
