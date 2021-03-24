@@ -34,7 +34,7 @@ export default function exampleFormPrivate( {data} ) {
               id={1}
               formData={data.allGfForm}
               // presetValues={{ input_1: 'This value coded in gatsby' }}
-              lambda='http://ocupop.paulstroot.com/gatsby/gatsby_form_submit.php?queryvar=lambda' // this should be an environment variable
+              lambda='https://crdi.ocupop.com/gatsby/gatsby_form_submit.php?queryvar=lambda' // this should be an environment variable
               successCallback={handleSuccess}
               errorCallback={handleError}
           />
