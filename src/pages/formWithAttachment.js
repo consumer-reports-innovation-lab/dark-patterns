@@ -68,7 +68,7 @@ const FormWithAttachment = ( {data: {gfForm}} ) => {
 
     if(!handleValidation()) return false;
 
-    const submitURL = 'https://crdi.ocupop.com/gatsby/gatsby_form_submit.php?queryvar=formWithAttachment';
+    const submitURL = 'http://ocupop.paulstroot.com/gatsby/gatsby_form_submit.php?queryvar=formWithAttachment';
     const baseURL = 'TBD';
     console.log("VALUES",values)
     let formData = {
