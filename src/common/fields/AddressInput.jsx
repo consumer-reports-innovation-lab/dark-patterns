@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import PlacesAutocomplete, { geocodeByAddress } from 'react-places-autocomplete'
 import Label from './label'
-import GoogleMap from '../ui/maps/Map'
-import Marker from '../ui/maps/Marker'
-import DEFAULT_LOCATION from '../constants/locations'
+import GoogleMap from '../ui/Maps/Map'
+import Marker from '../ui/Maps/Marker'
+import {DEFAULT_LOCATION} from '../constants/locations'
 
 const AddressInput = ({
   className,
@@ -23,7 +23,13 @@ const AddressInput = ({
     mapInstance: null,
     mapApi: null
   })
-  const [places] = useState([])
+  const [places] = useState([
+    {
+      placeID: '123',
+      name: '4P Headquarters',
+      marker: DEFAULT_LOCATION
+    }
+  ])
   const [mapLocation, setMapLocation] = useState([])
 
   const {
@@ -120,7 +126,7 @@ const AddressInput = ({
               onGoogleApiLoaded={({ map, maps }) => apiHasLoaded(map, maps)}>
               {places &&
                 places.map(place => (
-                  <Marker key={place.place_id} text={values.name} lat={place.marker._lat} lng={place.marker._lng} />
+                  <Marker key={place.placeID} text={place.name} lat={place.marker[0]} lng={place.marker[1]} />
                 ))}
             </GoogleMap>
           </div>

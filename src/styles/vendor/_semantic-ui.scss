@@ -1,0 +1,138 @@
+.ui {
+  &.menu {
+    .item {
+      margin: 0;
+      border-radius: 0;
+    }
+    &.vertical {
+      i.icon {
+        // float: left !important;
+      }
+    }
+  }
+  &.button {
+    border-radius: 0;
+  }
+
+  &.selection {
+    &.dropdown {
+      border-radius: 0;
+      width: 100%;
+    }
+  }
+
+  &.modal {
+    height: auto;
+  }
+
+  &.toggle {
+    z-index: 0;
+    &.checkbox {
+      margin-right: 20px;
+
+      label:before {
+        background-color: $gray-100;
+        width: 54px;
+        height: 28px;
+        border: 1px solid $gray-200;
+        @include transition;
+      }
+
+      label:after {
+        background: $gray-300;
+        width: 22px;
+        height: 22px;
+        top: 3px;
+        left: 4px;
+        @include transition;
+      }
+
+      label:hover:before {
+        background-color: $gray-100;
+        border: 1px solid $gray-200;
+        @include transition;
+      }
+
+      label:hover:after {
+        transform: scale(1.3);
+        @include transition;
+      }
+
+      input:focus ~ label:before {
+        background-color: $gray-100;
+        border: 1px solid $gray-200;
+        @include transition;
+      }
+
+      input:checked ~ label:before,
+      input:focus:checked ~ label:before {
+        background-color: $primary !important;
+        border: 1px solid $gray-200;
+        @include transition;
+      }
+
+      input:checked ~ label:after,
+      input:focus:checked ~ label:after {
+        background-color: $secondary !important;
+        top: 3px;
+        left: 28px;
+        box-shadow: none;
+      }
+
+      label:focus:after {
+        background: $primary;
+      }
+
+      input ~ label:after {
+        top: 3px;
+        left: 4px;
+        box-shadow: none;
+      }
+    }
+  }
+
+  .segment {
+    padding: 0;
+  }
+
+  &.popup {
+    &.userMenu__popup {
+      border-radius: 3px;
+      opacity: 0.9;
+      padding: 0;
+      left: 57px;
+      &::before {
+        display: none;
+      }
+      .menu {
+        margin: 0 !important;
+        .item {
+          margin: 0 !important;
+          border-radius: 0 !important;
+        }
+      }
+    }
+  }
+}
+
+// Checkbox
+.ui:not(.toggle).checkbox input:checked ~ label:after,
+.ui:not(.toggle).checkbox input:focus:checked ~ label:after {
+  background-color: $primary;
+  color: white;
+  border-radius: 3px;
+  padding-top: 1px;
+}
+
+.ui.checkbox input:not([type="radio"]):indeterminate,
+.ui.checkbox input:not([type="radio"]):indeterminate:focus {
+  ~ label:before {
+    background-color: $primary;
+  }
+
+  ~ label:after {
+    color: $white;
+    padding-top: 3px;
+    padding-left: 1px;
+  }
+}

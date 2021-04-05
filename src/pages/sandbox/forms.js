@@ -8,6 +8,7 @@ import {
   SwitchInput,
   SelectInput,
   RadioInput,
+  FileUpload,
 } from '../../common/fields'
 
 import FormikDebug from '../../common/utils/FormikDebug'
@@ -110,6 +111,16 @@ const FormSandbox = () => {
                       onChange={value => setFieldValue('featuredProduct', value)}
                       label="Select Featured Product"
                     />
+
+                    {/* Example of File Upload */}
+                    <Field
+                      name="featuredImage"
+                      type="text"
+                      component={FileUpload}
+                      placeholder="..."
+                      label="Featured Image"
+                    />
+
                     <button type="submit" className="btn btn-primary">Submit</button>
                     <FormikDebug />
                   </Form>

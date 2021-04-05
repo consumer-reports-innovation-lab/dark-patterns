@@ -2,11 +2,11 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Popup } from 'semantic-ui-react'
 
-const Hint = ({ content }) => {
+const FieldHint = ({ content }) => {
   return (
-    <div className="pt-1 ml-1 d-inline-block">
+    <div className="pt-1 ml-1 d-inline-block hint">
       <Popup
-        trigger={<i className="ri-question-fill text-mid" />}
+        trigger={<i className="fas fa-question-circle icon"></i>}
         content={content}
         position="right center"
         inverted
@@ -16,8 +16,8 @@ const Hint = ({ content }) => {
   )
 }
 
-Hint.propTypes = {
+FieldHint.propTypes = {
   content: PropTypes.string
 }
 
-export default Hint
+export default FieldHint

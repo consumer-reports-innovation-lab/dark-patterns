@@ -1,7 +1,7 @@
 import React from 'react'
-import Label from './label'
 import MaskedInput from 'react-text-mask'
 import createNumberMask from 'text-mask-addons/dist/createNumberMask'
+import Label from './label'
 
 const defaultMaskOptions = {
   prefix: '',
@@ -14,7 +14,7 @@ const defaultMaskOptions = {
   integerLimit: 3, // limit length of integer numbers
   requireDecimal: true,
   allowNegative: false,
-  allowLeadingZeroes: false
+  allowLeadingZeroes: false,
 }
 
 const NumberInput = ({
@@ -26,26 +26,30 @@ const NumberInput = ({
   required,
   field,
   maskOptions,
-  form: { errors, touched }
+  form: { errors, touched },
 }) => {
-  const status = touched[field.name] && errors[field.name] ? `is-invalid` : ``
+  const status = touched[field.name] && errors[field.name] ? 'is-invalid' : ''
   const numberMask = createNumberMask({
     ...defaultMaskOptions,
-    ...maskOptions
+    ...maskOptions,
   })
 
   return (
     <div className={`form-group ${className}`}>
       <Label label={label} hint={hint} />
-      <MaskedInput
-        mask={numberMask}
-        className={`form-control ${status}`}
-        {...field}
-        placeholder={placeholder}
-        type={type}
-        required={required}
-      />
-      {touched[field.name] && errors[field.name] && <div className="invalid-feedback">{errors[field.name]}</div>}
+      <div>
+        <MaskedInput
+          mask={numberMask}
+          className={`form-control ${status}`}
+          {...field}
+          placeholder={placeholder}
+          type={type}
+          required={required}
+        />
+      </div>
+      {touched[field.name] && errors[field.name] && (
+        <div className="invalid-feedback">{errors[field.name]}</div>
+      )}
     </div>
   )
 }
