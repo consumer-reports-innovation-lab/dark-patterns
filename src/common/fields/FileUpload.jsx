@@ -29,21 +29,21 @@ const FileUpload = ({
     (acceptedFiles) => {
       // @TODO: Refactor to use try/catch and add error handling
       // @TODO: Troubleshoot react-redux-firebase uploadFile (single)
-      firebase
-        .uploadFiles(storagePath, acceptedFiles, metaPath, { progress: true })
-        .then((results) => {
-          const newFiles = results.map((result) => {
-            const file = {
-              ...result.File,
-              key: result.key
-            }
-            return file
-          })
+      // firebase
+      //   .uploadFiles(storagePath, acceptedFiles, metaPath, { progress: true })
+      //   .then((results) => {
+      //     const newFiles = results.map((result) => {
+      //       const file = {
+      //         ...result.File,
+      //         key: result.key
+      //       }
+      //       return file
+      //     })
 
-          multiple
-            ? setFieldValue(name, value.concat(newFiles))
-            : setFieldValue(name, newFiles[0])
-        })
+      //     multiple
+      //       ? setFieldValue(name, value.concat(newFiles))
+      //       : setFieldValue(name, newFiles[0])
+      //   })
       console.log("DROP FILE")
     },
     [storagePath, multiple, name, value, setFieldValue]
