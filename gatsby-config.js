@@ -1,13 +1,13 @@
 require("dotenv").config({
-  path: `.env.${process.env.NODE_ENV}`
+  path: `.env.${process.env.NODE_ENV}`,
 });
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter`,
+    title: `Dark Patterns`,
     description: `Enter in default site meta description...`,
     lang: `en`,
-    author: `@ocupop`
+    author: `@ocupop`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -17,17 +17,17 @@ module.exports = {
       resolve: `gatsby-plugin-sass`,
       options: {
         sassOptions: {
-          includePaths: ["src/styles"]
-        }
-      }
+          includePaths: ["src/styles"],
+        },
+      },
     },
     {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: "gatsby-source-filesystem",
       options: {
         path: `${__dirname}/src/common/assets`,
-        name: "images"
-      }
+        name: "images",
+      },
     },
     // Twitter Source
     {
@@ -55,8 +55,8 @@ module.exports = {
     {
       resolve: "gatsby-plugin-load-script",
       options: {
-        src: `https://maps.googleapis.com/maps/api/js?key=${process.env.GOOGLE_MAPS_API_KEY}&libraries=places`
-      }
+        src: `https://maps.googleapis.com/maps/api/js?key=${process.env.GOOGLE_MAPS_API_KEY}&libraries=places`,
+      },
     },
 
     {
@@ -68,26 +68,26 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/common/assets/logo-icon.png` // This path is relative to the root of the site.
-      }
+        icon: `src/common/assets/logo-icon.png`, // This path is relative to the root of the site.
+      },
     },
     {
-      resolve: 'gatsby-source-gravityforms',
+      resolve: "gatsby-source-gravityforms",
       options: {
-          // Base URL needs to include protocol (http/https)
-          baseUrl: 'http://ocupop.paulstroot.com',
-          // Gravity Forms API
+        // Base URL needs to include protocol (http/https)
+        baseUrl: "http://ocupop.paulstroot.com",
+        // Gravity Forms API
 
-          api: {
-              key: 'ck_1c965e6f15c73f087f85fa6b6a7b4a29b191661d',
-              secret: 'cs_3056eebc1e83f13804225ff472c04e22d08ec9f6'
-          },          
-          
-          // Set to true to enable selfsigned certs in development mode
-          allowSelfSigned: true,
+        api: {
+          key: "ck_1c965e6f15c73f087f85fa6b6a7b4a29b191661d",
+          secret: "cs_3056eebc1e83f13804225ff472c04e22d08ec9f6",
+        },
 
-          // Basic Auth
-          /*
+        // Set to true to enable selfsigned certs in development mode
+        allowSelfSigned: true,
+
+        // Basic Auth
+        /*
           basicAuth: {
               username: 'ocupop',
               password: '36NE XJao CWK1 PGRf JBon hh6h',
@@ -142,6 +142,6 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
-    "gatsby-plugin-netlify" // make sure to keep it last in the array
-  ]
-}
+    "gatsby-plugin-netlify", // make sure to keep it last in the array
+  ],
+};

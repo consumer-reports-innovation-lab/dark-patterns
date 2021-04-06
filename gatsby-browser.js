@@ -6,6 +6,9 @@
 
 // You can delete this file if you're not using it
 
-import App from "./App"
+import App from "./App";
+// import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.min.js";
+import "@popperjs/core/dist/umd/popper.min.js";
 
-export const wrapRootElement = App
+export const wrapRootElement = App;

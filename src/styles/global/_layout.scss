@@ -15,9 +15,15 @@
 }
 
 #pageContent {
-  padding-top: $page-header-height-xs;
+  // padding-top: $page-header-height-xs;
   overflow: hidden;
+  background-color: $mid;
+  color: $white;
 }
 
 #pageFooter {
+  background-color: $primary;
+  .nav-link {
+    color: $black;
+  }
 }
