@@ -6,10 +6,14 @@ const Examples = () => {
       <div className="container">
         <div className="row">
           <div className="col-12 text-center">
-            <h2>Examples in Everyday Life</h2>
+            <h3>Examples in Everyday Life</h3>
           </div>
           <div className="col-12">
-            <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <ul
+              className="nav nav-pills my-4 d-flex justify-content-center"
+              id="pills-tab"
+              role="tablist"
+            >
               <li className="nav-item" role="presentation">
                 <button
                   className="nav-link active"
@@ -46,15 +50,19 @@ const Examples = () => {
                 role="tabpanel"
                 aria-labelledby="smart-devices-tab"
               >
-                Smart Devics
+                <div className="centered">
+                  <span className="fs-3">Smart Devices</span>
+                </div>
               </div>
               <div
-                className="tab-pane"
+                className="tab-pane "
                 id="social-media"
                 role="tabpanel"
                 aria-labelledby="social-media-tab"
               >
-                Social Media
+                <div className="centered">
+                  <span className="fs-3">Social Media</span>
+                </div>
               </div>
             </div>
           </div>

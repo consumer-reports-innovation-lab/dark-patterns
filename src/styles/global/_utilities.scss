@@ -129,6 +129,12 @@
   justify-content: center;
 }
 
+.centered {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+
 // Interesting layout solution for responsive elements
 .threesome {
   display: flex;

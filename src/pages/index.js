@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "gatsby";
 import Examples from "../common/components/examples";
+import Submit from "../common/components/submit";
+import Purpose from "../common/components/purpose";
 // import PropTypes from 'prop-types'
 
 const index = () => {
@@ -15,6 +17,7 @@ const index = () => {
                 An online platform that allows consumers to submit deceptive
                 design patterns they see in everyday products and services.
               </p>
+
               <Link to="/report" className="btn btn-primary">
                 Report a Pattern
               </Link>
@@ -23,6 +26,8 @@ const index = () => {
         </div>
       </section>
       <Examples></Examples>
+      <Submit></Submit>
+      <Purpose></Purpose>
     </>
   );
 };
