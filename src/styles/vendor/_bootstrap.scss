@@ -19,6 +19,9 @@
 }
 .card {
   background-color: transparent;
+  .card-body {
+    padding: 1.5rem 1rem;
+  }
 }
 
 .nav-link {
