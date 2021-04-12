@@ -1,12 +1,18 @@
 import React from "react";
 import { Link } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image";
 // import PropTypes from 'prop-types'
 
 const FooterMenu = () => {
   return (
     <div className="container">
       <div className="row">
-        <nav className="navbar navbar-expand-md justify-content-md-end">
+        <nav className="navbar navbar-expand-md justify-content-md-between">
+          <StaticImage
+            src="../../assets/global/cr-id.svg"
+            alt="Consumer Reports"
+            className="img-fluid my-4"
+          />
           <ul className="navbar-nav">
             <li className="nav-item">
               <span className="nav-link">

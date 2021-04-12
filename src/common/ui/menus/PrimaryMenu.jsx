@@ -4,31 +4,54 @@ import {Link} from "gatsby"
 
 const PrimaryMenu = props => {
   return (
- <nav className="navbar navbar-expand-md navbar-dark bg-mid">
-  <div className="container-fluid">
-    <Link to='/' className="navbar-brand">Dark Patterns Tip Line</Link>
-    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span className="navbar-toggler-icon"></span>
-    </button>
-    <div className="collapse navbar-collapse justify-content-md-end" id="navbarNav">
-      <ul className="navbar-nav">
-        <li className="nav-item">
-          <Link to='/harms' className="nav-link" activeClassName="active">Harms</Link>
-        </li>
-        <li className="nav-item">
-          <Link to='/shame' className="nav-link" activeClassName="active">Wall of Shame</Link>
-        </li>
-        <li className="nav-item">
-          <Link to='/about' className="nav-link" activeClassName="active">About</Link>
-        </li>
-        <li className="nav-item">
-          <Link to='/report' className="nav-link" activeClassName="active">Report</Link>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-  )
+    <nav className="navbar navbar-expand-md navbar-dark bg-mid" id="mainnav">
+      <div className="container-fluid">
+        <Link to="/" className="navbar-brand">
+          <div>
+            Dark Patterns <span className="text-primary">Tip Line</span>
+          </div>
+        </Link>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div
+          className="collapse navbar-collapse justify-content-md-end"
+          id="navbarNav"
+        >
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <Link to="/harms" className="nav-link" activeClassName="active">
+                Harms
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/shame" className="nav-link" activeClassName="active">
+                Wall of Shame
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/about" className="nav-link" activeClassName="active">
+                About
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/report" className="nav-link" activeClassName="active">
+                Report
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  );
 }
 
 PrimaryMenu.propTypes = {

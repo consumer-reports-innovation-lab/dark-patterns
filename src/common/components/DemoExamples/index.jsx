@@ -1,12 +1,16 @@
 import React from "react";
+import SocialMedia from "./SocialMedia";
+import SmartDevices from "./SmartDevices";
+import HealthWellness from "./HealthWellness";
+import FinancialInsuance from "./FinancialInsuance";
 
-const Examples = () => {
+const DemoExamples = () => {
   return (
     <section>
       <div className="container">
         <div className="row">
           <div className="col-12 text-center">
-            <h3>Examples in Everyday Life</h3>
+            <h2>Examples in Everyday Life</h2>
           </div>
           <div className="col-12">
             <ul
@@ -42,6 +46,34 @@ const Examples = () => {
                   Social Media
                 </button>
               </li>
+              <li className="nav-item" role="presentation">
+                <button
+                  className="nav-link"
+                  id="financial-insurance-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#financial-insurance"
+                  type="button"
+                  role="tab"
+                  aria-controls="financial-insurance"
+                  aria-selected="false"
+                >
+                  Financial Insurance
+                </button>
+              </li>
+              <li className="nav-item" role="presentation">
+                <button
+                  className="nav-link"
+                  id="health-wellness-tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#health-wellness"
+                  type="button"
+                  role="tab"
+                  aria-controls="health-wellness"
+                  aria-selected="false"
+                >
+                  Health & Wellness
+                </button>
+              </li>
             </ul>
             <div className="tab-content" id="pills-tabContent">
               <div
@@ -50,9 +82,7 @@ const Examples = () => {
                 role="tabpanel"
                 aria-labelledby="smart-devices-tab"
               >
-                <div className="centered">
-                  <span className="fs-3">Smart Devices</span>
-                </div>
+                <SmartDevices />
               </div>
               <div
                 className="tab-pane "
@@ -60,9 +90,23 @@ const Examples = () => {
                 role="tabpanel"
                 aria-labelledby="social-media-tab"
               >
-                <div className="centered">
-                  <span className="fs-3">Social Media</span>
-                </div>
+                <SocialMedia />
+              </div>
+              <div
+                className="tab-pane "
+                id="financial-insurance"
+                role="tabpanel"
+                aria-labelledby="financial-insurance-tab"
+              >
+                <FinancialInsuance />
+              </div>
+              <div
+                className="tab-pane "
+                id="health-wellness"
+                role="tabpanel"
+                aria-labelledby="health-wellness-tab"
+              >
+                <HealthWellness />
               </div>
             </div>
           </div>
@@ -72,4 +116,4 @@ const Examples = () => {
   );
 };
 
-export default Examples;
+export default DemoExamples;

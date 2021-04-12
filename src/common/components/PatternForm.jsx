@@ -1,12 +1,15 @@
 import React from "react";
 
-const Submit = () => {
+const PatternForm = () => {
   return (
     <section>
       <div className="container">
         <div className="row">
           <div className="col-12 col-md-8">
-            <h2>Report a Dark Pattern</h2>
+            <h1>
+              Report a<br />
+              Dark Pattern
+            </h1>
             <p>
               Frustrated people all over the world have collected dark patterns
               found from websites that call themselves trustworthy. Click around
@@ -20,4 +23,4 @@ const Submit = () => {
   );
 };
 
-export default Submit;
+export default PatternForm;

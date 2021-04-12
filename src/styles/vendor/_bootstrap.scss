@@ -2,6 +2,7 @@
 .btn {
   border-radius: 0px;
   margin-top: 15px;
+  margin-right: 15px;
   font-family: "Dela Gothic One", cursive;
   text-transform: uppercase;
   font-size: 1rem;
@@ -15,4 +16,11 @@
       background-color: transparent;
     }
   }
+}
+.card {
+  background-color: transparent;
+}
+
+.nav-link {
+  font-weight: 300;
 }

@@ -1,4 +1,4 @@
-export const env = 'dev'
+export const env = "dev";
 
 // Config for firebase
 export const firebase = {
@@ -9,11 +9,11 @@ export const firebase = {
   storageBucket: process.env.GATSBY_FIREBASE_STORAGE_BUCKET,
   messagingSenderId: process.env.GATSBY_FIREBASE_MESSAGING_SENDER_ID,
   measurementId: process.env.GATSBY_FIREBASE_MEASUREMENT_ID,
-  appId: process.env.GATSBY_FIREBASE_APP_ID
-}
+  appId: process.env.GATSBY_FIREBASE_APP_ID,
+};
 
-export const segmentId = process.env.GATSBY_SEGMENT_ID
+export const segmentId = process.env.GATSBY_SEGMENT_ID;
 
-export const publicVapidKey = process.env.GATSBY_PUBLIC_VAPID_KEY
+export const publicVapidKey = process.env.GATSBY_PUBLIC_VAPID_KEY;
 
-export const sentryDsn = process.env.GATSBY_SENTRY_DSN
+export const sentryDsn = process.env.GATSBY_SENTRY_DSN;

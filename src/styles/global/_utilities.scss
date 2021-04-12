@@ -102,6 +102,20 @@
   text-transform: underline !important;
 }
 
+.text-hero {
+  font-size: 4rem;
+}
+.text-small {
+  font-size: 1rem;
+}
+
+.back-btn {
+  color: $white;
+  font-family: "Dela Gothic One", cursive;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+}
+
 // Layout Utilities
 .bg-fill {
   height: 100%;
@@ -410,4 +424,32 @@
     animation-timing-function: linear;
     animation-iteration-count: infinite;
   }
+}
+
+// Cards
+.card-dark {
+  background-color: $dark !important;
+}
+.card-body {
+  .card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+  .card-text {
+    font-size: 1.125rem;
+  }
+  .card-link {
+    font-size: 0.875rem;
+    color: $primary;
+    font-family: "Dela Gothic One", cursive;
+    text-transform: uppercase;
+    &:hover {
+      color: $secondary;
+    }
+  }
+}
+
+.list-icon {
+  height: 50px;
+  width: 50px;
 }
