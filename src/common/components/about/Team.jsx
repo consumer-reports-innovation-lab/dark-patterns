@@ -2,7 +2,7 @@ import React from "react";
 
 const Team = () => {
   return (
-    <section className="team-wrapper">
+    <section className="team-wrapper" id="team">
       <div className="container">
         <div className="row">
           <div className="col-12 col-md-8 ">

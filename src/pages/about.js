@@ -6,7 +6,7 @@ import LookFamiliarAlt from "../common/components/LookFamiliarAlt";
 const about = () => {
   return (
     <>
-      <section>
+      <section id="about">
         <div className="container">
           <div className="row">
             <div className="col-12 col-md-8">
@@ -18,13 +18,11 @@ const about = () => {
                 amet rhoncus nisi.
               </p>
             </div>
-            <div className="col-4 d-none-d-md-flex">
-              <nav
-                id="navbar-example3"
-                className="navbar navbar-light position-fixed"
-              >
-                <nav className="nav nav-pills flex-column">
-                  <p>On This Page</p>
+            <div className="col-2 offset-2 d-none-d-md-flex">
+              {/* TODO Add scrollspy to wrapper for this page */}
+              <nav id="aboutNav" className="navbar">
+                <nav className="nav">
+                  <span className="nav-link text-primary">On This Page</span>
                   <a className="nav-link" href="#about">
                     About
                   </a>
