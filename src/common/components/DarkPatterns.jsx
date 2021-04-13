@@ -12,7 +12,7 @@ const DarkPatterns = () => {
             <div className="card card-dark">
               <StaticImage
                 src="https://via.placeholder.com/150"
-                class="card-img-top"
+                className="card-img-top"
                 alt=""
               />
               <div className="card-body">

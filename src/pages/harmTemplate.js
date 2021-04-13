@@ -29,7 +29,7 @@ const harmTemplate = () => {
             <div className="col-12 centered">
               <StaticImage
                 src="https://via.placeholder.com/800x500"
-                class="img-fluid"
+                className="img-fluid"
                 alt=""
               />
             </div>

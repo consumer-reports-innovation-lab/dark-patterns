@@ -37,7 +37,7 @@ const shameExample = () => {
                   <p className="text-small">Social Media</p>
                 </div>
               </div>
-              <div className="row mt-4">
+              <div className="row my-4">
                 <div className="col-12">
                   <h4>Description</h4>
                   <p>
@@ -48,10 +48,10 @@ const shameExample = () => {
                   </p>
                 </div>
               </div>
-              <div className="row mt-4">
+              <div className="row my-4">
                 <div className="col-12">
                   <h4>Harm Type(s)</h4>
-                  <ul className="harm-list">
+                  <ul className="icon-list">
                     <li>
                       <StaticImage
                         src="../common/assets/logo-icon.svg"
@@ -63,7 +63,7 @@ const shameExample = () => {
                   </ul>
                 </div>
               </div>
-              <div className="row mt-4">
+              <div className="row my-4">
                 <div className="col-12">
                   <h4>Tags</h4>
                   <div className="tag">No Choice</div>
@@ -72,11 +72,7 @@ const shameExample = () => {
               </div>
             </div>
             <div className="col-12 col-md-6 col-lg-4 centered">
-              <StaticImage
-                src="https://via.placeholder.com/200x600"
-                class="card-img-top"
-                alt=""
-              />
+              <StaticImage src="https://via.placeholder.com/300x650" alt="" />
             </div>
           </div>
         </div>

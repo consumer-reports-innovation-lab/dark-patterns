@@ -5,8 +5,8 @@ const Team = () => {
     <section className="team-wrapper">
       <div className="container">
         <div className="row">
-          <div className="col-12 col-md-10 ">
-            <div className="row">
+          <div className="col-12 col-md-8 ">
+            <div className="row mb-4">
               <div className="col-12 text-center">
                 <h2>Team</h2>
               </div>
@@ -15,6 +15,10 @@ const Team = () => {
               <div className="col-12 col-md-6 text-center">
                 <h4>Ben Moskowitz</h4>
                 <p>Director - Digital Lab, Consumer Reports</p>
+              </div>
+              <div className="col-12 col-md-6 text-center">
+                <h4>Stephanie Nguyen</h4>
+                <p>Investigative Research, Dark Patterns Tip Line</p>
               </div>
             </div>
           </div>
