@@ -65,7 +65,7 @@ const Shame = () => {
                         A brief summary - Pellentesque at bibendum mauris, in
                         porta nisi
                       </p>
-                      <Link to="/harmTemplate" className="card-link">
+                      <Link to="/shameExample" className="card-link">
                         Explore Dark Pattern
                       </Link>
                     </div>
@@ -82,7 +82,7 @@ const Shame = () => {
                         A brief summary - Pellentesque at bibendum mauris, in
                         porta nisi
                       </p>
-                      <Link to="/harmTemplate" className="card-link">
+                      <Link to="/shameExample" className="card-link">
                         Explore Dark Pattern
                       </Link>
                     </div>
@@ -99,7 +99,7 @@ const Shame = () => {
                         A brief summary - Pellentesque at bibendum mauris, in
                         porta nisi
                       </p>
-                      <Link to="/harmTemplate" className="card-link">
+                      <Link to="/shameExample" className="card-link">
                         Explore Dark Pattern
                       </Link>
                     </div>
