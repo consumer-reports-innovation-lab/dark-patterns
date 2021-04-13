@@ -37,7 +37,7 @@ const Home = () => {
             <div className="col-12 mb-4">
               <h2>Our Purpose</h2>
             </div>
-            <div className="col-12 col-md-6">
+            <div className="col-12 col-md-6 col-lg-7">
               <p>
                 Pellentesque nulla est, aliquam rutrum quam ac, molestie
                 venenatis lectus. Aliquam urna lectus, tempor a est sed,
@@ -53,56 +53,50 @@ const Home = () => {
                 About Us
               </Link>
             </div>
-            <div className="col-12 col-md-6 d-flex flex-column justify-content-center align-items-start">
+            <div className="col-12 col-md-6 col-lg-5 d-flex flex-column justify-content-center align-items-start">
               <StaticImage
                 src="../common/assets/global/cr-id-reversed.svg"
                 alt="Consumer Reports"
                 className="img-fluid"
               />
-              <div className="container ps-0">
-                <div className="row">
-                  <div className="col-12 ">
-                    <div className="row my-4">
-                      <div className="col-2 centered px-0">
-                        <StaticImage
-                          src="../common/assets/logo-icon.svg"
-                          alt=""
-                          className="list-icon"
-                        />
-                      </div>
-                      <div className="col-10 text-small centered">
-                        Collect dark patterns database - Pellentesque at
-                        bibendum mauris, in porta
-                      </div>
-                    </div>
-                    <div className="row my-4">
-                      <div className="col-2 centered px-0">
-                        <StaticImage
-                          src="../common/assets/logo-icon.svg"
-                          alt=""
-                          className="list-icon"
-                        />
-                      </div>
-                      <div className="col-10 text-small centered">
-                        Educate consumers and tech brands on good and bad
-                        practices
-                      </div>
-                    </div>
-                    <div className="row my-4">
-                      <div className="col-2 centered px-0">
-                        <StaticImage
-                          src="../common/assets/logo-icon.svg"
-                          alt=""
-                          className="list-icon"
-                        />
-                      </div>
-                      <div className="col-10 text-small centered">
-                        Promote change Pellentesque at bibendum mauris, in porta
-                      </div>
-                    </div>
+
+              <ul className="icon-list">
+                <li className="align-items-center">
+                  <StaticImage
+                    src="../common/assets/logo-icon.svg"
+                    className="list-icon mt-2"
+                  />
+                  <div className="text-small">
+                    <p>
+                      Collect dark patterns database - Pellentesque at bibendum
+                      mauris, in porta
+                    </p>
                   </div>
-                </div>
-              </div>
+                </li>
+                <li className="align-items-center">
+                  <StaticImage
+                    src="../common/assets/logo-icon.svg"
+                    className="list-icon mt-2"
+                  />
+                  <div className="text-small">
+                    <p>
+                      Educate consumers and tech brands on good and bad
+                      practices
+                    </p>
+                  </div>
+                </li>
+                <li className="align-items-center">
+                  <StaticImage
+                    src="../common/assets/logo-icon.svg"
+                    className="list-icon mt-2"
+                  />
+                  <div className="text-small">
+                    <p>
+                      Promote change Pellentesque at bibendum mauris, in porta
+                    </p>
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
