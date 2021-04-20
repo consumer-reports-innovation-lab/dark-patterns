@@ -1,14 +1,13 @@
-import React from 'react'
+import React from "react";
 import { Link } from "gatsby";
 
-const RelatedHarms = () => {
+const RelatedSightings = () => {
   return (
-    <section className="bg-dark">
+    <section>
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <h3>Wall of Shame</h3>
-            <h4>'Stole My Personal Information'</h4>
+            <h3>Sightings</h3>
           </div>
         </div>
         <div className="row">
@@ -55,7 +54,7 @@ const RelatedHarms = () => {
             </div>
           </div>
         </div>
-        <div className="row">
+        <div className="row mt-5">
           <div className="col-12 centered">
             <Link to="/harms" className="btn btn-primary">
               View All Examples
@@ -68,6 +67,6 @@ const RelatedHarms = () => {
       </div>
     </section>
   );
-}
+};
 
-export default RelatedHarms
+export default RelatedSightings;

@@ -3,7 +3,7 @@ import { StaticImage } from "gatsby-plugin-image";
 
 const Goals = () => {
   return (
-    <section className="bg-dark" id="our-goals">
+    <section  id="our-goals">
       <div className="container">
         <div className="row">
           <div className="col-12 col-md-8">

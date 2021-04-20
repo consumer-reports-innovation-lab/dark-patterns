@@ -9,22 +9,22 @@ const FooterMenu = () => {
       <div className="row">
         <nav className="navbar navbar-expand-md justify-content-md-between">
           <StaticImage
-            src="../../assets/global/cr-id.svg"
+            src="../../assets/global/cr-id-reversed.svg"
             alt="Consumer Reports"
-            className="img-fluid my-4"
+            className="img-fluid my-4 "
           />
           <ul className="navbar-nav">
-            <li className="nav-item">
+            <li className="nav-item centered text-end">
               <span className="nav-link">
                 &copy; Consumer Reports {new Date().getFullYear()}
               </span>
             </li>
-            <li className="nav-item">
+            <li className="nav-item text-end">
               <Link to="/privacy-policy" className="nav-link">
                 Privacy Policy
               </Link>
             </li>
-            <li className="nav-item">
+            <li className="nav-item text-end">
               <Link to="/TOS" className="nav-link">
                 Terms of Service
               </Link>

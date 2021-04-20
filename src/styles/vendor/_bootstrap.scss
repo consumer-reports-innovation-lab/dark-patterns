@@ -7,23 +7,70 @@
   text-transform: uppercase;
   font-size: 1rem;
   padding: 0.5rem 1.5rem;
+  position: relative;
+  border: 0px;
+  &:hover,
+  &:focus,
+  &:active {
+    opacity: 1 !important;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: 0 auto;
+      height: 3px;
+      width: 100%;
+      animation: btn-highlight 1s forwards;
+    }
+  }
 }
 .nav-pills {
   .nav-link {
-    color: $white;
+    position: relative;
     &.active {
-      color: $primary;
+      color: $black;
+      font-weight: 700;
       background-color: transparent;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        left: 0;
+        right: 0;
+        bottom: -10px;
+        margin: 0 auto;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 8px solid $primary;
+      }
     }
   }
 }
 .card {
-  background-color: transparent;
-  .card-body {
-    padding: 1.5rem 1rem;
+  border: 0px;
+}
+.nav-link {
+  font-weight: 300;
+}
+.bg-dark {
+  color: $white;
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: $white;
   }
 }
 
-.nav-link {
-  font-weight: 300;
+.carousel-indicators {
+  top: 0;
+  bottom: auto;
+  [data-bs-target] {
+    height: 100%;
+    width: 100%;
+    text-indent: 0;
+  }
 }

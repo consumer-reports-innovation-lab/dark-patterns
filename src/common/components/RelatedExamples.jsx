@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 
 const RelatedExamples = () => {
   return (
-    <section className="bg-dark">
+    <section >
       <div className="container">
         <div className="row">
           <div className="col-12">

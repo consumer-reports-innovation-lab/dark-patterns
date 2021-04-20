@@ -4,7 +4,7 @@ import {Link} from "gatsby"
 // TODO is there a way to set some of these styles based on URL to remove this component?
 const LookFamiliarAlt = () => {
   return (
-    <section className="bg-dark">
+    <section >
       <div className="container">
         <div className="row ">
           <div className="col-12 centered ">

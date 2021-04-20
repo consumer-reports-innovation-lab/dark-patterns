@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
-import RelatedHarms from "../common/components/RelatedHarms";
+import RelatedSightings from "../common/components/RelatedSightings";
 
 const harmTemplate = () => {
   return (
@@ -16,37 +16,44 @@ const harmTemplate = () => {
             </div>
           </div>
           <div className="row">
-            <div className="col-12 col-md-8">
-              <h1>“Stole my Personal Information”</h1>
+            <div className="col-12 col-md-8 col-lg-7">
+              <h1>Bias & Discrimination</h1>
               <p>
-                Pellentesque at bibendum mauris, in porta nisi. Duis ornare ac
-                metus et porttitor. Cras non commodo massa, et pretium turpis.
-                Nam sit amet rhoncus nisi. Vivamus at imperdiet arcu.
+                A person who contributes user data to a product or service may
+                experience unfair impacts based on demographic identifiers such
+                as age, race, and gender. E.g.) discrimination in employment,
+                insurance, housing, education, credit, etc.
               </p>
-            </div>
-          </div>
-          <div className="row py-5">
-            <div className="col-12 centered">
-              <StaticImage
-                src="https://via.placeholder.com/800x500"
-                className="img-fluid"
-                alt=""
-              />
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-12 centered">
-              <Link to="/report" className="btn btn-primary">
-                Report a Pattern
-              </Link>
               <Link to="/shame" className="btn btn-primary">
-                Wall of shame
+                Report a Pattern
               </Link>
             </div>
           </div>
         </div>
       </section>
-      <RelatedHarms />
+      <section className="bg-light " id="exampleWrapper">
+        <div className="container">
+          <div className="row py-5 centered">
+            <div className="col-12 col-md-5 p-md-4">
+              <StaticImage
+                src="https://via.placeholder.com/500x700"
+                className="img-fluid"
+                alt=""
+              />
+            </div>
+            <div className="col-12 col-md-6 callout ms-lg-5">
+              <p>
+                A social networking app for gay, bi, trans, and queer people
+                featured an ethnicity filter, which some argue can enforce
+                racism by segregating matches in the app by skin color. In
+                response to the #BlackLivesMatter movement, the app removed
+                their ethnicity filter.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <RelatedSightings />
     </>
   );
 };

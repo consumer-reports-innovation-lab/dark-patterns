@@ -111,7 +111,7 @@ const AddressInput = ({
         {touched[field.name] && errors[field.name] && <div className="invalid-feedback">{errors[field.name]}</div>}
       </div>
 
-      <div className="bg-dark text-white p-5">
+      <div className=" p-5">
         <div className="row">
           <div className="col-12">
             <small className="d-none">{JSON.stringify(mapLocation, null, 2)}</small>

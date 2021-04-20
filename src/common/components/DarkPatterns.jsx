@@ -1,28 +1,22 @@
 import React from "react";
 import { Link } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
-
 
 const DarkPatterns = () => {
   return (
-    <section className="bg-mid">
+    <section>
       <div className="container">
         <div className="row">
           <div className="col-12 col-md-6 col-lg-4">
-            <div className="card card-dark">
-              <StaticImage
-                src="https://via.placeholder.com/150"
-                className="card-img-top"
-                alt=""
-              />
+            <div className="card">
               <div className="card-body">
-                <p className="card-title">Stole my personal information</p>
+                <p className="card-title">Bias & Discrimination</p>
                 <p className="card-text">
-                  A brief summary - Pellentesque at bibendum mauris, in porta
-                  nisi.
+                  A person who contributes user data to a product or service
+                  experiences unfair impacts based on demographic identifiers
+                  such as age, race, and gender.
                 </p>
                 <Link to="/harmTemplate" className="card-link">
-                  Explore Dark Pattern
+                  Explore This Dark Pattern
                 </Link>
               </div>
             </div>

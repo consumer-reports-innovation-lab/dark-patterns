@@ -1,18 +1,20 @@
 import React from "react";
 import { Link } from "gatsby";
 
-const Shame = () => {
+const Sightings = () => {
   return (
     <>
-      <section>
+      <section className="pb-0">
         <div className="container">
           <div className="row">
             <div className="col-12 col-md-8">
-              <h1>Wall of Shame</h1>
+              <h1>Sightings from the crowd</h1>
               <p>
-                Pellentesque at bibendum mauris, in porta nisi. Duis ornare ac
-                metus et porttitor. Cras non commodo massa, et pretium turpis.
-                Nam sit amet rhoncus nisi. Vivamus at imperdiet arcu.
+                Frustrated people all over the world have found dark patterns on
+                “trustworthy” websites and apps. Click around to see some
+                examples of how these dark patterns hurt people, and better
+                understand the techniques companies use to trick you into doing
+                what they want.
               </p>
               <Link to="/report" className="btn btn-primary">
                 Report a Pattern
@@ -23,11 +25,11 @@ const Shame = () => {
       </section>
       <section>
         <div className="container">
-          <div className="row">
+          {/* <div className="row">
             <div className="col-12 d-flex justify-content-end">
               <span>Sort By</span>Most Recent
             </div>
-          </div>
+          </div> */}
           <div className="row">
             <div className="col-12 col-md-4">
               <h2>Harms</h2>
@@ -114,4 +116,4 @@ const Shame = () => {
   );
 };
 
-export default Shame;
+export default Sightings;

@@ -1,14 +1,14 @@
-import React from 'react'
-import {Link} from "gatsby"
+import React from "react";
+import { Link } from "gatsby";
 // import PropTypes from 'prop-types'
 
-const PrimaryMenu = props => {
+const PrimaryMenu = (props) => {
   return (
-    <nav className="navbar navbar-expand-md navbar-dark bg-mid" id="mainnav">
+    <nav className="navbar navbar-expand-md navbar-light" id="mainnav">
       <div className="container-fluid">
         <Link to="/" className="navbar-brand">
           <div>
-            Dark Patterns <span className="text-primary">Tip Line</span>
+            Dark Patterns <span className="highlighter">Tip Line</span>
           </div>
         </Link>
         <button
@@ -33,8 +33,12 @@ const PrimaryMenu = props => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/shame" className="nav-link" activeClassName="active">
-                Wall of Shame
+              <Link
+                to="/sightings"
+                className="nav-link"
+                activeClassName="active"
+              >
+                Sightings
               </Link>
             </li>
             <li className="nav-item">
@@ -52,10 +56,8 @@ const PrimaryMenu = props => {
       </div>
     </nav>
   );
-}
+};
 
-PrimaryMenu.propTypes = {
+PrimaryMenu.propTypes = {};
 
-}
-
-export default PrimaryMenu
+export default PrimaryMenu;
