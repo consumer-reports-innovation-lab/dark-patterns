@@ -74,3 +74,18 @@
     text-indent: 0;
   }
 }
+
+.form-control,
+.form-select {
+  border: 0px;
+  background-color: $gray-100;
+  padding: 1rem 1.25rem;
+  border-radius: 0px;
+  color: $black;
+  font-weight: 300;
+  &:focus {
+    border: 0px;
+    background-color: $primary;
+    color: $black;
+  }
+}
