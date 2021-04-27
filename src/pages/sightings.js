@@ -1,8 +1,16 @@
 import React from "react"
 // import PropTypes from 'prop-types'
-import { Link } from "gatsby"
+import { Formik, Field, Form, FieldArray } from "formik"
+// import FormikDebug from "../common/utils/FormikDebug"
+import {
+  RadioInput,
+  // TextInput,
+  SwitchInput
+} from "../common/fields"
+import * as Yup from "yup"
 import Intro from '../components/examples/Intro'
 import ExampleCard from "../components/examples/ExampleCard"
+
 
 
 
@@ -15,6 +23,17 @@ const ExamplesPage = () => {
       url: "/"
     }
   ]
+
+  const categories = [
+    {
+      slug: 'blah',
+      name: 'Blah'
+    }
+  ]
+  const initialValues = {
+
+  }
+
   return (
     <>
       <Intro />
@@ -27,27 +46,41 @@ const ExamplesPage = () => {
           </div> */}
           <div className="row">
             <div className="col-12 col-md-4">
-              <h2>Harms</h2>
-              <ul className="list-of-harms">
-                <li>
-                  <input
-                    type="checkbox"
-                    id="harmOne"
-                    name="harmOne"
-                    value="Bike"
-                  />
-                  <label htmlFor="harmOne">Stole my personal Information</label>
-                </li>
-                <li>
-                  <input
-                    type="checkbox"
-                    id="harmTwo"
-                    name="harmTwo"
-                    value="Bike"
-                  />
-                  <label htmlFor="harmTwo">Charged me more money</label>
-                </li>
-              </ul>
+              <Formik
+                enableReinitialize
+                initialValues={initialValues}
+                // validationSchema={AuthorSchema}
+                onSubmit={(values) => console.log(values)}
+              >
+                {({ values, setFieldValue }) => (
+                  <Form>
+                    <h2>Harms</h2>
+                    <ul className="list-of-harms">
+                      {categories && categories.map(category => {
+                        const { slug, name } = category
+
+                        return (
+                          <li key={category.slug}>
+                            <Field
+                              name={slug}
+                              type="checkbox"
+                              component={SwitchInput}
+                              // toggle
+                              // active={active}
+                              // hint="Show examples in this category"
+                              onChange={(e, value) =>
+                                setFieldValue(slug, value.checked)
+                              }
+                              label={name}
+                            />
+                          </li>
+                        )
+                      })}
+                    </ul>
+                    {/* <FormikDebug /> */}
+                  </Form>
+                )}
+              </Formik>
             </div>
 
             <div className="col-12 col-md-8">
