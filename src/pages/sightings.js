@@ -1,28 +1,23 @@
-import React from "react";
-import { Link } from "gatsby";
+import React from "react"
+// import PropTypes from 'prop-types'
+import { Link } from "gatsby"
+import Intro from '../components/examples/Intro'
+import ExampleCard from "../components/examples/ExampleCard"
 
-const Sightings = () => {
+
+
+const ExamplesPage = () => {
+  const examples = [
+    {
+      id: '123',
+      title: "Instagram: No Option for “No”",
+      summary: "A brief summary - Pellentesque at bibendum mauris, in porta nisi",
+      url: "/"
+    }
+  ]
   return (
     <>
-      <section className="pb-0">
-        <div className="container">
-          <div className="row">
-            <div className="col-12 col-md-8">
-              <h1>Sightings from the crowd</h1>
-              <p>
-                Frustrated people all over the world have found dark patterns on
-                “trustworthy” websites and apps. Click around to see some
-                examples of how these dark patterns hurt people, and better
-                understand the techniques companies use to trick you into doing
-                what they want.
-              </p>
-              <Link to="/report" className="btn btn-primary">
-                Report a Pattern
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Intro />
       <section>
         <div className="container">
           {/* <div className="row">
@@ -54,66 +49,32 @@ const Sightings = () => {
                 </li>
               </ul>
             </div>
+
             <div className="col-12 col-md-8">
               <div className="row">
-                <div className="col-12 col-md-6 my-4">
-                  <div className="card card-dark">
-                    <div className="card-body">
-                      <p className="card-date">04/02/2021</p>
-                      <p className="card-title">
-                        Instagram: No Option for “No”
-                      </p>
-                      <p className="card-text">
-                        A brief summary - Pellentesque at bibendum mauris, in
-                        porta nisi
-                      </p>
-                      <Link to="/shameExample" className="card-link">
-                        Explore Dark Pattern
-                      </Link>
+                {examples && examples.map(example => {
+                  const { id } = example
+                  return (
+                    <div key={id} className="col-12 col-md-6 my-4">
+                      <ExampleCard example={example} />
                     </div>
-                  </div>
-                </div>
-                <div className="col-12 col-md-6 my-4">
-                  <div className="card card-dark">
-                    <div className="card-body">
-                      <p className="card-date">04/02/2021</p>
-                      <p className="card-title">
-                        Instagram: No Option for “No”
-                      </p>
-                      <p className="card-text">
-                        A brief summary - Pellentesque at bibendum mauris, in
-                        porta nisi
-                      </p>
-                      <Link to="/shameExample" className="card-link">
-                        Explore Dark Pattern
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-12 col-md-6 my-4">
-                  <div className="card card-dark">
-                    <div className="card-body">
-                      <p className="card-date">04/02/2021</p>
-                      <p className="card-title">
-                        Instagram: No Option for “No”
-                      </p>
-                      <p className="card-text">
-                        A brief summary - Pellentesque at bibendum mauris, in
-                        porta nisi
-                      </p>
-                      <Link to="/shameExample" className="card-link">
-                        Explore Dark Pattern
-                      </Link>
-                    </div>
-                  </div>
-                </div>
+                  )
+                })}
               </div>
             </div>
           </div>
         </div>
       </section>
     </>
-  );
-};
+  )
+}
 
-export default Sightings;
+ExamplesPage.propTypes = {
+
+}
+
+ExamplesPage.defaultProps = {
+
+}
+
+export default ExamplesPage
