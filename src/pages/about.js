@@ -132,7 +132,7 @@ const AboutPage = () => {
               <Partners partners={partners} />
             </div>
 
-            <div className="col-4 pt-5 ">
+            <div className="col-4 pt-5 d-none d-lg-block">
               <div className="sticky">
                 <h3 className="">On This Page</h3>
                 <Scrollspy items={ ['about', 'our-values', 'team'] } currentClassName="active" className="navbar  about-nav" >

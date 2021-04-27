@@ -8,7 +8,7 @@ const PrimaryMenu = (props) => {
       <div className="container-fluid">
         <Link to="/" className="navbar-brand">
           <div>
-            Dark Patterns <span className="highlighter">Tip Line</span>
+            <span className="d-none d-md-inline">Dark Patterns</span> <span className="highlighter">Tip Line</span>
           </div>
         </Link>
         <button
@@ -20,7 +20,7 @@ const PrimaryMenu = (props) => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon"></span>
+          Menu
         </button>
         <div
           className="collapse navbar-collapse justify-content-md-end"
