@@ -1,8 +1,8 @@
 import React from "react"
-import {Link} from 'gatsby'
+import { Link } from 'gatsby'
 import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image"
 
-const examples = [
+const featuredExamples = [
   {
     slug: "smart-devices",
     name: "Smart Devices",
@@ -12,7 +12,7 @@ const examples = [
   }
 ]
 
-const DemoExamples = () => {
+const FeaturedExamples = () => {
   return (
     <section className="bg-light">
       <div className="container">
@@ -27,7 +27,7 @@ const DemoExamples = () => {
               data-bs-ride="carousel"
             >
               <div className="carousel-indicators">
-                {examples && examples.map((example, index) => {
+                {featuredExamples && featuredExamples.map((example, index) => {
                   const { slug, name } = example
                   return (
                     <button
@@ -46,7 +46,7 @@ const DemoExamples = () => {
               </div>
 
               <div className="carousel-inner">
-                {examples && examples.map((example, index) => {
+                {featuredExamples && featuredExamples.map((example, index) => {
                   const { slug, name, description, imageSrc, link } = example
                   return (
                     <div key={`${slug}-item`} className="carousel-item">
@@ -76,4 +76,4 @@ const DemoExamples = () => {
   )
 }
 
-export default DemoExamples
+export default FeaturedExamples
