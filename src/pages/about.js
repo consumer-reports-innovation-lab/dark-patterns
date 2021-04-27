@@ -1,11 +1,12 @@
 import React from "react"
 // import PropTypes from 'prop-types'
-
+import Scrollspy from 'react-scrollspy'
 import Intro from "../components/about/Intro"
 import Goals from "../components/about/Goals"
 import Team from "../components/about/Team"
 import Partners from "../components/about/Partners"
 import CTA from "../components/about/CTA"
+
 
 const AboutPage = () => {
   const goals = [
@@ -130,39 +131,19 @@ const AboutPage = () => {
               <hr className="bg-primary my-5"/>
               <Partners partners={partners} />
             </div>
-            <div className="col-4 d-flex align-items-start justify-content-center pt-5">
-              {/* TODO Add scrollspy to wrapper for this page */}
-              <nav className="navbar sticky" id="aboutNav">
-                  <h3 className="">On This Page</h3>
-                 <ul className="nav">
-                    <li className="nav-item ">
-                        <a className="nav-link" href="#about">About</a>
-                    </li>
-                  </ul>
 
-                {/* <div className="nav" >
-
-                  <h3 className="">On This Page</h3>
-
-
-
-
-                    <a className="nav-link" href="#about">
-                    About
-                  </a>
-
-                  <a className="nav-link" href="#our-values">
-                    Our Values
-                  </a>
-                  <a className="nav-link" href="#team">
-                    Team
-                  </a>
-                  <a className="nav-link" href="#partners">
-                    Partners
-                  </a>
-                </div> */}
-              </nav>
+            <div className="col-4 pt-5 ">
+              <div className="sticky">
+                <h3 className="">On This Page</h3>
+                <Scrollspy items={ ['about', 'our-values', 'team'] } currentClassName="active" className="navbar  about-nav" >
+                  <li className="nav-item"><a className="nav-link" href="#about">About</a></li>
+                  <li className="nav-item"><a className="nav-link" href="#our-values">Our Values</a></li>
+                  <li className="nav-item"><a className="nav-link" href="#team">Team</a></li>
+                  <li className="nav-item"><a className="nav-link" href="#partners">Partners</a></li>
+                </Scrollspy>
+              </div>
             </div>
+
           </div>
         </div>
       </section>

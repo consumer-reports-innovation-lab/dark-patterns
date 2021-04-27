@@ -22,7 +22,7 @@ function Layout({ children }) {
       <HEAD />
       <PageHeader siteTitle={data.site.siteMetadata.title} />
 
-      <main id="pageContent">{children}</main>
+      <main id="pageContent" >{children}</main>
 
       <PageFooter siteTitle={data.site.siteMetadata.title} />
     </>
