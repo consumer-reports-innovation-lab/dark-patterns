@@ -29,92 +29,6 @@ const AboutPage = () => {
       iconPath: "/static/img/logo-icon.png"
     },
   ]
-    const team = [
-    {
-      slug: "stephanie-nguyen",
-      name: "Stephanie Nguyen",
-      org: "Dark Patterns Tipline",
-      title: "Lead"
-    },
-    {
-      slug: "ben-moskowitz",
-      name: "Ben Moskowitz",
-      org: "Consumer Reports",
-      title: "Advisory, Director of the Digital Lab"
-    },
-    {
-      slug: "shirin-mori",
-      name: "Shirin Mori",
-      org: "EFF",
-      title: "Advisory, Designer"
-    },
-    {
-      slug: "jasmine-mcnealy",
-      name: "Jasmine McNealy",
-      org: "University of Florida",
-      title: "Advisory, Associate Professor"
-    },
-    {
-      slug: "katie-mcinnis",
-      name: "Katie McInnis",
-      org: "",
-      title: ""
-    },
-    {
-      slug: "arunesh-mathur",
-      name: "Arunesh Mathur",
-      org: "",
-      title: ""
-    },
-    {
-      slug: "dennis-jen",
-      name: "Dennis Jen",
-      org: "Media Cloud",
-      title: "Advisory, Chief Technology Officer"
-    },
-    {
-      slug: "amira-dhalla",
-      name: "Amira Dhalla",
-      org: "Consumer Reports",
-      title: "Advisory, Associate Director"
-    },
-    {
-      slug: "sage-cheng",
-      name: "Sage Cheng",
-      org: "Access Now",
-      title: "Advisory, Design and UX Lead"
-    },
-    {
-      slug: "harry-brignull",
-      name: "Harry Brignull",
-      org: "DarkPatterns.org",
-      title: "Advisory, Founder"
-    },
-    {
-      slug: "jennifer-brody",
-      name: "Jennifer Brody",
-      org: "Access Now",
-      title: "Advisory, U.S. Advocacy Manager"
-    },
-    {
-      slug: "matt-bailey",
-      name: "Matt Bailey",
-      org: "PEN America",
-      title: "Advisory, Digital Freedom Program Director"
-    },
-  ]
-  const partners = [
-    {
-      slug: "consumer-reports",
-      org: "Consumer Reports",
-      logoPath: "/static/img/logo-icon.png"
-    },
-    {
-      slug: "dark-patterns",
-      org: "Dark Patterns",
-      logoPath: "/static/img/logo-icon.png"
-    },
-  ]
 
 
   return (
@@ -127,15 +41,15 @@ const AboutPage = () => {
               <hr className="bg-primary my-5" />
               <Goals goals={goals} />
               <hr className="bg-primary my-5" />
-              <Team team={team} />
-              <hr className="bg-primary my-5"/>
-              <Partners partners={partners} />
+              <Team />
+              <hr className="bg-primary my-5" />
+              <Partners />
             </div>
 
             <div className="col-4 pt-5 d-none d-lg-block">
               <div className="sticky">
                 <h3 className="">On This Page</h3>
-                <Scrollspy items={ ['about', 'our-values', 'team'] } currentClassName="active" className="navbar  about-nav" >
+                <Scrollspy items={['about', 'our-values', 'team']} currentClassName="active" className="navbar about-nav" >
                   <li className="nav-item"><a className="nav-link" href="#about">About</a></li>
                   <li className="nav-item"><a className="nav-link" href="#our-values">Our Values</a></li>
                   <li className="nav-item"><a className="nav-link" href="#team">Team</a></li>

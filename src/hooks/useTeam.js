@@ -18,7 +18,7 @@ export const useTeam = () => {
       }
     `
   )
-  const team = data.allWpTeamMember.edges
+  const team = data.allWpTeamMember.edges.map(item => item.node)
 
   return { team }
 }

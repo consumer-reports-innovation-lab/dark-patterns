@@ -1,8 +1,11 @@
 import React from "react"
-import PropTypes from 'prop-types'
-import { StaticImage } from "gatsby-plugin-image"
+// import PropTypes from 'prop-types'
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { usePartners } from '../../hooks/usePartners'
 
-const Partners = ({ partners }) => {
+const Partners = () => {
+  const { partners } = usePartners()
+
   return (
     <div id="partners">
       <div className="row">
@@ -12,11 +15,18 @@ const Partners = ({ partners }) => {
       </div>
       <div className="row">
         {partners && partners.map(partner => {
-
+          const {id, title, partnerOptions: {logoImage}} = partner
+          const imageData = getImage(logoImage)
           return (
-            <div className="col-4 my-5">
-
-              {partner.org}
+            <div key={id} className="col-4 my-5">
+              {title}
+              <br/>
+              {imageData && (
+                <GatsbyImage
+                  image={imageData}
+                  alt={title}
+                />
+              )}
             </div>
           )
         })}
@@ -26,11 +36,11 @@ const Partners = ({ partners }) => {
 }
 
 Partners.propTypes = {
-  partners: PropTypes.instanceOf(Array)
+  // partners: PropTypes.instanceOf(Array)
 }
 
 Partners.defaultProps = {
-  partners: []
+  // partners: []
 }
 
 export default Partners

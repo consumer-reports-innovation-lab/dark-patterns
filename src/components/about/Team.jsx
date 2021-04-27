@@ -1,7 +1,10 @@
 import React from "react"
 import PropTypes from 'prop-types'
+import { useTeam } from '../../hooks/useTeam'
 
-const Team = ({ team }) => {
+const Team = () => {
+  const { team } = useTeam()
+
   return (
     <div id="team">
           <div className="row mb-4">
@@ -11,10 +14,12 @@ const Team = ({ team }) => {
           </div>
           <div className="row">
             {team && team.map(member => {
+              const { id, title, teamOptions: {jobTitle, organization} } = member
+
               return (
-                <div key={member.slug} className="col-12 col-md-6 my-4">
-                  <h3 className="text-dark">{member.name}</h3>
-                  <p>{member.org} {member.title}</p>
+                <div key={id} className="col-12 col-md-6 my-4">
+                  <h3 className="text-dark">{title}</h3>
+                  <p>{organization} {jobTitle}</p>
                 </div>
               )
             })}
@@ -24,11 +29,11 @@ const Team = ({ team }) => {
 }
 
 Team.propTypes = {
-  team: PropTypes.instanceOf(Array)
+
 }
 
 Team.defaultProps = {
-  team: []
+
 }
 
 export default Team

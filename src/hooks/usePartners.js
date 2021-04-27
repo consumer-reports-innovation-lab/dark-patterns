@@ -4,16 +4,14 @@ export const usePartners = () => {
   const data = useStaticQuery(graphql`
       query Partners {
         allWpPartner(sort: {order: DESC, fields: title}) {
-          edges {
-            node {
-              id
-              title
-              partnerOptions {
-                logoImage {
-                  localFile {
-                    childImageSharp {
-                      gatsbyImageData
-                    }
+          nodes {
+            id
+            title
+            partnerOptions {
+              logoImage {
+                localFile {
+                  childImageSharp {
+                    gatsbyImageData(width: 500, quality: 100, layout: CONSTRAINED)
                   }
                 }
               }
@@ -23,7 +21,7 @@ export const usePartners = () => {
       }
     `
   )
-  const partners = data.allWpPartner.edges
+  const partners = data.allWpPartner.nodes
 
   return { partners }
 }
