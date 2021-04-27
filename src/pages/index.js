@@ -1,9 +1,10 @@
-import React from "react";
-import { Link } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
-import DemoExamples from "../common/components/DemoExamples/";
-import PatternForm from "../common/components/PatternForm";
+import React from "react"
 // import PropTypes from 'prop-types'
+import { Link } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
+import DemoExamples from "../components/DemoExamples"
+import PatternForm from "../components/PatternForm"
+
 
 const Home = () => {
   return (
@@ -34,8 +35,11 @@ const Home = () => {
           </div>
         </div>
       </section>
+
       <DemoExamples />
+
       <PatternForm />
+
       <section className="bg-dark">
         <div className="container">
           <div className="row centered">
@@ -58,8 +62,9 @@ const Home = () => {
               <ul className="icon-list">
                 <li className="align-items-start mb-5">
                   <StaticImage
-                    src="../common/assets/logo-icon.svg"
                     className="list-icon mt-2"
+                    alt=""
+                    src="../common/assets/logos/logo-icon.svg"
                   />
                   <div className="text-small">
                     <h4>Engage</h4>
@@ -71,8 +76,9 @@ const Home = () => {
                 </li>
                 <li className="align-items-start mb-5">
                   <StaticImage
-                    src="../common/assets/logo-icon.svg"
                     className="list-icon mt-2"
+                    alt=""
+                    src="../common/assets/logos/logo-icon.svg"
                   />
                   <div className="text-small">
                     <h4>Inform</h4>
@@ -85,8 +91,9 @@ const Home = () => {
                 </li>
                 <li className="align-items-start mb-5">
                   <StaticImage
-                    src="../common/assets/logo-icon.svg"
                     className="list-icon mt-2"
+                    alt=""
+                    src="../common/assets/logos/logo-icon.svg"
                   />
                   <div className="text-small">
                     <h4>Empower</h4>
@@ -98,8 +105,9 @@ const Home = () => {
                 </li>
                 <li className="align-items-start mb-5">
                   <StaticImage
-                    src="../common/assets/logo-icon.svg"
                     className="list-icon mt-2"
+                    alt=""
+                    src="../common/assets/logos/logo-icon.svg"
                   />
                   <div className="text-small">
                     <h4>Change</h4>
@@ -116,8 +124,10 @@ const Home = () => {
       </section>
     </>
   );
-};
+}
 
-Home.propTypes = {};
+Home.propTypes = {
 
-export default Home;
+}
+
+export default Home

@@ -41,7 +41,7 @@ const Sightings = () => {
                     name="harmOne"
                     value="Bike"
                   />
-                  <label for="harmOne">Stole my personal Information</label>
+                  <label htmlFor="harmOne">Stole my personal Information</label>
                 </li>
                 <li>
                   <input
@@ -50,7 +50,7 @@ const Sightings = () => {
                     name="harmTwo"
                     value="Bike"
                   />
-                  <label for="harmTwo">Charged me more money</label>
+                  <label htmlFor="harmTwo">Charged me more money</label>
                 </li>
               </ul>
             </div>

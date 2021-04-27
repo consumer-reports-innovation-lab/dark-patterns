@@ -1,7 +1,7 @@
 import React from "react";
-import Team from "../common/components/about/Team";
-import Goals from "../common/components/about/Goals";
-import LookFamiliarAlt from "../common/components/LookFamiliarAlt";
+import Team from "../components/about/Team";
+import Goals from "../components/about/Goals";
+import LookFamiliarAlt from "../components/LookFamiliarAlt";
 
 const about = () => {
   return (

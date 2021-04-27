@@ -1,5 +1,6 @@
 import React from "react";
 import { StaticImage } from "gatsby-plugin-image";
+import logoSrc from '../../common/assets/logos/logo-icon.png'
 
 const Goals = () => {
   return (
@@ -10,10 +11,10 @@ const Goals = () => {
             <h2>Our Goals</h2>
             <ul className="icon-list">
               <li className="align-items-start">
-                <StaticImage
-                  src="../common/assets/logo-icon.svg"
+                {/* <StaticImage
+                  src={logoSrc}
                   className="list-icon mt-2"
-                />
+                /> */}
                 <div>
                   <h3>Collect</h3>
                   <p>
@@ -24,24 +25,24 @@ const Goals = () => {
                 </div>
               </li>
               <li className="align-items-start">
-                <StaticImage
-                  src="../common/assets/logo-icon.svg"
+                {/* <StaticImage
+                  src={logoSrc}
                   className="list-icon mt-2"
-                />
+                /> */}
                 <div>
                   <h3>Educate</h3>
                   <p>
-                    Consumers & decision makers - bibendum mauris, in porta
+                    Consumers &amp; decision makers - bibendum mauris, in porta
                     nisi. Duis ornare ac metus et porttitor. Duis ornare ac
                     metus et porttitor.
                   </p>
                 </div>
               </li>
               <li className="align-items-start">
-                <StaticImage
-                  src="../common/assets/logo-icon.svg"
+                {/* <StaticImage
+                  src={logoSrc}
                   className="list-icon mt-2"
-                />
+                /> */}
                 <div>
                   <h3>Change</h3>
                   <p>

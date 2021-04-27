@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-import DarkPatterns from "../common/components/DarkPatterns";
+import DarkPatterns from "../components/DarkPatterns";
 
 const harms = () => {
   return (

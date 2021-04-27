@@ -31,9 +31,9 @@ const PatternForm = () => {
         </div>
         <div className="row mt-5">
           <div className="col-12 col-md-8">
-            <form>
+            {/* <form>
               <div className="mb-5">
-                <label for="uploadScreenShot" className="form-label">
+                <label htmlFor="uploadScreenShot" className="form-label">
                   Upload a Screenshot
                 </label>
                 <input
@@ -44,7 +44,7 @@ const PatternForm = () => {
                 />
               </div>
               <div className="mb-5">
-                <label for="sourceLink" className="form-label">
+                <label htmlFor="sourceLink" className="form-label">
                   Source Link
                 </label>
                 <input
@@ -55,7 +55,7 @@ const PatternForm = () => {
                 />
               </div>
               <div className="mb-5">
-                <label for="industrySelect" className="form-label">
+                <label htmlFor="industrySelect" className="form-label">
                   Industry
                 </label>
                 <select className="form-select" aria-label="Select Industry">
@@ -69,7 +69,7 @@ const PatternForm = () => {
                 </select>
               </div>
               <div className="mb-5">
-                <label for="harmSelect" className="form-label">
+                <label htmlFor="harmSelect" className="form-label">
                   What harm did this cause you?
                 </label>
                 <select className="form-select" aria-label="Select Harm">
@@ -86,7 +86,7 @@ const PatternForm = () => {
                 </select>
               </div>
               <div className="mb-5">
-                <label for="descriptionTextarea" className="form-label">
+                <label htmlFor="descriptionTextarea" className="form-label">
                   Describe this dark pattern (Optional)
                 </label>
                 <textarea
@@ -101,15 +101,16 @@ const PatternForm = () => {
                   value=""
                   id="flexCheckDefault"
                 />
-                <label className="form-check-label" for="flexCheckDefault">
+                <label className="form-check-label" htmlFor="flexCheckDefault">
                   By submitting this form, I agree to the terms of Consumer
                   Reports’ Privacy Policy and User Agreement.
                 </label>
               </div>
-              <button type="submit" class="btn btn-primary">
+              <button type="submit" className="btn btn-primary">
                 Submit
               </button>
-            </form>
+            </form> */}
+
           </div>
         </div>
       </div>

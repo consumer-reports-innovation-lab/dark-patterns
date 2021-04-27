@@ -1,15 +1,14 @@
 import { applyMiddleware, compose, createStore } from 'redux'
-import thunk from 'redux-thunk'
 import rootReducer from './reducers'
 
 
-export default function createReduxStore(initialState = {}) {
+export default function createReduxStore() {
   // ======================================================
   // Store Enhancers
   // ======================================================
   const enhancers = []
   if (typeof window !== `undefined`) {
-    if (window && window.location && window.location.hostname === 'localhost') {
+    if (window && window.location) {
       const devToolsExtension = window.__REDUX_DEVTOOLS_EXTENSION__
       if (typeof devToolsExtension === 'function') {
         enhancers.push(devToolsExtension())
@@ -20,18 +19,15 @@ export default function createReduxStore(initialState = {}) {
   // ======================================================
   // Middleware Configuration
   // ======================================================
-  const middleware = [
-    // thunk.withExtraArgument(),
-    thunk
-    // This is where you add other middleware like redux-observable
-  ]
+
+  const middleware = []
 
   // ======================================================
   // Store Instantiation and HMR Setup
   // ======================================================
+
   const store = createStore(
     rootReducer(),
-    initialState,
     compose(applyMiddleware(...middleware), ...enhancers)
   )
 
