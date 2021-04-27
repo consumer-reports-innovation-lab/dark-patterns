@@ -3,7 +3,7 @@ import React from 'react'
 
 const Intro = () => {
   return (
-    <div id="intro">
+    <div id="about">
       <h1>About</h1>
       <p>
         The Dark Patterns Tip Line is led by a team of designers, academic researchers, legal experts, policy specialists, and advocacy-minded individuals.</p>

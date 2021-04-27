@@ -118,7 +118,7 @@ const AboutPage = () => {
 
   return (
     <>
-      <section>
+      <section >
         <div className="container">
           <div className="row">
             <div className="col-12 col-lg-8">
@@ -132,12 +132,25 @@ const AboutPage = () => {
             </div>
             <div className="col-4 d-flex align-items-start justify-content-center pt-5">
               {/* TODO Add scrollspy to wrapper for this page */}
-              <nav className="navbar sticky side-nav">
-                <nav className="nav">
+              <nav className="navbar sticky" id="aboutNav">
                   <h3 className="">On This Page</h3>
-                  <a className="nav-link" href="#about">
+                 <ul className="nav">
+                    <li className="nav-item ">
+                        <a className="nav-link" href="#about">About</a>
+                    </li>
+                  </ul>
+
+                {/* <div className="nav" >
+
+                  <h3 className="">On This Page</h3>
+
+
+
+
+                    <a className="nav-link" href="#about">
                     About
                   </a>
+
                   <a className="nav-link" href="#our-values">
                     Our Values
                   </a>
@@ -147,7 +160,7 @@ const AboutPage = () => {
                   <a className="nav-link" href="#partners">
                     Partners
                   </a>
-                </nav>
+                </div> */}
               </nav>
             </div>
           </div>
