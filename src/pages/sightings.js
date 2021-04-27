@@ -7,7 +7,7 @@ import {
   // TextInput,
   SwitchInput
 } from "../common/fields"
-import * as Yup from "yup"
+import { useCategories } from '../hooks/useCategories'
 import Intro from '../components/examples/Intro'
 import ExampleCard from "../components/examples/ExampleCard"
 
@@ -15,6 +15,8 @@ import ExampleCard from "../components/examples/ExampleCard"
 
 
 const ExamplesPage = () => {
+  const { categories } = useCategories()
+
   const examples = [
     {
       id: '123',
@@ -23,16 +25,6 @@ const ExamplesPage = () => {
       url: "/"
     }
   ]
-
-  const categories = [
-    {
-      slug: 'blah',
-      name: 'Blah'
-    }
-  ]
-  const initialValues = {
-
-  }
 
   return (
     <>
@@ -48,8 +40,7 @@ const ExamplesPage = () => {
             <div className="col-12 col-md-4">
               <Formik
                 enableReinitialize
-                initialValues={initialValues}
-                // validationSchema={AuthorSchema}
+                initialValues={{}}
                 onSubmit={(values) => console.log(values)}
               >
                 {({ values, setFieldValue }) => (
@@ -57,19 +48,18 @@ const ExamplesPage = () => {
                     <h2>Harms</h2>
                     <ul className="list-of-harms">
                       {categories && categories.map(category => {
-                        const { slug, name } = category
+                        const { id, name, description } = category.node
 
                         return (
                           <li key={category.slug}>
                             <Field
-                              name={slug}
+                              name={id}
                               type="checkbox"
                               component={SwitchInput}
                               // toggle
-                              // active={active}
-                              // hint="Show examples in this category"
+                              hint={description}
                               onChange={(e, value) =>
-                                setFieldValue(slug, value.checked)
+                                setFieldValue(id, value.checked)
                               }
                               label={name}
                             />
