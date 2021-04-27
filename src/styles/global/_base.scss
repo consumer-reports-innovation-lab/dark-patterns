@@ -69,3 +69,8 @@ input[type="file"] {
   // seems to be an issue where the right border gets cut off if set to cover or 100%
   background-size: 99.9% auto;
 }
+
+hr {
+  height: 2px !important;
+  opacity: 1;
+}

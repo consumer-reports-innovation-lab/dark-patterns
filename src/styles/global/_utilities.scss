@@ -94,6 +94,17 @@
 }
 
 // Text utilities
+.font-primary {
+  font-family: "Dela Gothic One", cursive;
+}
+.font-secondary {
+  font-family: "Averta", sans-serif;
+}
+
+.text-bold {
+  font-weight: 600;
+}
+
 .text-nocase {
   text-transform: none !important;
 }

@@ -3,13 +3,16 @@ import React from 'react'
 
 const Intro = () => {
   return (
-    <div id="intro">
+    <div id="about">
       <h1>About</h1>
       <p>
-        Why problem, why this matters, what you can do -Pellentesque at
-        bibendum mauris, in porta nisi. Duis ornare ac metus et
-        porttitor. Cras non commodo massa, et pretium turpis. Nam sit
-        amet rhoncus nisi.</p>
+        The Dark Patterns Tip Line is led by a team of designers, academic researchers, legal experts, policy specialists, and advocacy-minded individuals.</p>
+      <p>
+        We came together to collect dark patterns to better understand how technology is exploiting people. Our ultimate vision is to leverage this data to combat manipulative practices online through policy reform.
+      </p>
+      <p>
+        We have grounded this work by highlighting examples from people’s lived experiences so we can best showcase how dark patterns lead to every day human harms.
+        </p>
     </div>
   )
 }

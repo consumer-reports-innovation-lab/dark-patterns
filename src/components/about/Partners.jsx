@@ -1,5 +1,6 @@
 import React from "react"
 import PropTypes from 'prop-types'
+import { StaticImage } from "gatsby-plugin-image"
 
 const Partners = ({ partners }) => {
   return (
@@ -13,8 +14,16 @@ const Partners = ({ partners }) => {
         {partners && partners.map(partner => {
 
           return (
-            <div className="col-4">
-              Logo goes here...
+            <div className="col-4 my-5">
+              <StaticImage
+                src="{ partner.logoPath }"
+                alt="{ partner.org }"
+                placeholder="blurred"
+                layout="fixed"
+                width={200}
+                height={200}
+              />
+              {partner.org}
             </div>
           )
         })}
