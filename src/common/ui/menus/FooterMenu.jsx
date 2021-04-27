@@ -14,7 +14,7 @@ const FooterMenu = () => {
             className="img-fluid my-4 "
           />
           <ul className="navbar-nav">
-            <li className="nav-item centered text-end">
+            <li className="nav-item content-center text-end">
               <span className="nav-link">
                 &copy; Consumer Reports {new Date().getFullYear()}
               </span>

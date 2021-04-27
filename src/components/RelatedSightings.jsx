@@ -55,7 +55,7 @@ const RelatedSightings = () => {
           </div>
         </div>
         <div className="row mt-5">
-          <div className="col-12 centered">
+          <div className="col-12 content-center">
             <Link to="/harms" className="btn btn-primary">
               View All Examples
             </Link>

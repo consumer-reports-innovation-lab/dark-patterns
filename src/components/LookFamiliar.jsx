@@ -6,7 +6,7 @@ const LookFamiliar = () => {
     <section>
       <div className="container">
         <div className="row ">
-          <div className="col-12 centered ">
+          <div className="col-12 content-center ">
             <h1 className="text-white">Look Familiar?</h1>
           </div>
           <div className="col-12 centered">

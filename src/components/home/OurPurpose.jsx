@@ -7,7 +7,7 @@ const OurPurpose = () => {
   return (
     <section className="bg-dark">
       <div className="container">
-        <div className="row centered">
+        <div className="row content-center">
           <div className="col-12 col-md-6 col-lg-6 mb-5 pb-5">
             <h2>Our Purpose</h2>
             <p>
