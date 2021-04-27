@@ -15,14 +15,7 @@ const Partners = ({ partners }) => {
 
           return (
             <div className="col-4 my-5">
-              <StaticImage
-                src="{ partner.logoPath }"
-                alt="{ partner.org }"
-                placeholder="blurred"
-                layout="fixed"
-                width={200}
-                height={200}
-              />
+
               {partner.org}
             </div>
           )
