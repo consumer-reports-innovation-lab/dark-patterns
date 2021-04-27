@@ -1,15 +1,14 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
+import { Link } from 'gatsby'
 
 const CTA = () => {
   return (
-    <section>
+    <section className="bg-dark">
       <div className="container">
-        <div className="row ">
-          <div className="col-12 content-center">
+        <div className="row justify-content-center text-center">
+          <div className="col-12">
             <h1 className="text-white">Look Familiar?</h1>
-          </div>
-          <div className="col-12 content-center">
             <Link to="/report" className="btn btn-primary">
               Report a Pattern
             </Link>

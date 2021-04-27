@@ -1,36 +1,66 @@
-import React from "react";
-import Team from "../components/about/Team";
-import Goals from "../components/about/Goals";
-import LookFamiliarAlt from "../components/LookFamiliarAlt";
+import React from "react"
+// import PropTypes from 'prop-types'
 
-const about = () => {
+import Intro from "../components/about/Intro"
+import Goals from "../components/about/Goals"
+import Team from "../components/about/Team"
+import Partners from "../components/about/Partners"
+import CTA from "../components/about/CTA"
+
+const AboutPage = () => {
+  const goals = [
+    {
+      slug: "collect",
+      title: "Collect",
+      description: "Recognized dark patterns - Pellentesque at bibendum mauris, in porta nisi duis ornare.Duis ornare ac metus et porttitor.",
+      iconPath: "../../common/assets/logos/logo-icon.png"
+    },
+    {
+      slug: "educate",
+      title: "Educate",
+      description: "Recognized dark patterns - Pellentesque at bibendum mauris, in porta nisi duis ornare.Duis ornare ac metus et porttitor.",
+      iconPath: "../../common/assets/logos/logo-icon.png"
+    },
+    {
+      slug: "change",
+      title: "Change",
+      description: "Recognized dark patterns - Pellentesque at bibendum mauris, in porta nisi duis ornare.Duis ornare ac metus et porttitor.",
+      iconPath: "../../common/assets/logos/logo-icon.png"
+    },
+  ]
+  const partners = []
+  const team = []
+
   return (
     <>
-      <section id="about">
+      <section>
         <div className="container">
           <div className="row">
             <div className="col-12 col-md-8">
-              <h1>About</h1>
-              <p>
-                Why problem, why this matters, what you can do -Pellentesque at
-                bibendum mauris, in porta nisi. Duis ornare ac metus et
-                porttitor. Cras non commodo massa, et pretium turpis. Nam sit
-                amet rhoncus nisi.
-              </p>
+              <Intro />
+              <hr className="bg-primary" />
+              <Goals goals={goals} />
+              <hr className="bg-primary" />
+              <Team team={team} />
+              <hr className="bg-primary" />
+              <Partners partners={partners} />
             </div>
             <div className="col-2 offset-2 d-none-d-md-flex">
               {/* TODO Add scrollspy to wrapper for this page */}
-              <nav id="aboutNav" className="navbar">
+              <nav className="navbar sticky">
                 <nav className="nav">
                   <span className="nav-link text-primary">On This Page</span>
-                  <a className="nav-link" href="#about">
+                  <a className="nav-link text-dark" href="#about">
                     About
                   </a>
-                  <a className="nav-link" href="#our-goals">
+                  <a className="nav-link text-dark" href="#our-goals">
                     Our Goals
                   </a>
-                  <a className="nav-link" href="#team">
+                  <a className="nav-link text-dark" href="#team">
                     Team
+                  </a>
+                  <a className="nav-link text-dark" href="#partners">
+                    Partners
                   </a>
                 </nav>
               </nav>
@@ -38,11 +68,19 @@ const about = () => {
           </div>
         </div>
       </section>
-      <Goals />
-      <Team />
-      <LookFamiliarAlt />
-    </>
-  );
-};
 
-export default about;
+      <CTA />
+    </>
+  )
+}
+
+AboutPage.propTypes = {
+
+}
+
+AboutPage.defaultProps = {
+
+}
+
+
+export default AboutPage
