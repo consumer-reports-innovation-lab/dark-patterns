@@ -94,6 +94,17 @@
 }
 
 // Text utilities
+.font-primary {
+  font-family: "Dela Gothic One", cursive;
+}
+.font-secondary {
+  font-family: "Averta", sans-serif;
+}
+
+.text-bold {
+  font-weight: 600;
+}
+
 .text-nocase {
   text-transform: none !important;
 }
@@ -565,4 +576,23 @@
   margin-right: 1rem;
   font-weight: 300;
   background-color: $gray-700;
+}
+
+.side-nav {
+  .nav {
+    flex-direction: column;
+    .nav-link {
+      padding-left: 0px;
+      font-family: "Dela Gothic One", cursive;
+      text-transform: uppercase;
+      color: $primary;
+      font-size: 0.875rem;
+      margin-bottom: 10px;
+      color: $dark;
+      transition: 0.5s;
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
 }
