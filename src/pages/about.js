@@ -13,19 +13,19 @@ const AboutPage = () => {
       slug: "collect",
       title: "Collect",
       description: "Recognized dark patterns - Pellentesque at bibendum mauris, in porta nisi duis ornare.Duis ornare ac metus et porttitor.",
-      iconPath: "../../common/assets/logos/logo-icon.png"
+      iconPath: "/static/img/logo-icon.png"
     },
     {
       slug: "educate",
       title: "Educate",
       description: "Recognized dark patterns - Pellentesque at bibendum mauris, in porta nisi duis ornare.Duis ornare ac metus et porttitor.",
-      iconPath: "../../common/assets/logos/logo-icon.png"
+      iconPath: "/static/img/logo-icon.png"
     },
     {
       slug: "change",
       title: "Change",
       description: "Recognized dark patterns - Pellentesque at bibendum mauris, in porta nisi duis ornare.Duis ornare ac metus et porttitor.",
-      iconPath: "../../common/assets/logos/logo-icon.png"
+      iconPath: "/static/img/logo-icon.png"
     },
   ]
   const partners = []

@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from 'prop-types'
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { StaticImage } from "gatsby-plugin-image"
 
 const Goals = ({ goals }) => {
 
@@ -11,13 +11,13 @@ const Goals = ({ goals }) => {
           <h2>Our Goals</h2>
           <ul className="icon-list">
             {goals && goals.map(goal => {
-              const {title, description, iconPath} = goal
-              const imageData = getImage(iconPath)
+              const {slug, title, description, iconPath} = goal
 
               return (
-                <li className="align-items-start">
-                  <GatsbyImage
-                    image={imageData}
+                <li key={slug} className="align-items-start">
+                  <StaticImage
+                    src={iconPath}
+                    alt={title}
                     className="list-icon mt-2"
                   />
                   <div>
