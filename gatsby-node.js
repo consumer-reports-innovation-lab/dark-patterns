@@ -1,14 +1,14 @@
 const path = require(`path`)
 
-const createExamplePages = async ({ posts, gatsbyUtilities }) =>
+const createExamplePages = async ({ examples, gatsbyUtilities }) =>
   Promise.all(
-    posts.map(({ previous, post, next }) =>
+    examples.map(({ previous, example, next }) =>
       // createPage is an action passed to createPages
       // See https://www.gatsbyjs.com/docs/actions#createPage for more info
       gatsbyUtilities.actions.createPage({
         // Use the WordPress uri as the Gatsby page path
         // This is a good idea so that internal links and menus work 👍
-        path: post.uri,
+        path: example.uri,
 
         // use the blog post template as the page component
         // component: path.resolve(`./src/templates/${post.nodeType}.js`),
@@ -20,7 +20,7 @@ const createExamplePages = async ({ posts, gatsbyUtilities }) =>
           // we need to add the post id here
           // so our blog post template knows which blog post
           // the current page is (when you open it in a browser)
-          id: post.id,
+          id: example.id,
 
           // We also use the next and previous id's to query them and add links!
           previousPostId: previous ? previous.id : null,
@@ -64,13 +64,12 @@ const createCategoryPages = async ({ categories, gatsbyUtilities }) =>
 
 async function getExamples({ graphql, reporter }) {
   const graphqlResult = await graphql(/* GraphQL */ `
-    query WpPosts {
+    query WpPatterns {
       allWpDarkPattern(sort: { fields: [date], order: DESC }) {
         edges {
-          post: node {
+          example: node {
             id
             uri
-            nodeType
           }
           next {
             id
@@ -91,13 +90,9 @@ async function getExamples({ graphql, reporter }) {
     return
   }
 
-  const examples = graphqlResult.data.allWpPost.edges
+  const examples = graphqlResult.data.allWpDarkPattern.edges
 
-  const posts = [
-    ...examples,
-  ]
-
-  return posts
+  return examples
 }
 
 async function getCategories({ graphql, reporter }) {
@@ -132,7 +127,7 @@ exports.createPages = async gatsbyUtilities => {
   const examples = await getExamples(gatsbyUtilities)
   const categories = await getCategories(gatsbyUtilities)
 
-  await createExamplePages({ posts, gatsbyUtilities })
+  await createExamplePages({ examples, gatsbyUtilities })
   await createCategoryPages({ categories, gatsbyUtilities })
 
 }

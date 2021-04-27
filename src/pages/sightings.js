@@ -1,18 +1,14 @@
 import React from "react"
 // import PropTypes from 'prop-types'
-import { Formik, Field, Form, FieldArray } from "formik"
+import { Formik, Field, Form } from "formik"
 // import FormikDebug from "../common/utils/FormikDebug"
 import {
-  RadioInput,
   // TextInput,
   SwitchInput
 } from "../common/fields"
 import { useCategories } from '../hooks/useCategories'
 import Intro from '../components/examples/Intro'
 import ExampleCard from "../components/examples/ExampleCard"
-
-
-
 
 const ExamplesPage = () => {
   const { categories } = useCategories()
@@ -51,7 +47,7 @@ const ExamplesPage = () => {
                         const { id, name, description } = category.node
 
                         return (
-                          <li key={category.slug}>
+                          <li key={id}>
                             <Field
                               name={id}
                               type="checkbox"
