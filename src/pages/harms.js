@@ -1,8 +1,16 @@
-import React from "react";
-import { Link } from "gatsby";
-import DarkPatterns from "../components/DarkPatterns";
+import React from "react"
+import { Link } from "gatsby"
+import CategoryCard from "../components/categories/CategoryCard"
 
-const harms = () => {
+const CategoriesPage = () => {
+  const categories = [
+    {
+      slug: "bias-discrimination",
+      name: "Bias & Discrimination",
+      description: "A person who contributes user data to a product or service experiences unfair impacts based on demographic identifiers such as age, race, and gender.",
+      url: "/category/bias-discrimination"
+    }
+  ]
   return (
     <>
       <section>
@@ -25,9 +33,24 @@ const harms = () => {
           </div>
         </div>
       </section>
-      <DarkPatterns></DarkPatterns>
-    </>
-  );
-};
 
-export default harms;
+      <section>
+        <div className="container">
+          <div className="row">
+            {categories && categories.map(category => {
+
+              return (
+                <div key={category.slug} className="col-12 col-md-6 col-lg-4">
+                  <CategoryCard category={category} />
+                </div>
+              )
+            })}
+
+          </div>
+        </div>
+      </section>
+    </>
+  )
+}
+
+export default CategoriesPage
