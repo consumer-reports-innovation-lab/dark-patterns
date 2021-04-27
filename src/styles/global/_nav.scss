@@ -19,10 +19,15 @@
     .nav-link {
       position: relative;
       text-transform: uppercase;
-      font-size: 0.875rem;
+      font-size: 1.25rem;
+      margin: 1rem auto;
       font-family: "Dela Gothic One", cursive;
       border-bottom: 2px solid transparent;
       border-top: 2px solid transparent;
+      @media (min-width: 768px) {
+        font-size: 0.875rem;
+        margin: auto;
+      }
       &:not(.active) {
         color: $black;
         opacity: 1 !important;
@@ -31,16 +36,18 @@
       &:hover,
       &.active {
         color: $black;
-        &::before {
-          content: "";
-          position: absolute;
-          left: 0;
-          right: 0;
-          margin: 0 auto;
-          bottom: -5px;
-          height: 3px;
-          width: 100%;
-          animation: highlight 1s 0.25s forwards;
+        @media (min-width: 768px) {
+          &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            bottom: -5px;
+            height: 3px;
+            width: 100%;
+            animation: highlight 1s 0.25s forwards;
+          }
         }
       }
       @media (min-width: 820px) {
@@ -68,6 +75,12 @@
     top: 12px;
     right: 0;
     border: 0;
+    font-family: "Averta", sans-serif;
+    font-weight: 600;
+    color: $black;
+    // text-transform: uppercase;
+    padding-right: 15px;
+
     &:focus {
       outline: none;
     }
@@ -99,6 +112,7 @@
       background-image: none;
       border: none;
       overflow: hidden;
+
       .icon-bar {
         width: 18px;
         height: 2px;
