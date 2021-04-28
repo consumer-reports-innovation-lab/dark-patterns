@@ -8,7 +8,7 @@ const createExamplePages = async ({ examples, gatsbyUtilities }) =>
       gatsbyUtilities.actions.createPage({
         // Use the WordPress uri as the Gatsby page path
         // This is a good idea so that internal links and menus work 👍
-        path: `/examples/${example.slug}/`,
+        path: `/example/${example.slug}/`,
 
         // use the blog post template as the page component
         // component: path.resolve(`./src/templates/${post.nodeType}.js`),

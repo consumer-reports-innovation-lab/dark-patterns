@@ -26,10 +26,10 @@ const OurPurpose = () => {
           <div className="col-12 col-md-6 offset-lg-1 col-lg-5 d-flex flex-column justify-content-center align-items-start">
             <ul className="icon-list">
               <li className="align-items-start mb-5">
-                <StaticImage
+                <img
                   className="list-icon mt-2"
                   alt=""
-                  src="../common/assets/logos/logo-icon.svg"
+                  src="/img/logos/logo-icon.svg"
                 />
                 <div className="text-small">
                   <h4>Engage</h4>
@@ -40,10 +40,10 @@ const OurPurpose = () => {
                 </div>
               </li>
               <li className="align-items-start mb-5">
-                <StaticImage
+                <img
                   className="list-icon mt-2"
                   alt=""
-                  src="../common/assets/logos/logo-icon.svg"
+                  src="/img/logos/logo-icon.svg"
                 />
                 <div className="text-small">
                   <h4>Inform</h4>
@@ -55,10 +55,10 @@ const OurPurpose = () => {
                 </div>
               </li>
               <li className="align-items-start mb-5">
-                <StaticImage
+                <img
                   className="list-icon mt-2"
                   alt=""
-                  src="../common/assets/logos/logo-icon.svg"
+                  src="/img/logos/logo-icon.svg"
                 />
                 <div className="text-small">
                   <h4>Empower</h4>
@@ -69,10 +69,10 @@ const OurPurpose = () => {
                 </div>
               </li>
               <li className="align-items-start mb-5">
-                <StaticImage
+                <img
                   className="list-icon mt-2"
                   alt=""
-                  src="../common/assets/logos/logo-icon.svg"
+                  src="/img/logos/logo-icon.svg"
                 />
                 <div className="text-small">
                   <h4>Change</h4>

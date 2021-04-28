@@ -64,9 +64,10 @@ const Category = ({ data: { category } }) => {
             </div>
             <div className="row">
               {examples.map(example => {
+                console.log(example)
                 return (
                   <div className="col-12 col-md-4 my-4">
-                    <ExampleCard example={example} className="card-light" />
+                    {/* <ExampleCard example={example.node} className="card-light" /> */}
                   </div>
                 )
               })}
