@@ -13,7 +13,7 @@ const HEAD = ({ pageDescription, pageTitle, pageAuthor }) => {
   return (
     <Helmet titleTemplate={`%s | ${metaTitle}`} defaultTitle={title}>
       <html lang={lang} />
-      <body data-bs-spy="scroll" data-bs-target="#aboutNav" data-bs-offset="0" tabIndex="0" />
+      <body />
       <meta name="description" content={metaDescription} />
       <meta name="author" content={metaAuthor} />
       {/* TODO - Add default metaData and logic for page overrides */}
