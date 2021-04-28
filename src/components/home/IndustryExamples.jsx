@@ -78,7 +78,7 @@ const IndustryExamples = () => {
                 const { slug, name, description, exampleCopy, imageSrc, link } = example
                 return (
                   <TabPanel>
-                    <div key={slug} className="row mt-5">
+                    <div key={slug} className="row mt-4">
                       <div className="col-12 col-md-6">
                         <img
                           src="/img/home-example.png"

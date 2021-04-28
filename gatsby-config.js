@@ -119,13 +119,13 @@ module.exports = {
     //   },
     // },
 
-    {
-      resolve: 'gatsby-plugin-purgecss', // purges all unused/unreferenced css rules
-      options: {
-        develop: true, // Activates purging in npm run develop
-        // purgeOnly: ['/main.scss'], // applies purging only on the bulma css file
-      },
-    }, // must be after other CSS plugins
+    // {
+    //   resolve: 'gatsby-plugin-purgecss', // purges all unused/unreferenced css rules
+    //   options: {
+    //     develop: true, // Activates purging in npm run develop
+    //     // purgeOnly: ['/main.scss'], // applies purging only on the bulma css file
+    //   },
+    // }, // must be after other CSS plugins
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
