@@ -39,7 +39,7 @@ const Category = ({ data: { category } }) => {
                 />
               ) : (
                 // TODO: Replace with placeholder from comp
-                <img src="https://via.placeholder.com/800/000/000" alt="" className="img-fluid" />
+                <img src="/img/placeholder-example-interior.png" alt="" className="img-fluid" />
               )}
             </div>
             <div className="col-12 col-lg-6">

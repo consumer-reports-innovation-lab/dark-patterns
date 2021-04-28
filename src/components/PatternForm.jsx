@@ -33,7 +33,7 @@ const PatternForm = () => {
         </div>
         <div className="row mt-5">
           <div className="col-12">
-            <hr/>
+
             <div className="bg-iframe aspect-5x7" >
             <iframe  src={iFrameSrc} title="Submit a dark pattern tip" />
             </div>

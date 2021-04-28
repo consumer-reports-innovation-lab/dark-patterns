@@ -10,7 +10,6 @@ const ExampleCard = ({ example: { uri, date, patternAttributes: {affiliatedCompa
         <p className="card-date">{date}</p>
         <p className="card-title">{affiliatedCompany}</p>
         <p className="card-text">{summary}</p>
-        {console.log(summary)}
         <Link to={uri} className="card-link">Explore Dark Pattern</Link>
       </div>
     </div>
