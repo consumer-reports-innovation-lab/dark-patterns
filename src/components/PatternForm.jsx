@@ -32,9 +32,11 @@ const PatternForm = () => {
           </div>
         </div>
         <div className="row mt-5">
-          <div className="col-12 col-md-8">
+          <div className="col-12">
             <hr/>
-            <iframe src={iFrameSrc} title="Submit a dark pattern tip" />
+            <div className="bg-iframe aspect-5x7" >
+            <iframe  src={iFrameSrc} title="Submit a dark pattern tip" />
+            </div>
           </div>
         </div>
       </div>

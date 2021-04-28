@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 
 const CTA = () => {
   return (
-    <section className="bg-dark">
+    <section className="bg-mid">
       <div className="container">
         <div className="row justify-content-center text-center">
           <div className="col-12">

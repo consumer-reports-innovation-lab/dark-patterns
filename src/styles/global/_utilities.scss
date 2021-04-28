@@ -33,7 +33,7 @@
     padding-top: 75%;
   }
   &.aspect-5x7 {
-    padding-top: 120%;
+    padding-top: 140%;
   }
   &.aspect-16x9 {
     padding-top: 56.25%;
@@ -567,13 +567,38 @@
   }
 }
 
+.list-primary {
+  list-style: none;
+  li {
+    align-items: center;
+    font-family: "Averta", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-transform: none;
+    margin: 1.5rem 0;
+    position: relative;
+    &::before {
+      content: "\2022";
+      color: $primary;
+      font-weight: bold;
+      display: inline-block;
+      width: 1rem;
+      margin-left: -1rem;
+      font-size: 2rem;
+      position: absolute;
+      top: 0px;
+    }
+  }
+}
+
 .tag {
-  color: $white;
+  color: $dark;
   display: inline-block;
   padding: 0.5rem 2rem;
   font-size: 0.875rem;
   border-radius: 8px;
   margin-right: 1rem;
   font-weight: 300;
-  background-color: $gray-700;
+  text-transform: capitalize;
+  background-color: $gray-200;
 }
