@@ -4,7 +4,7 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import parse from "html-react-parser"
 import ZoomImage from 'react-medium-image-zoom'
 import CTA from '../components/about/CTA'
-import RelatedExamples from '../components/RelatedExamples'
+import RelatedExamples from '../components/examples/RelatedExamples'
 
 const Example = ({ data: { example } }) => {
   const {

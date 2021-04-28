@@ -1,8 +1,8 @@
 import React from "react"
-import { Link } from "gatsby"
-import ExampleCard from './examples/ExampleCard'
+import ExampleCard from './ExampleCard'
 
 const RelatedExamples = ({ example, heading }) => {
+  console.log("EXAMPLE:", example)
   const nodes = example.categories.nodes.length > 0
     ? example.categories.nodes
     : example.tags.nodes
@@ -24,11 +24,12 @@ const RelatedExamples = ({ example, heading }) => {
         <div className="row">
           {relatedExamples.length > 0 && (
             <div className="row">
-              {relatedExamples.map(example => {
+              {relatedExamples.map(related => {
+                if (Object.keys(related).length === 0) return
 
                 return (
-                  <div className="col-12 col-md-4 my-4">
-                    <ExampleCard example={example} className="card-light" />
+                  <div key={related.id} className="col-12 col-md-4 my-4">
+                    <ExampleCard example={related} className="card-light" />
                   </div>
                 )
               })}
@@ -40,4 +41,4 @@ const RelatedExamples = ({ example, heading }) => {
   )
 }
 
-export default RelatedExamples;
+export default RelatedExamples

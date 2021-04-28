@@ -1,13 +1,14 @@
 import React from "react"
 import { Link } from 'gatsby'
 import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image"
+import { ImageGroup } from "semantic-ui-react"
 
 const featuredExamples = [
   {
     slug: "smart-devices",
     name: "Smart Devices",
     description: "Enter description",
-    imageSrc: "../common/assets/placeholder-example.png",
+    imageSrc: "/img/placeholder-example.png",
     link: "/"
   }
 ]
@@ -52,8 +53,8 @@ const FeaturedExamples = () => {
                     <div key={`${slug}-item`} className="carousel-item">
                       <div className="row">
                         <div className="col-12 col-md-6">
-                          <StaticImage
-                            src="../common/assets/placeholder-example.png"
+                          <img
+                            src="/img/placeholder-example.png"
                             alt="placeholder"
                             className="img-fluid"
                           />

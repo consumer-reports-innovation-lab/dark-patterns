@@ -4,14 +4,23 @@ require('dotenv').config({
 const fs = require('fs')
 const path = require('path')
 const website = require('./siteconfig')
-
+const pathPrefix = website.pathPrefix === '/' ? '' : website.pathPrefix
 
 module.exports = {
+  flags: {},
+  pathPrefix: website.pathPrefix,
   siteMetadata: {
-    title: `Dark Patterns`,
-    description: `Enter in default site meta description...`,
-    lang: `en`,
-    author: `@ocupop`,
+    siteUrl: website.url + pathPrefix, // For gatsby-plugin-sitemap
+    pathPrefix,
+    title: website.title,
+    description: website.description,
+    shareImage: website.shareImage,
+    headline: website.headline,
+    inLanguage: website.inLanguage,
+    ogLanguage: website.ogLanguage,
+    author: website.author,
+    twitter: website.twitter,
+    facebook: website.facebook,
   },
   plugins: [
 
@@ -50,61 +59,8 @@ module.exports = {
         // },
       },
     },
-    // Twitter Source
-    // {
-    //   resolve: `gatsby-source-twitter`,
-    //   options: {
-    //     credentials: {
-    //       consumer_key: process.env.TWITTER_API_KEY,
-    //       consumer_secret: process.env.TWITTER_API_SECRET,
-    //       bearer_token: process.env.TWITTER_BEARER_TOKEN,
-    //     },
-    //     queries: {
-    //       getTweets: {
-    //         endpoint: "statuses/user_timeline",
-    //         params: {
-    //           screen_name: "darkpatterns",
-    //           include_rts: false,
-    //           exclude_replies: true,
-    //           tweet_mode: "extended",
-    //         },
-    //       },
-    //     },
-    //   },
-    // },
 
-    {
-      resolve: "gatsby-source-gravityforms",
-      options: {
-        // Base URL needs to include protocol (http/https)
-        baseUrl: "http://ocupop.paulstroot.com",
-        // Gravity Forms API
 
-        api: {
-          key: "ck_1c965e6f15c73f087f85fa6b6a7b4a29b191661d",
-          secret: "cs_3056eebc1e83f13804225ff472c04e22d08ec9f6",
-        },
-
-        // Set to true to enable selfsigned certs in development mode
-        allowSelfSigned: true,
-
-        // Basic Auth
-        /*
-          basicAuth: {
-              username: 'ocupop',
-              password: '36NE XJao CWK1 PGRf JBon hh6h',
-          },
-          ignoreFields: [
-              // Top level fields within the Gravity Forms return
-              // to ignore.
-              // Default ignore is 'notifications'. To keep this
-              // as set, remove the ignoreFields setting from here.
-              // If adding more fields, you will need to include
-              // notifications to ensure it is ignored.
-          ],
-          */
-      },
-    },
 
     // You can have multiple instances of this plugin to create indexes with
     // different names or engines. For example, multi-lingual sites could create

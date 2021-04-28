@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
+
 const ExampleCard = ({ example: { uri, date, patternAttributes: {affiliatedCompany, summary} } }) => {
 
   return (

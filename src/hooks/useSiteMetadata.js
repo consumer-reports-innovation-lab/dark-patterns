@@ -7,7 +7,7 @@ export const useSiteMetadata = () => {
           siteMetadata {
             author
             description
-            lang
+            inLanguage
             title
           }
         }
