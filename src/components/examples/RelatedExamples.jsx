@@ -14,6 +14,8 @@ const RelatedExamples = ({ example, heading }) => {
   }).reduce((a, b) => [...a, ...b]).slice(0, 3)
 
   return (
+    <>
+    {relatedExamples.length > 0 && (
     <section>
       <div className="container">
         <div className="row">
@@ -22,7 +24,7 @@ const RelatedExamples = ({ example, heading }) => {
           </div>
         </div>
         <div className="row">
-          {relatedExamples.length > 0 && (
+
             <div className="row">
               {relatedExamples.map(related => {
                 if (Object.keys(related).length === 0) return
@@ -34,10 +36,12 @@ const RelatedExamples = ({ example, heading }) => {
                 )
               })}
             </div>
-          )}
+
         </div>
       </div>
     </section>
+    )}
+    </>
   )
 }
 

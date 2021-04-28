@@ -74,6 +74,7 @@ const Example = ({ data: { example } }) => {
                   </ul>
                 </div>
               </div>
+
               <div className="row my-4">
                 <div className="col-12">
                   <h4>Tags</h4>
@@ -83,6 +84,8 @@ const Example = ({ data: { example } }) => {
                   })}
                 </div>
               </div>
+
+
             </div>
             <div className="col-12 col-md-6 col-lg-4 centered">
               <ZoomImage overlayBgColorEnd={`rgba(0,0,0,0.7)`}>

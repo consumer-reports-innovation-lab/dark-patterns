@@ -37,7 +37,7 @@ const CategoriesPage = () => {
         </div>
       </section>
 
-      <section>
+      <section className="pt-0">
         <div className="container">
           <div className="row">
             {categories && categories.map(category => {
