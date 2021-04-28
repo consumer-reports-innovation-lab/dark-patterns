@@ -7,20 +7,13 @@ import {
   SwitchInput
 } from "../common/fields"
 import { useCategories } from '../hooks/useCategories'
+import { useExamples } from '../hooks/useExamples'
 import Intro from '../components/examples/Intro'
 import ExampleCard from "../components/examples/ExampleCard"
 
 const ExamplesPage = () => {
   const { categories } = useCategories()
-
-  const examples = [
-    {
-      id: '123',
-      title: "Instagram: No Option for “No”",
-      summary: "A brief summary - Pellentesque at bibendum mauris, in porta nisi",
-      url: "/"
-    }
-  ]
+  const { examples } = useExamples()
 
   return (
     <>
@@ -72,10 +65,10 @@ const ExamplesPage = () => {
             <div className="col-12 col-md-8">
               <div className="row">
                 {examples && examples.map(example => {
-                  const { id } = example
+                  const { id } = example.node
                   return (
                     <div key={id} className="col-12 col-md-6 my-4">
-                      <ExampleCard example={example} />
+                      <ExampleCard example={example.node} />
                     </div>
                   )
                 })}

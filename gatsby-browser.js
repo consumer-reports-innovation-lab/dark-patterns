@@ -1,6 +1,6 @@
 import 'semantic-ui-css/semantic.min.css'
-import 'react-redux-toastr/lib/css/react-redux-toastr.min.css'
 import 'remixicon/fonts/remixicon.css'
+import 'react-medium-image-zoom/dist/styles.css'
 import './src/styles/main.scss'
 
 

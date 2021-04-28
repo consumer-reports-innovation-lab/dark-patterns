@@ -6,8 +6,7 @@ export const useExamples = () => {
         allWpExample(sort: {order: DESC, fields: date}) {
           edges {
             node {
-              id
-              title
+              ...ExampleDetails
             }
           }
         }
