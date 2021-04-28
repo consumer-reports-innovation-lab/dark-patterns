@@ -520,7 +520,7 @@
         right: 0;
         bottom: 0;
         margin: 0 auto;
-        height: 300px;
+        height: 350px;
         width: 100%;
         box-shadow: inset 0px 0.01px 0px 0px $primary;
       }
@@ -602,4 +602,25 @@
   text-transform: capitalize;
   background-color: $gray-200;
   margin-bottom: 1rem;
+}
+
+.tab-nav-link {
+  color: $black;
+  font-size: 1rem;
+  font-weight: 300;
+  font-family: "Averta", sans-serif !important;
+  text-transform: capitalize !important;
+  &:hover,
+  &:focus {
+    color: $black;
+    text-decoration: none;
+    &::before {
+      content: "";
+      animation: none !important;
+    }
+  }
+  &.react-tabs__tab--selected {
+    color: $primary !important;
+    font-size: 5rem !important;
+  }
 }

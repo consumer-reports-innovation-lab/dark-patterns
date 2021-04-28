@@ -22,8 +22,10 @@ const Example = ({ data: { example } }) => {
     },
     tags,
     categories
+
   } = example
 
+// console.log(localFile)
 
   return (
     <>
@@ -90,9 +92,12 @@ const Example = ({ data: { example } }) => {
 
             </div>
             <div className="col-12 col-md-6 col-lg-4 centered">
-              <ZoomImage overlayBgColorEnd={`rgba(0,0,0,0.7)`}>
+              {/* <ZoomImage overlayBgColorEnd={`rgba(0,0,0,0.7)`}>
                 <GatsbyImage image={getImage(localFile)} alt={title} />
-              </ZoomImage>
+              </ZoomImage> */}
+
+              <GatsbyImage image={getImage(localFile)} alt={title} />
+
             </div>
           </div>
         </div>

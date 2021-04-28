@@ -14,7 +14,7 @@ const Partners = () => {
         </div>
       </div>
       <div className="row">
-        {partners && partners.map(partner => {
+        {/* {partners && partners.map(partner => {
           const {id, title, partnerOptions: {logoImage}} = partner
           const imageData = getImage(logoImage)
           return (
@@ -27,9 +27,19 @@ const Partners = () => {
                   alt={title}
                 />
               )}
+
+
+
             </div>
           )
-        })}
+        })} */}
+
+        <div className="col-4 my-5">
+            <img src="/img/cr-id.svg" />
+        </div>
+        <div className="col-4 my-5">
+            <img src="/img/dp-id.svg" />
+        </div>
       </div>
     </div>
   )
