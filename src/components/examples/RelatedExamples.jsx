@@ -2,7 +2,7 @@ import React from "react"
 import ExampleCard from './ExampleCard'
 
 const RelatedExamples = ({ example, heading }) => {
-  console.log("EXAMPLE:", example)
+
   const nodes = example.categories.nodes.length > 0
     ? example.categories.nodes
     : example.tags.nodes
