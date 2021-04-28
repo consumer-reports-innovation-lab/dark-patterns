@@ -2,6 +2,7 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import parse from "html-react-parser"
+import ExampleCard from '../components/examples/ExampleCard'
 import CTA from '../components/about/CTA'
 
 const Category = ({ data: { category } }) => {
@@ -54,7 +55,8 @@ const Category = ({ data: { category } }) => {
           </div>
         </div>
       </section>
-      {examples && examples.length > 0 ? (
+
+      {examples && examples.nodes.length > 0 ? (
         <section>
           <div className="container">
             <div className="row">
@@ -63,11 +65,12 @@ const Category = ({ data: { category } }) => {
               </div>
             </div>
             <div className="row">
-              {examples.map(example => {
-                console.log(example)
+              {examples.nodes.map(example => {
+                if (Object.keys(example).length === 0) return
+
                 return (
-                  <div className="col-12 col-md-4 my-4">
-                    {/* <ExampleCard example={example.node} className="card-light" /> */}
+                  <div key={example.id} className="col-12 col-md-4 my-4">
+                    <ExampleCard example={example} className="card-light" />
                   </div>
                 )
               })}
@@ -98,9 +101,9 @@ export const pageQuery = graphql`
           }
         }
       }
-      examples: children {
-        ... on WpExample {
-          ...ExampleDetails
+      examples {
+        nodes {
+          ...ExampleSummary
         }
       }
     }
