@@ -10,6 +10,7 @@ export const ExampleSummary = graphql`
       affiliatedCompany
       description
       industry
+      summary
     }
   }
 `

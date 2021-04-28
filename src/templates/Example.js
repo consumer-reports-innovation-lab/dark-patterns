@@ -75,6 +75,7 @@ const Example = ({ data: { example } }) => {
                 </div>
               </div>
 
+              {tags.nodes.length > 0 && (
               <div className="row my-4">
                 <div className="col-12">
                   <h4>Tags</h4>
@@ -84,6 +85,7 @@ const Example = ({ data: { example } }) => {
                   })}
                 </div>
               </div>
+              )}
 
 
             </div>
