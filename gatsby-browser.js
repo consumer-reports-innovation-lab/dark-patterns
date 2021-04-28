@@ -1,3 +1,4 @@
+import 'react-tabs/style/react-tabs.css'
 import 'semantic-ui-css/semantic.min.css'
 import 'remixicon/fonts/remixicon.css'
 import 'react-medium-image-zoom/dist/styles.css'
