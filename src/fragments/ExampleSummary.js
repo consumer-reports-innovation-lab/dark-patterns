@@ -9,7 +9,6 @@ export const ExampleSummary = graphql`
     patternAttributes {
       affiliatedCompany
       description
-      industry
       summary
     }
   }

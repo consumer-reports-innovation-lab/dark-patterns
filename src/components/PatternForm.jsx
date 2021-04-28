@@ -12,6 +12,7 @@ const PatternForm = () => {
               Report a<br />
               Dark Pattern
             </h1>
+
             <p>
               Notice a website or app up to something suspicious? Maybe you’ve
               felt forced into giving up personal details or discovered a hidden

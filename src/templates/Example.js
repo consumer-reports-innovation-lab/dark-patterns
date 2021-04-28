@@ -37,7 +37,7 @@ const Example = ({ data: { example } }) => {
             </div>
           </div>
           <div className="row">
-            <div className="col-12 col-md-6 col-lg-8">
+            <div className="col-12 col-md-6 ">
               <div className="row">
                 <div className="col-12">
                   <h2>{title}</h2>
@@ -48,7 +48,7 @@ const Example = ({ data: { example } }) => {
                   <h4>Company</h4>
                   <p className="text-small">{affiliatedCompany}</p>
                 </div>
-                <div className="col-4">
+                <div className="col-3">
                   <h4>Date</h4>
                   <p className="text-small">{date}</p>
                 </div>
@@ -91,7 +91,7 @@ const Example = ({ data: { example } }) => {
 
 
             </div>
-            <div className="col-12 col-md-6 col-lg-4 centered">
+            <div className="col-12 col-md-6  centered">
               <ZoomImage overlayBgColorEnd={`rgba(0,0,0,0.7)`}>
                 <GatsbyImage image={getImage(localFile)} alt={title} />
               </ZoomImage>

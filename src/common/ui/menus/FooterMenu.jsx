@@ -6,12 +6,13 @@ import { StaticImage } from "gatsby-plugin-image";
 const FooterMenu = () => {
   return (
     <div className="container">
-      <div className="row">
+      <div className="row py-5">
         <nav className="navbar navbar-expand-md justify-content-md-between">
           <StaticImage
             src="../../assets/global/cr-id-reversed.svg"
             alt="Consumer Reports"
-            className="img-fluid my-4 "
+            className="img-fluid "
+            height={50}
           />
           <ul className="navbar-nav">
             <li className="nav-item content-center text-end">
