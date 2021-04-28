@@ -9,6 +9,7 @@ html {
 body {
   background-color: $body-bg;
   color: $body-color;
+  overflow-wrap: break-word;
 }
 
 section {

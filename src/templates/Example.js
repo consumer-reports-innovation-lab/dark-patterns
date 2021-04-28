@@ -55,16 +55,16 @@ const Example = ({ data: { example } }) => {
                   <p className="text-small">{industry}</p>
                 </div>
               </div>
-              <div className="row my-4">
+              <div className="row my-5">
                 <div className="col-12">
                   <h4>Description</h4>
                   {parse(description)}
                 </div>
               </div>
-              <div className="row my-4">
+              <div className="row my-5">
                 <div className="col-12">
                   <h4>Harm Type(s)</h4>
-                  <ul className="icon-list">
+                  <ul className="list-primary">
                     {categories && categories.nodes.map(category => {
                       const { id, name } = category
                       return (

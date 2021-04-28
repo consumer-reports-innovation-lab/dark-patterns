@@ -5,7 +5,7 @@ import { Link } from 'gatsby'
 const ExampleCard = ({ example: { uri, date, patternAttributes: {affiliatedCompany, summary} } }) => {
 
   return (
-    <div className="card card-dark">
+    <div className="card">
       <div className="card-body">
         <p className="card-date">{date}</p>
         <p className="card-title">{affiliatedCompany}</p>
