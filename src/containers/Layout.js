@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import HEAD from "../common/ui/Head";
 import PageHeader from "../common/ui/PageHeader";
 import PageFooter from "../common/ui/PageFooter";
+import Link from "gatsby";
 
 function Layout({ children }) {
   const data = useStaticQuery(graphql`
@@ -21,7 +22,7 @@ function Layout({ children }) {
       <HEAD />
       <PageHeader siteTitle={data.site.siteMetadata.title} />
 
-      <main id="pageContent">{children}</main>
+      <main id="pageContent" >{children}</main>
 
       <PageFooter siteTitle={data.site.siteMetadata.title} />
     </>
@@ -29,7 +30,7 @@ function Layout({ children }) {
 }
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 };
 
 export default Layout;

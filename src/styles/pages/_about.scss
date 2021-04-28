@@ -1,0 +1,42 @@
+.team-wrapper {
+  h2 {
+    color: $white;
+  }
+}
+
+.about-nav {
+  flex-direction: column;
+  align-items: flex-start;
+  list-style: none;
+  padding-left: 0px;
+  .nav-item {
+    .nav-link {
+      color: $dark;
+      font-family: "Dela Gothic One", cursive;
+      text-transform: uppercase;
+      font-size: 0.875rem;
+      margin-bottom: 1.5rem;
+      transition: 0.5s;
+      padding-left: 0px;
+      position: relative;
+      &:hover {
+        color: $primary;
+      }
+    }
+    &.active {
+      .nav-link {
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+          bottom: -5px;
+          height: 3px;
+          width: 100%;
+          animation: highlight 1.5s forwards;
+        }
+      }
+    }
+  }
+}

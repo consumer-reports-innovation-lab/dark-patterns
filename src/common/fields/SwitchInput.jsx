@@ -4,7 +4,7 @@ import { Checkbox } from 'semantic-ui-react'
 // import Hint from './hint'
 
 const SwitchInput = ({
-  className, hint, type, label, field, onChange, toggle, active,
+  className, hint, type, label, field, onChange, toggle,
   form: {
     errors,
     touched,
@@ -15,7 +15,6 @@ const SwitchInput = ({
 
   return (
     <div className={`form-group ${className}`}>
-      <Label label={label} hint={hint} />
       <div className="d-flex align-items-center">
         <Checkbox
           {...field}
@@ -24,11 +23,9 @@ const SwitchInput = ({
           onChange={onChange}
           toggle={toggle}
         />
-        {active && (
-          <div className={`status ${active ? 'active' : ''}`}>
-            {active ? 'Active' : 'Inactive'}
-          </div>
-        )}
+        <div className="mx-3">
+          <Label label={label} hint={hint} />
+        </div>
       </div>
     </div>
   )

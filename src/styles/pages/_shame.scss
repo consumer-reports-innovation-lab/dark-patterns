@@ -1,0 +1,24 @@
+.list-of-harms {
+  list-style: none;
+  padding-left: 0px;
+  li {
+    margin: 0.5rem 0 1rem 0;
+  }
+}
+
+#exampleWrapper {
+  position: relative;
+  &::before {
+    // TODO Just replace with svg...
+    content: "Example";
+    font-family: "Dela Gothic One", cursive;
+    position: absolute;
+    left: 2vw;
+    transform-origin: bottom left;
+    transform: rotate(90deg);
+    font-size: 10vh;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    color: $gray-300;
+  }
+}

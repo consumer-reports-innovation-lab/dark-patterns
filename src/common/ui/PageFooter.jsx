@@ -4,9 +4,9 @@ import FooterMenu from './menus/FooterMenu'
 const PageFooter = () => {
 
   return (
-    <header id="pageFooter">
+    <footer id="pageFooter">
       <FooterMenu />
-    </header>
+    </footer>
   )
 }
 

@@ -1,11 +1,8 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/browser-apis/
- */
+import 'semantic-ui-css/semantic.min.css'
+import 'remixicon/fonts/remixicon.css'
+import 'react-medium-image-zoom/dist/styles.css'
+import './src/styles/main.scss'
 
-// You can delete this file if you're not using it
 
 import App from "./App"
-
 export const wrapRootElement = App

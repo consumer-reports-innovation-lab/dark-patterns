@@ -4,7 +4,7 @@
   top: 0;
   left: 0;
   background-color: $white;
-  box-shadow: 0 0 10px rgba($black, 0.2);
+
   z-index: 99;
 
   @include media-breakpoint-down(lg) {
@@ -15,9 +15,31 @@
 }
 
 #pageContent {
-  padding-top: $page-header-height-xs;
-  overflow: hidden;
+  // padding-top: $page-header-height-xs;
+  // overflow: hidden;
+  // background-color: $mid;
+  color: $black;
 }
 
 #pageFooter {
+  background-color: $black;
+  .nav-link {
+    color: $white;
+    position: relative;
+    &:hover,
+    &:focus,
+    &:active {
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        bottom: -5px;
+        height: 3px;
+        width: 100%;
+        animation: highlight 0.5s forwards cubic-bezier(0.95, 0.05, 0.795, 0.035);
+      }
+    }
+  }
 }

@@ -13,13 +13,40 @@ const HEAD = ({ pageDescription, pageTitle, pageAuthor }) => {
   return (
     <Helmet titleTemplate={`%s | ${metaTitle}`} defaultTitle={title}>
       <html lang={lang} />
-      <body />
+      <body data-bs-spy="scroll" data-bs-target="#aboutNav" data-bs-offset="0" tabIndex="0" />
       <meta name="description" content={metaDescription} />
       <meta name="author" content={metaAuthor} />
       {/* TODO - Add default metaData and logic for page overrides */}
+      <link rel="preconnect" href="//cdn.cr.org/" crossorigin="true" />
+      <link
+        rel="preload"
+        href="//cdn.cr.org/crux/fonts/v1/AvertaW01-Light.woff2?v=1.0.1"
+        as="font"
+        crossorigin="true"
+      />
+      <link
+        rel="preload"
+        href="//cdn.cr.org/crux/fonts/v1/AvertaW01-Regular.woff2?v=1.0.1"
+        as="font"
+        crossorigin="true"
+      />
+      <link
+        rel="preload"
+        href="//cdn.cr.org/crux/fonts/v1/AvertaW01-Bold.woff2?v=1.0.1"
+        as="font"
+        crossorigin="true"
+      />
+      <link
+        rel="preload"
+        href="//cdn.cr.org/crux/styles/2.0/static/icons/crux-icons.woff"
+        as="font"
+        crossorigin="true"
+      />
     </Helmet>
-  )
+  );
 }
+
+
 
 HEAD.propTypes = {
   pageDescription: PropTypes.string,

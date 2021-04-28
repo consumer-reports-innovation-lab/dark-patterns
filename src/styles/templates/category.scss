@@ -1,0 +1,16 @@
+.category-example {
+  position: relative;
+  &::before {
+    @extend .h1;
+    content: "Example";
+    position: absolute;
+    top: calc(50% - 2.5rem);
+    left: -12rem;
+    transform: rotate(90deg);
+    opacity: 0.1;
+    font-size: 4.5rem;
+    @include media-breakpoint-down(lg) {
+      display: none;
+    }
+  }
+}

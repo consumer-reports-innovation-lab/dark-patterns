@@ -94,12 +94,71 @@
 }
 
 // Text utilities
+.font-primary {
+  font-family: "Dela Gothic One", cursive;
+}
+.font-secondary {
+  font-family: "Averta", sans-serif;
+}
+
+.text-bold {
+  font-weight: 600;
+}
+
 .text-nocase {
   text-transform: none !important;
 }
 
 .text-underline {
   text-transform: underline !important;
+}
+
+.text-hero {
+  font-size: 4rem;
+}
+.text-small {
+  font-size: 1rem;
+  p {
+    font-size: 1rem;
+  }
+}
+.callout {
+  border-left: 0.5rem solid $primary;
+  padding-left: 20px;
+}
+
+.highlighter {
+  padding: 0 8px;
+  margin: auto 5px;
+  position: relative;
+  animation: highlight 0.75s 0.5s forwards cubic-bezier(0.95, 0.05, 0.795, 0.035);
+}
+
+.back-btn {
+  color: $black;
+  font-family: "Dela Gothic One", cursive;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  position: relative;
+  padding-left: 12px;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 2px;
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-right: 5px solid $primary;
+    transition: 0.2s;
+  }
+  &:hover {
+    color: $primary;
+    &::before {
+      transform: translateX(-5px);
+    }
+  }
 }
 
 // Layout Utilities
@@ -127,6 +186,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.content-center {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
 }
 
 // Interesting layout solution for responsive elements
@@ -404,4 +469,111 @@
     animation-timing-function: linear;
     animation-iteration-count: infinite;
   }
+}
+
+// Cards
+.card {
+  height: 100%;
+
+  .card-body {
+    padding: 0px;
+    box-shadow: 2px 3px 24px #0000001d;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    .card-date {
+      font-size: 0.875rem;
+      color: $gray-700;
+      text-align: right;
+      margin: 1rem 1.5rem -1.25rem 0rem;
+    }
+    .card-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      padding: 2rem 1.75rem 0rem 1.75rem;
+      margin-bottom: 0px;
+      color: $black;
+    }
+    .card-text {
+      font-size: 1.125rem;
+      padding: 1rem 1.75rem;
+      color: $black;
+    }
+    .card-link {
+      padding: 1rem 1.5rem;
+      font-size: 0.875rem;
+      display: flex;
+      margin-top: auto;
+      align-self: flex-end;
+      width: 100%;
+      color: $black;
+      background-color: $primary;
+      font-family: "Dela Gothic One", cursive;
+      text-transform: uppercase;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        z-index: -1;
+        right: 0;
+        bottom: 0;
+        margin: 0 auto;
+        height: 300px;
+        width: 100%;
+        box-shadow: inset 0px 0.01px 0px 0px $primary;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 47px;
+        margin: 0 auto;
+        height: 2px;
+        width: 88%;
+        box-shadow: inset 0.01px 0px 0px 0px $black;
+      }
+      &:hover {
+        &::before {
+          animation: card-highlight 1.5s forwards;
+        }
+        &::after {
+          animation: btn-highlight 1s 0.25s forwards;
+        }
+      }
+    }
+  }
+}
+.list-icon {
+  min-width: 50px;
+  max-width: 50px;
+}
+.icon-list {
+  list-style: none;
+  padding-left: 0px;
+  .gatsby-image-wrapper {
+    margin-right: 1rem;
+  }
+  li {
+    display: flex;
+    align-items: center;
+    font-family: "Averta", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-transform: none;
+    margin: 1.5rem 0;
+  }
+}
+
+.tag {
+  color: $white;
+  display: inline-block;
+  padding: 0.5rem 2rem;
+  font-size: 0.875rem;
+  border-radius: 8px;
+  margin-right: 1rem;
+  font-weight: 300;
+  background-color: $gray-700;
 }
