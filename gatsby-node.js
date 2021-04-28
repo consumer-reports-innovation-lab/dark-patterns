@@ -8,7 +8,7 @@ const createExamplePages = async ({ examples, gatsbyUtilities }) =>
       gatsbyUtilities.actions.createPage({
         // Use the WordPress uri as the Gatsby page path
         // This is a good idea so that internal links and menus work 👍
-        path: example.uri,
+        path: `/examples/${example.slug}/`,
 
         // use the blog post template as the page component
         // component: path.resolve(`./src/templates/${post.nodeType}.js`),
@@ -65,11 +65,11 @@ const createCategoryPages = async ({ categories, gatsbyUtilities }) =>
 async function getExamples({ graphql, reporter }) {
   const graphqlResult = await graphql(/* GraphQL */ `
     query WpPatterns {
-      allWpDarkPattern(sort: { fields: [date], order: DESC }) {
+      allWpExample(sort: { fields: [date], order: DESC }) {
         edges {
           example: node {
             id
-            uri
+            slug
           }
           next {
             id
@@ -90,7 +90,7 @@ async function getExamples({ graphql, reporter }) {
     return
   }
 
-  const examples = graphqlResult.data.allWpDarkPattern.edges
+  const examples = graphqlResult.data.allWpExample.edges
 
   return examples
 }

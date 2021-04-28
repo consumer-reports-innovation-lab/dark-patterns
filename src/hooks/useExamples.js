@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 export const useExamples = () => {
   const data = useStaticQuery(graphql`
       query Examples {
-        allWpDarkPattern(sort: {order: DESC, fields: date}) {
+        allWpExample(sort: {order: DESC, fields: date}) {
           edges {
             node {
               id
@@ -14,7 +14,7 @@ export const useExamples = () => {
       }
     `
   )
-  const examples = data.allWpDarkPattern.edges
+  const examples = data.allWpExample.edges
 
   return { examples }
 }

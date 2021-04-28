@@ -1,16 +1,19 @@
 import React from "react"
 import { Link } from "gatsby"
 import CategoryCard from "../components/categories/CategoryCard"
+import { useCategories } from '../hooks/useCategories'
 
 const CategoriesPage = () => {
-  const categories = [
-    {
-      slug: "bias-discrimination",
-      name: "Bias & Discrimination",
-      description: "A person who contributes user data to a product or service experiences unfair impacts based on demographic identifiers such as age, race, and gender.",
-      url: "/category/bias-discrimination"
-    }
-  ]
+  const { categories } = useCategories()
+  console.log(categories)
+  // const categories = [
+  //   {
+  //     slug: "bias-discrimination",
+  //     name: "Bias & Discrimination",
+  //     description: "A person who contributes user data to a product or service experiences unfair impacts based on demographic identifiers such as age, race, and gender.",
+  //     url: "/category/bias-discrimination"
+  //   }
+  // ]
   return (
     <>
       <section>
@@ -26,7 +29,7 @@ const CategoriesPage = () => {
               <Link to="/report" className="btn btn-primary">
                 Report a Pattern
               </Link>
-              <Link to="/shame" className="btn btn-primary">
+              <Link to="/sightings" className="btn btn-primary">
                 Wall of Shame
               </Link>
             </div>
@@ -38,10 +41,12 @@ const CategoriesPage = () => {
         <div className="container">
           <div className="row">
             {categories && categories.map(category => {
+              if (category.node.name === "Uncategorized") return
+              const { id } = category.node
 
               return (
-                <div key={category.slug} className="col-12 col-md-6 col-lg-4">
-                  <CategoryCard category={category} />
+                <div key={id} className="col-12 col-md-6 mb-4">
+                  <CategoryCard category={category.node} />
                 </div>
               )
             })}

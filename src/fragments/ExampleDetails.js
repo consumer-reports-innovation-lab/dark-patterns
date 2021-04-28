@@ -1,15 +1,15 @@
 import { graphql } from "gatsby"
 
 export const ExampleDetails = graphql`
-  fragment ExampleDetails on WpDarkPattern {
+  fragment ExampleDetails on WpExample {
     id
     title
     uri
     date(formatString: "MMMM DD, YYYY")
     patternAttributes {
-      describeThisDarkPatternOptional
+      affiliatedCompany
+      description
       industry
-      sourceLink
     }
     featuredImage {
       node {

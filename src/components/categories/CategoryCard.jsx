@@ -3,14 +3,14 @@ import PropTypes from 'prop-types'
 import { Link } from "gatsby"
 
 const CategoryCard = ({ category, className }) => {
-  const {name, description, url} = category
+  const {name, description, uri} = category
 
   return (
     <div className={`card ${className}`}>
       <div className="card-body">
         <p className="card-title">{name}</p>
         <p className="card-text">{description}</p>
-        <Link to={url} className="card-link">Explore This Dark Pattern</Link>
+        <Link to={uri} className="card-link">Explore This Dark Pattern</Link>
       </div>
     </div>
   )

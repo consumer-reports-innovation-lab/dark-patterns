@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import parse from "html-react-parser"
 import CTA from '../components/about/CTA'
 
 const Category = ({ data: { category } }) => {
@@ -26,62 +27,41 @@ const Category = ({ data: { category } }) => {
         </div>
       </section>
 
-      <section className="bg-light">
+      <section className="bg-light category-example">
         <div className="container">
-          {imageData ? (
-            <div className="row">
-              <div className="col-12 col-lg-6">
+          <div className="row align-items-center">
+            <div className="col-12 col-lg-6">
+              {imageData ? (
                 <GatsbyImage
                   image={imageData}
                   alt={`${name} Example`}
                   className="img-fluid"
                 />
-              </div>
-              <div className="col-12 col-lg-6">
-                <div className="p-5 border-left">
-                  {description}
-                </div>
-              </div>
+              ) : (
+                // TODO: Replace with placeholder from comp
+                <img src="https://via.placeholder.com/800/000/000" alt="" className="img-fluid" />
+              )}
             </div>
-          ) : (
-            <div>Need Image Data...</div>
-          )}
-
-        </div>
-      </section>
-
-      <section>
-        <div className="container">
-          <div className="row">
-            <div className="col-12">
-              <h2>Sightings</h2>
+            <div className="col-12 col-lg-6">
+              <div className="p-5 border-start border-5 border-primary">
+                {description ? (
+                  <p>{parse(description)}</p>
+                ) : (
+                  <p>This app asks to collect data, but does not offer a way for the user to decline data collection.</p>
+                )}
+              </div>
             </div>
           </div>
-          {examples && examples.length > 0 ? (
-            <div className="row">
-              {examples.map(example => {
-                return (
-                  <div className="col-12 col-md-4 my-4">
-                    <ExampleCard example={example} className="card-light" />
-                  </div>
-                )
-              })
-              }
-            </div>
-          ) : (
-            <div className="row">
-              <div className="col-12">
-                <div className="alert alert-warning">
-                  <h4 className="text-dark">There are no sightings associated with this category.</h4>
-                </div>
-              </div>
-            </div>
-          )}
         </div>
       </section>
       {examples && examples.length > 0 ? (
         <section>
           <div className="container">
+            <div className="row">
+              <div className="col-12">
+                <h2>Sightings</h2>
+              </div>
+            </div>
             <div className="row">
               {examples.map(example => {
                 return (
@@ -94,17 +74,8 @@ const Category = ({ data: { category } }) => {
           </div>
         </section>
       ) : (
-        <section className="bg-dark">
-          <div className="container">
-            <div className="row">
-              <div className="col-12">
-
-              </div>
-            </div>
-          </div>
-        </section>
+        <CTA />
       )}
-
     </>
   )
 }
@@ -127,7 +98,7 @@ export const pageQuery = graphql`
         }
       }
       examples: children {
-        ... on WpDarkPattern {
+        ... on WpExample {
           ...ExampleDetails
         }
       }

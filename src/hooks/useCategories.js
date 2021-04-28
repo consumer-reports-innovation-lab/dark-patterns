@@ -7,6 +7,7 @@ export const useCategories = () => {
           edges {
             node {
               id
+              uri
               name
               description
               parentId
