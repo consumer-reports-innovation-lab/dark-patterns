@@ -40,7 +40,7 @@ const industryExamples = [
     slug: "education",
     name: "Education",
     description: "Online learning platforms, children’s games with social media components, videoconferencing systems for educational purposes",
-    exampleCopy: "Websites that prey on students struggling to understand course material with the promise of answers to their questions. But to get the answers students are forced to download their app — the student cannot find the answer without downloading and/or paying for the service.",
+    exampleCopy: "An online social learning platform for kids that shares their personal profile details (including full name, age, and location) to other learners on the platform by default. ",
     imageSrc: "/img/home-example.png",
     link: "/"
   }
@@ -55,7 +55,7 @@ const IndustryExamples = () => {
           <div className="col-12 col-md-10 text-center">
             <div className="p-5 pt-0">
               <h2>DARK PATTERNS ARE EVERYWHERE</h2>
-              <p>Dark patterns are common in websites and apps we use everyday, but they’re hard to spot because they’re designed to deceive us. Through secretly obtaining personal information and making us do things we don’t want to do, dark patterns cause serious harm.</p>
+              <p>Dark patterns are common in websites and apps we use everyday, but they’re sometimes hard to spot because they’re designed to deceive us. Through secretly obtaining personal information and making us do things we don’t want to do, dark patterns can create inconveniences or even serious harms.</p>
               <p className="lead mt-4"><strong>Check out a few real-life examples below.</strong></p>
             </div>
           </div>

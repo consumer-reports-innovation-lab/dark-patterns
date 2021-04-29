@@ -6,13 +6,16 @@ const CategoryCard = ({ category, className }) => {
   const {name, description, uri} = category
 
   return (
+    <Link to={uri} draggable="false" >
     <div className={`card ${className}`}>
       <div className="card-body">
         <p className="card-title">{name}</p>
         <p className="card-text">{description}</p>
-        <Link to={uri} className="card-link">Explore This Dark Pattern</Link>
+        <p className="card-link">Explore This Dark Pattern</p>
+
       </div>
     </div>
+    </Link>
   )
 }
 

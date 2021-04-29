@@ -34,11 +34,11 @@ const Partners = () => {
           )
         })} */}
 
-        <div className="col-4 my-5">
-            <img src="/img/cr-id.svg" />
+        <div className="col-4 my-5 d-flex">
+            <img src="/img/cr-id.svg" className="img-fluid" />
         </div>
         <div className="col-4 my-5">
-            <img src="/img/dp-id.svg" />
+            <img src="/img/dp-id.svg" className="img-fluid"  />
         </div>
       </div>
     </div>

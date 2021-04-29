@@ -11,13 +11,7 @@ const OurPurpose = () => {
           <div className="col-12 col-md-6 col-lg-6 mb-5 pb-5">
             <h2>Our Purpose</h2>
             <p>
-              The Dark Patterns Tip Line is a platform that allows people to
-              submit deceptive designs they see in everyday digital products
-              and services. Through crowdsourcing human stories of digital
-              manipulation and amplifying people’s voices, we will raise
-              awareness of the real-life harms that result from deceptive
-              designs. Your stories and screenshots will help pressure
-              lawmakers to hold companies accountable for online abuse.
+              The Dark Patterns Tip Line is a platform that allows people to submit deceptive designs they see in everyday digital products and services. Through crowdsourcing human stories of digital manipulation and amplifying people’s voices, we will raise awareness of the real-life harms that result from deceptive designs. Your stories and screenshots will help pressure policymakers to hold companies accountable for their dishonest and harmful practices.
               </p>
             <Link to="/about" className="btn btn-primary">
               About Us
@@ -63,8 +57,7 @@ const OurPurpose = () => {
                 <div className="text-small">
                   <h4>Empower</h4>
                   <p>
-                    Empower policymakers and advocates with evidence that
-                    illustrates real-life harms of deception online.
+                    mpower policymakers and advocates with evidence that illustrates real-life harms of deception online.
                     </p>
                 </div>
               </li>
