@@ -4,7 +4,7 @@ const PatternForm = () => {
   const iFrameSrc = 'https://staging-darkpatterns.kinsta.cloud/'
 
   return (
-    <section>
+    <section className="pb-0">
       <div className="container">
         <div className="row">
           <div className="col-12 col-md-8">
@@ -27,14 +27,26 @@ const PatternForm = () => {
         <div className="row mt-5">
           <div className="col-12">
 
-            <div className="bg-iframe aspect-5x7" >
+            {/* <div className="bg-iframe aspect-5x7" >
             <iframe  src={iFrameSrc} title="Submit a dark pattern tip" />
-            </div>
+            </div> */}
+
+            <iframe  src={iFrameSrc} title="Submit a dark pattern tip" width="100%"/>
+
+
           </div>
         </div>
       </div>
     </section>
+
+
   );
 };
 
 export default PatternForm;
+
+
+
+
+
+

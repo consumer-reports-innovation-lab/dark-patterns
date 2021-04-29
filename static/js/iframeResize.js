@@ -1,6 +1,4 @@
 /*
-https://jacobfilipp.com/iframe-height-autoresize-crossdomain/
-
 MIT License
 
 Copyright (c) 2019 Jacob Filipp
@@ -36,25 +34,25 @@ SOFTWARE.
 // event.source - a reference to the 'window' object that sent the message
 function gotResizeMessage(event)
 {
-	//console.log( "got resize message: " + JSON.stringify(event.data))
-	
+	console.log( "got resize message: " + JSON.stringify(event.data))
+
 	var matches = document.querySelectorAll('iframe'); // iterate through all iFrames on page
 	for (i=0; i<matches.length; i++)
 	{
 		if( matches[i].contentWindow == event.source ) // found the iFrame that sent us a message
 		{
-			//console.log("found iframe that sent a message: " + matches[i].src)
-				
+			console.log("found iframe that sent a message: " + matches[i].src)
+
 			//matches[i].width = Number( event.data.width )	 <--- we do not do anything with the page width for now
 			matches[i].height = Number( event.data.height )
-			
+
 			return 1;
 		}
 	}
 }
-	    
+
 document.addEventListener("DOMContentLoaded", function(){
-	
+
 	window.addEventListener("message", gotResizeMessage, false)
-	
+
 }); //on DOM ready
