@@ -24,7 +24,8 @@ h1,
   text-transform: uppercase;
   color: $black;
   font-size: 3rem;
-  line-height: 1.4;
+  line-height: 1.1;
+  margin-bottom: 1.75rem;
 }
 
 h2,
@@ -46,13 +47,14 @@ h4,
 .h4 {
   font-family: "Dela Gothic One", cursive;
   text-transform: uppercase;
-  font-size: 0.875rem;
+  font-size: 1.2rem;
 }
 
 p {
   font-weight: 300;
   font-size: 1.375rem;
   line-height: 1.875rem;
+  margin-bottom: 1.4rem;
 }
 
 em {
@@ -61,7 +63,4 @@ em {
 
 i {
   letter-spacing: 0;
-}
-
-.lead {
 }

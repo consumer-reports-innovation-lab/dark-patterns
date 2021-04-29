@@ -39,12 +39,11 @@ const Category = ({ data: { category } }) => {
                   className="img-fluid"
                 />
               ) : (
-                // TODO: Replace with placeholder from comp
-                <img src="https://via.placeholder.com/800/000/000" alt="" className="img-fluid" />
+                <img src="/img/placeholder-example-interior.png" alt="" className="img-fluid" />
               )}
             </div>
             <div className="col-12 col-lg-6">
-              <div className="p-5 border-start border-5 border-primary">
+              <div className="p-5 border-start border-5 border-primary my-5">
                 {description ? (
                   <p>{parse(description)}</p>
                 ) : (

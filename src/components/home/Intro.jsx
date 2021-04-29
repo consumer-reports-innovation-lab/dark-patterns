@@ -11,15 +11,12 @@ const Intro = () => {
             <h1 className="text-hero">Dark Patterns Tip Line</h1>
             <p>
               Every day, we’re exploited for profit through{" "}
-              <strong>dark patterns</strong>: design tactics used in websites
-                and apps to trick you into doing things you never meant to do.
+              <strong>dark patterns</strong>: design tactics used in websites and apps to persuade you into doing things you probably would not do otherwise.
               </p>
             <p className="text-small">
               <strong>
-                We need to take a stand against dark patterns — and you can
-                help. Join us as we fight back against companies using
-                manipulative dark patterns to steal our private information,
-                money, and time. You deserve respect, online and off.
+                We need to take a stand against dark patterns—and you can help by reporting a dark pattern today. It will help us fight back against companies using manipulative dark patterns to take our private information, money, and time. You deserve respect, online and off.
+
                 </strong>
             </p>
 

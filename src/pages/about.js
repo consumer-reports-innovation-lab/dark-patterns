@@ -49,7 +49,7 @@ const AboutPage = () => {
             <div className="col-4  d-none d-lg-flex justify-content-center">
               <div className="sticky pt-5">
                 <h3 className="">On This Page</h3>
-                <Scrollspy items={['about', 'our-values', 'team']} currentClassName="active" className="navbar about-nav" >
+                <Scrollspy items={['about', 'our-values', 'team']} offset={-50} currentClassName="active" className="navbar about-nav" >
                   <li className="nav-item"><a className="nav-link" href="#about">About</a></li>
                   <li className="nav-item"><a className="nav-link" href="#our-values">Our Values</a></li>
                   <li className="nav-item"><a className="nav-link" href="#team">Team</a></li>

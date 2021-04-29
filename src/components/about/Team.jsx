@@ -19,7 +19,7 @@ const Team = () => {
               return (
                 <div key={id} className="col-12 col-md-6 my-4">
                   <h3 className="text-dark">{title}</h3>
-                  <p>{organization} {jobTitle}</p>
+                  <p>{jobTitle} {organization} </p>
                 </div>
               )
             })}
