@@ -661,7 +661,20 @@
     }
   }
   &.react-tabs__tab--selected {
-    // color: $primary !important;
-    // font-size: 5rem !important;
+    &::after {
+      content: "";
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+
+      border-top: 8px solid $primary;
+      position: absolute;
+      bottom: -0.5rem;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }
