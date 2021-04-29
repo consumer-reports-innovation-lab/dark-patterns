@@ -66,7 +66,7 @@ const IndustryExamples = () => {
                   const { slug, name } = example
                   return (
                     <Tab
-                    className="btn btn-link tab-nav-link"
+                    className=" tab-nav-link"
                       key={`${slug}-button`}
                     >
                       {name}

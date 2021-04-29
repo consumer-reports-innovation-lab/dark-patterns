@@ -9,20 +9,25 @@
   padding: 0.5rem 1.5rem;
   position: relative;
   border: 0px;
+  overflow: hidden;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    height: 3px;
+    width: 100%;
+    background-color: $black;
+    transform: translateX(-100%);
+    transition: 0.5s;
+  }
   &:hover,
   &:focus,
   &:active {
-    opacity: 1 !important;
     &::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      margin: 0 auto;
-      height: 3px;
-      width: 100%;
-      animation: btn-highlight 1s forwards;
+      transform: translateX(0);
     }
   }
 }
