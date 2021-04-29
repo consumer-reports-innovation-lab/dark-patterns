@@ -9,7 +9,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  background-color: $black;
+
   overflow: hidden;
   &.aspect-1x1 {
     padding-top: 100%;
@@ -513,41 +513,6 @@
       font-family: "Dela Gothic One", cursive;
       text-transform: uppercase;
       text-align: center;
-      // &::before {
-      //   content: "";
-      //   position: absolute;
-      //   left: 0;
-      //   z-index: -1;
-      //   right: 0;
-      //   bottom: 0;
-      //   margin: 0 auto;
-      //   height: 350px;
-      //   width: 100%;
-      //   box-shadow: inset 0px 0.01px 0px 0px $primary;
-      //   -webkit-backface-visibility: hidden;
-      //   backface-visibility: hidden;
-      // }
-      // &::after {
-      //   content: "";
-      //   position: absolute;
-      //   left: 0;
-      //   right: 0;
-      //   bottom: 47px;
-      //   margin: 0 auto;
-      //   height: 2px;
-      //   width: 88%;
-      //   box-shadow: inset 0.01px 0px 0px 0px $black;
-      //   -webkit-backface-visibility: hidden;
-      //   backface-visibility: hidden;
-      // }
-      &:hover {
-        &::before {
-          animation: card-highlight 1.5s forwards;
-        }
-        &::after {
-          animation: btn-highlight 1s 0.25s forwards;
-        }
-      }
     }
     &::before {
       content: "";
@@ -557,9 +522,12 @@
       right: 0;
       bottom: 0;
       margin: 0 auto;
-      height: 350px;
+      height: 100%;
       width: 100%;
-      box-shadow: inset 0px 0.01px 0px 0px $primary;
+      transform: translateY(100%);
+      transition: 0.5s;
+      // box-shadow: inset 0px 0.01px 0px 0px $primary;
+      background-color: $primary;
       -webkit-backface-visibility: hidden;
       backface-visibility: hidden;
     }
@@ -578,7 +546,8 @@
     }
     &:hover {
       &::before {
-        animation: card-highlight 1.5s forwards;
+        // animation: card-highlight 1.5s forwards;
+        transform: translateY(0);
       }
       &::after {
         animation: btn-highlight 1s 0.25s forwards;
@@ -651,6 +620,11 @@
   font-weight: 300;
   font-family: "Averta", sans-serif !important;
   text-transform: capitalize !important;
+  list-style: none;
+  position: relative;
+  margin: 0.5rem 1.5rem;
+  text-align: center;
+  cursor: pointer;
   &:hover,
   &:focus {
     color: $black;
@@ -661,16 +635,16 @@
     }
   }
   &.react-tabs__tab--selected {
+    background-color: transparent;
     &::after {
       content: "";
       width: 0;
       height: 0;
       border-left: 10px solid transparent;
       border-right: 10px solid transparent;
-
       border-top: 8px solid $primary;
       position: absolute;
-      bottom: -0.5rem;
+      bottom: -0.75rem;
       left: 0;
       right: 0;
       margin-left: auto;
