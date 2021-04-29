@@ -26,20 +26,5 @@
   .nav-link {
     color: $white;
     position: relative;
-    &:hover,
-    &:focus,
-    &:active {
-      &::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-        bottom: -5px;
-        height: 3px;
-        width: 100%;
-        animation: highlight 0.5s forwards cubic-bezier(0.95, 0.05, 0.795, 0.035);
-      }
-    }
   }
 }

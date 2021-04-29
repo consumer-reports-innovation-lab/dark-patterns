@@ -19,22 +19,32 @@
       transition: 0.5s;
       padding-left: 0px;
       position: relative;
+      overflow: hidden;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: 0 auto;
+        height: 3px;
+        width: 100%;
+        background-color: $primary;
+        transform: translateX(-100%);
+        transition: 0.5s;
+      }
       &:hover {
-        color: $primary;
+        &::before {
+          transform: translateX(0);
+        }
       }
     }
+
     &.active {
       .nav-link {
         &::before {
-          content: "";
-          position: absolute;
-          left: 0;
-          right: 0;
-          margin: 0 auto;
-          bottom: -5px;
-          height: 3px;
-          width: 100%;
-          animation: highlight 1.5s forwards;
+          transform: translateX(0);
         }
       }
     }
