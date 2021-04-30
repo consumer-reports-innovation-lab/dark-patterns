@@ -11,5 +11,14 @@ export const ExampleSummary = graphql`
       description
       summary
     }
+    featuredImage {
+      node {
+        localFile {
+          childImageSharp {
+            gatsbyImageData(quality: 100, layout: FULL_WIDTH)
+          }
+        }
+      }
+    }
   }
 `
