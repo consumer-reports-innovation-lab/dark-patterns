@@ -490,10 +490,21 @@
       text-align: right;
       margin: 1rem 1.5rem -1.25rem 0rem;
     }
+    .card-image {
+      height: 150px;
+      overflow: hidden;
+    }
+    .card-company {
+      font-size: 1rem;
+      font-weight: 300;
+      padding: 2rem 1.75rem 0rem 1.75rem;
+      margin-bottom: 0px;
+      color: $black;
+    }
     .card-title {
       font-size: 1.5rem;
       font-weight: 600;
-      padding: 2rem 1.75rem 0rem 1.75rem;
+      padding: 0rem 1.75rem 0rem 1.75rem;
       margin-bottom: 0px;
       color: $black;
     }
