@@ -652,3 +652,36 @@
     }
   }
 }
+
+.hero-graphic {
+  &::before {
+    content: "";
+    position: absolute;
+    height: 75%;
+    width: 185%;
+    // background-color: $primary;
+    right: -100%;
+    bottom: 0px;
+    box-shadow: inset 0.1px 0px 0px 0px $primary;
+    animation: highlight 0.75s 0.5s forwards cubic-bezier(0.95, 0.05, 0.795, 0.035);
+  }
+  &::after {
+    content: "";
+    width: 120%;
+    height: 150%;
+    background-image: url(/img/phone-placeholder.png);
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    bottom: -100px;
+  }
+}
+
+.magnify {
+  button {
+    cursor: -moz-zoom-in;
+    cursor: -webkit-zoom-in;
+    cursor: zoom-in;
+  }
+}

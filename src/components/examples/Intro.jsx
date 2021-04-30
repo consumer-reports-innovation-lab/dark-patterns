@@ -14,6 +14,7 @@ const Intro = () => {
               </p>
             <Link to="/report" className="btn btn-primary">Report a Pattern</Link>
           </div>
+
         </div>
       </div>
     </section>

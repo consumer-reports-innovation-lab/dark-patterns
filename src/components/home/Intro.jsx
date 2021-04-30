@@ -24,6 +24,10 @@ const Intro = () => {
               Report a Pattern
               </Link>
           </div>
+           <div className="col-12 col-md-6 d-none d-md-block position-relative">
+              <div className="hero-graphic">
+              </div>
+          </div>
         </div>
       </div>
     </section>

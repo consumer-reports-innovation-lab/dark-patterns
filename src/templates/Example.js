@@ -92,7 +92,7 @@ const Example = ({ data: { example } }) => {
 
             </div>
             <div className="col-12 col-md-6">
-              <div>
+              <div className="magnify">
               <ZoomImage overlayBgColorEnd={`rgba(0,0,0,0.7)`}>
                 <GatsbyImage image={getImage(localFile)} alt={title} />
               </ZoomImage>
