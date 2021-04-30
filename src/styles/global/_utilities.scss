@@ -652,3 +652,26 @@
     }
   }
 }
+
+.hero-graphic {
+  &::before {
+    content: "";
+    position: absolute;
+    height: 75%;
+    width: 185%;
+    background-color: $primary;
+    right: -100%;
+    bottom: 0px;
+  }
+  &::after {
+    content: "";
+    width: 120%;
+    height: 150%;
+    background-image: url(/img/phone-placeholder.png);
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    bottom: -100px;
+  }
+}
