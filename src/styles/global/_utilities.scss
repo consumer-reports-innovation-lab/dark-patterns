@@ -677,3 +677,11 @@
     bottom: -100px;
   }
 }
+
+.magnify {
+  button {
+    cursor: -moz-zoom-in;
+    cursor: -webkit-zoom-in;
+    cursor: zoom-in;
+  }
+}
