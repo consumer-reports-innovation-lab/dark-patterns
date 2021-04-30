@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 // import PropTypes from 'prop-types'
 import { Formik, Field, Form } from "formik"
 // import FormikDebug from "../common/utils/FormikDebug"
@@ -10,10 +10,29 @@ import { useCategories } from '../hooks/useCategories'
 import { useExamples } from '../hooks/useExamples'
 import Intro from '../components/examples/Intro'
 import ExampleCard from "../components/examples/ExampleCard"
+import { objectToArray } from '../common/utils/helpers'
 
 const ExamplesPage = () => {
   const { categories } = useCategories()
   const { examples } = useExamples()
+  const [filteredExamples, setFilteredExamples] = useState([])
+  const [activeFilters, setActiveFilters] = useState([])
+
+  useEffect(() => {
+    const filtered = examples.filter(example => {
+      const categoryIds = example.node.categories.nodes.map(node => node.id)
+      return activeFilters.some(r => categoryIds.indexOf(r) >= 0)
+    })
+
+    !activeFilters.length ? setFilteredExamples(examples) : setFilteredExamples(filtered)
+
+  }, [examples, activeFilters])
+
+  const updateFilters = ({ name, checked }) => {
+    const newFilters = checked ? [...activeFilters, name] : activeFilters.filter(f => f !== name)
+
+    setActiveFilters(newFilters)
+  }
 
   return (
     <>
@@ -47,9 +66,10 @@ const ExamplesPage = () => {
                               component={SwitchInput}
                               // toggle
                               hint={description}
-                              onChange={(e, value) =>
+                              onChange={(e, value) => {
                                 setFieldValue(id, value.checked)
-                              }
+                                updateFilters(value)
+                              }}
                               label={name}
                             />
                           </li>
@@ -64,7 +84,7 @@ const ExamplesPage = () => {
 
             <div className="col-12 col-md-8">
               <div className="row">
-                {examples && examples.map(example => {
+                {filteredExamples && filteredExamples.map(example => {
                   const { id } = example.node
                   return (
                     <div key={id} className="col-12 col-lg-6 my-4">
