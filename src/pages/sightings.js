@@ -38,7 +38,7 @@ const ExamplesPage = () => {
                     <ul className="list-of-harms">
                       {categories && categories.map(category => {
                         const { id, name, description } = category.node
-
+                        if (name === "Uncategorized") return
                         return (
                           <li key={id}>
                             <Field
@@ -67,7 +67,7 @@ const ExamplesPage = () => {
                 {examples && examples.map(example => {
                   const { id } = example.node
                   return (
-                    <div key={id} className="col-12 col-md-6 my-4">
+                    <div key={id} className="col-12 col-lg-6 my-4">
                       <ExampleCard example={example.node} />
                     </div>
                   )
