@@ -45,7 +45,7 @@ const ExamplesPage = () => {
             </div>
           </div> */}
           <div className="row">
-            <div className="col-12 col-md-4">
+            <div className="col-12 col-md-4 col-lg-3">
               <Formik
                 enableReinitialize
                 initialValues={{}}
@@ -82,12 +82,12 @@ const ExamplesPage = () => {
               </Formik>
             </div>
 
-            <div className="col-12 col-md-8">
+            <div className="col-12 col-md-8  col-lg-9">
               <div className="row">
                 {filteredExamples && filteredExamples.map(example => {
                   const { id } = example.node
                   return (
-                    <div key={id} className="col-12 col-lg-6 my-4">
+                    <div key={id} className="col-12 col-lg-6 col-xxl-4 my-4">
                       <ExampleCard example={example.node} />
                     </div>
                   )
