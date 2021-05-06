@@ -1,32 +1,3 @@
-// Selects
-.styled-select {
-  position: relative;
-  font-family: $font-family-base;
-  width: auto;
-  border-radius: 20px;
-  border: 1px solid $gray-600;
-  background: $white;
-  min-width: 50%;
-  padding: 7px;
-
-  select {
-    background: transparent;
-    border: none;
-    color: $gray-600;
-    width: 100%;
-  }
-  &.square-select {
-    border-radius: 0;
-    padding: 13px 7px;
-    margin: 10px 0;
-    border: 1px solid $gray-400;
-    font-weight: 100;
-    select {
-      color: $gray-400;
-    }
-  }
-}
-
 // Checklist
 [type="radio"]:checked,
 [type="radio"]:not(:checked) {
@@ -109,47 +80,66 @@
   }
 }
 
-.gravityform {
-  margin-bottom: 40px;
-  .gform_fields {
-    padding: 0;
-    li {
-      list-style: none;
-      margin-bottom: 10px;
-      label {
-        font-size: 12px;
-        text-transform: uppercase;
-        font-weight: bold;
-        margin-bottom: 0px;
-      }
-      input,
-      textarea {
-        border: 1px solid grey;
-        width: 100%;
-        max-width: 300px;
-      }
-      textarea {
-        height: 100px;
-      }
-    }
-    .gravityform__error_message {
-      color: red;
-      font-size: 12px;
+.form-group {
+  display: flex;
+  align-items: flex-start;
+}
+
+.form-hint {
+  width: 40%;
+  padding: 0.5rem 1rem;
+  margin-left: 2rem;
+  margin-top: -1rem;
+  border-left: 4px solid $primary;
+  opacity: 0;
+  @include transition();
+}
+
+.form-control {
+  &:focus {
+    & + .form-hint {
+      opacity: 1;
     }
   }
-  .gform_footer {
-    .gravityform__button {
-      color: #ffffff;
-      background-color: darkolivegreen;
-      padding: 8px 25px;
-      font-size: 12px;
-      text-transform: uppercase;
-      font-weight: bold;
-      border-radius: 5px;
-      border: none;
-      &:hover {
-        background-color: olivedrab;
-      }
+}
+
+.select-container {
+  width: 100%;
+  .select__placeholder {
+    font-size: 14px;
+    font-weight: 300;
+    margin: 0;
+  }
+  .select__value-container {
+    padding: 0;
+  }
+  .select__control {
+    border: 0;
+    border-radius: 0;
+    background-color: $light;
+    color: $black;
+    padding: 0.5rem 1.25rem;
+  }
+  .select__control--is-focused {
+    outline: none;
+    box-shadow: none;
+    border: 0;
+    &:hover {
+      border: 0;
+    }
+  }
+  .select__menu,
+  .select__menu-list {
+    border-radius: 0;
+    border: 0;
+  }
+  .select__option {
+    &.select__option--is-focused {
+      background-color: rgba($primary, 0.5);
+    }
+    &.select__option--is-selected {
+      background-color: rgba($primary, 1);
+      color: $black;
     }
   }
 }

@@ -72,3 +72,19 @@ export function getElementParseOptions() {
     }
   })
 }
+
+export function sortOptions(arr) {
+  const options = arr.map(item => {
+    const { id, name } = item.node
+
+    return {
+      value: id,
+      label: name === 'Uncategorized' ? 'Other' : name
+    }
+  })
+
+  const i = options.findIndex(o => o.label === "Other")
+  const newArray = options.concat(options.splice(i, 1))
+
+  return newArray
+}

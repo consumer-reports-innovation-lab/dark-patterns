@@ -2,19 +2,18 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Hint from './hint'
 
-const Label = ({ hint, label }) => {
-
+const label = ({ hint, label }) => {
   return (
-    <label className={label ? '' : 'sr-only'}>
-      <span>{label}</span>
+    <label className={label ? 'form-label' : 'sr-only'}>
+      <span className="mr-2">{label}</span>
       {hint && <Hint content={hint} />}
     </label>
   )
 }
 
-Label.propTypes = {
+label.propTypes = {
   label: PropTypes.string,
   hint: PropTypes.string
 }
 
-export default Label
+export default label
