@@ -20,7 +20,7 @@ const CategoriesPage = () => {
         <div className="container">
           <div className="row">
             <div className="col-12 col-md-8">
-              <h1>Harms of Dark Patterns</h1>
+              <h1>Harms of<br />Dark Patterns</h1>
               <Link to="/report" className="btn btn-primary">
                 Report a Pattern
               </Link>
