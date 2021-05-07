@@ -14,10 +14,10 @@ import { useIndustries } from '../../hooks/useIndustries'
 import { sortOptions } from '../../common/utils/helpers'
 
 const ValidationSchema = Yup.object().shape({
-  content: Yup.string()
-    .min(10, 'Too Short!')
-    .max(100, 'Too Long!')
-    .required('Required'),
+  // sourceLink: Yup.string()
+  //   .min(10, 'Too Short!')
+  //   .max(100, 'Too Long!')
+  //   .required('Required'),
 })
 
 
@@ -27,19 +27,19 @@ const ExampleForm = () => {
   const industryOptions = sortOptions(industries)
   const categoryOptions = sortOptions(categories)
   const initialValues = {
-    sourceLink: "",
-    affiliatedCompany: "",
-    description: "",
+    source_link: "https://ocupop.com",
+    affiliated_company: "Ocupop",
+    description: "This is an example of a description",
     industry: null,
     category: null,
-    email: ""
+    optional_email: "t@ocupop.com"
   }
 
   const handleSubmit = (values) => {
-    console.log(values)
+    const {industry, category} = values
     try {
       const token = process.env.GATSBY_REST_TOKEN
-      fetch(`${process.env.GATSBY_REST_URL}/posts`, {
+      fetch(`${process.env.GATSBY_REST_URL}/example`, {
         method: "POST",
         headers: {
           'Content-Type': 'application/json',
@@ -47,9 +47,10 @@ const ExampleForm = () => {
           'Authorization': 'Bearer ' + token
         },
         body: JSON.stringify({
-          title: 'Lorem ipsum',
-          content: 'Lorem ipsum dolor sit amet.',
-          status: 'draft'
+          title: `New submission... ${new Date()}`,
+          categories: [category.value],
+          industry: [industry.value],
+          fields: values
         })
       }).then(response => {
         return response.json()
@@ -57,7 +58,7 @@ const ExampleForm = () => {
         console.log(post)
       })
     } catch (error) {
-
+      console.log(error)
     }
   }
 
@@ -70,7 +71,7 @@ const ExampleForm = () => {
         validationSchema={ValidationSchema}
         onSubmit={(values, { resetForm }) => {
           handleSubmit(values)
-          resetForm()
+          // resetForm()
         }}
       >
         {({ values, setFieldValue }) => (
@@ -86,7 +87,7 @@ const ExampleForm = () => {
             /> */}
 
             <Field
-              name="sourceLink"
+              name="source_link"
               type="text"
               component={TextInput}
               placeholder="Enter source link..."
@@ -96,7 +97,7 @@ const ExampleForm = () => {
             />
 
             <Field
-              name="affiliatedCompany"
+              name="affiliated_company"
               type="text"
               component={TextInput}
               placeholder="Enter company name..."
@@ -140,7 +141,7 @@ const ExampleForm = () => {
             />
 
             <Field
-              name="email"
+              name="optional_email"
               type="text"
               component={EmailInput}
               placeholder="Stay informed..."

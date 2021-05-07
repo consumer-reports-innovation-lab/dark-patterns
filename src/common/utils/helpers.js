@@ -75,10 +75,10 @@ export function getElementParseOptions() {
 
 export function sortOptions(arr) {
   const options = arr.map(item => {
-    const { id, name } = item.node
+    const { termTaxonomyId, name } = item.node
 
     return {
-      value: id,
+      value: termTaxonomyId,
       label: name === 'Uncategorized' ? 'Other' : name
     }
   })

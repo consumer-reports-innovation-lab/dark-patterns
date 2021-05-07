@@ -7,6 +7,7 @@ export const useIndustries = () => {
           edges {
             node {
               id
+              termTaxonomyId
               name
               slug
             }
