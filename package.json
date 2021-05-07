@@ -59,6 +59,7 @@
     "react-select": "^4.3.0",
     "react-tabs": "^3.2.2",
     "react-text-mask": "^5.4.3",
+    "react-timeago": "^5.2.0",
     "redux": "^4.0.5",
     "redux-thunk": "^2.3.0",
     "remixicon": "^2.5.0",

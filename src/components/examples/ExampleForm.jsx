@@ -77,14 +77,15 @@ const ExampleForm = () => {
         {({ values, setFieldValue }) => (
           <Form>
 
-            {/* <Field
+            <Field
               name="featuredImage"
               type="text"
               component={FileUpload}
+              multiple
               placeholder="..."
               label="Featured Image"
               className="mb-4"
-            /> */}
+            />
 
             <Field
               name="source_link"
