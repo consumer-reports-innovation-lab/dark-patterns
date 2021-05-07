@@ -2,8 +2,10 @@ import React, { useCallback, useState, useEffect } from 'react'
 // import PropTypes from 'prop-types'
 // import { useSelector } from 'react-redux'
 import { useDropzone } from 'react-dropzone'
+import { createMediaFromFile } from '../wp/wpActions'
 import Label from './label'
 import FilePreview from './FilePreview'
+
 
 // Path within Database for metadata (also used for file Storage path)
 const metaPath = 'assets'
@@ -21,40 +23,10 @@ const FileUpload = ({
   multiple = false,
   form: { errors, touched, setFieldValue },
 }) => {
-  const [filePreviews, setFilePreviews] = useState([])
-  const onDrop = useCallback((acceptedFiles) => {
-    if (acceptedFiles.length) {
-      if (multiple) {
-        const localFiles = acceptedFiles.map((file) =>
-          URL.createObjectURL(file)
-        );
-        setFieldValue(name, acceptedFiles);
-        setFilePreviews(localFiles);
-      } else {
-        setFieldValue(name, acceptedFiles);
-        setFilePreviews([URL.createObjectURL(acceptedFiles[0])]);
-      }
-    }
+
+  const onDrop = useCallback(acceptedFiles => {
+    setFieldValue(name, acceptedFiles)
   }, [storagePath, multiple, name, value, setFieldValue])
-
-  useEffect(() => {
-    // if we have multiple files
-    if (value && value instanceof Array) {
-      const previews = value.map(imageLocation => {
-        console.log("Previews:", imageLocation)
-        // Where are these previews going to be stored?
-        return imageLocation.path
-      })
-      setFilePreviews(previews)
-    }
-    // if we have a single file
-    else if (value && !(value instanceof File)) {
-      console.log(value)
-      const imagePath = []
-
-      setFilePreviews(imagePath)
-    }
-  }, [value])
 
   const {
     getRootProps,
@@ -103,11 +75,11 @@ const FileUpload = ({
             {isFileTooLarge && <div className="text-danger mt-2">File is too large.</div>}
           </div>
         </div>
-        {value && (
-          <div className="card-group">
-            <FilePreview files={value} />
-          </div>
-        )}
+        <div className="card-group">
+          {value && value.map(file => {
+            return <FilePreview key={file.path} file={file} preview={URL.createObjectURL(file)} />
+          })}
+        </div>
       </div>
     </>
   )
