@@ -79,18 +79,43 @@ const IndustryExamples = () => {
                 return (
                   <TabPanel>
                     <div key={slug} className="row mt-4">
-                      <div className="col-12 col-md-6">
-                        <img
-                          src="/img/home-example.png"
-                          alt="placeholder"
-                          className="img-fluid"
-                        />
+                      <div className="col-12 col-lg-7 ">
+
+
+                        <div className="home-example-wrapper">
+
+                          <div className="example-interface">
+                            <p>Sync your contact listto connect with friends!</p>
+                            <span className="example-btn">Start</span>
+                          </div>
+                          <div className="example-callout">
+                            Personal data can be shared with others
+                          </div>
+                          <div className="example-device">
+                            <img
+                              src="/img/examples/iphone-social.webp"
+                              alt=""
+                            />
+                          </div>
+                        </div>
+
+
                       </div>
-                      <div className="col-12 col-md-6 text-center d-flex justify-content-center flex-column">
-                        <h3>{name}</h3>
+                      <div className="col-12 col-lg-5  text-center d-flex justify-content-center flex-column ">
+                        <div className="row">
+                          <div className="col-12 col-md-6 col-lg-12">
+                            <h3>{name}</h3>
+                            <p>{description}</p>
+                          </div>
+                          <div className="col-12 col-md-6 col-lg-12">
+                            <h3 className="mt-5 mt-lg-4">Example</h3>
+                            <p>{exampleCopy}</p>
+                          </div>
+                        </div>
+                        {/* <h3>{name}</h3>
                         <p>{description}</p>
                         <h3 className="mt-4">Example</h3>
-                        <p>{exampleCopy}</p>
+                        <p>{exampleCopy}</p> */}
                       </div>
                     </div>
                   </TabPanel>
