@@ -14,10 +14,10 @@ import { useIndustries } from '../../hooks/useIndustries'
 import { sortOptions } from '../../common/utils/helpers'
 
 const ValidationSchema = Yup.object().shape({
-  // sourceLink: Yup.string()
-  //   .min(10, 'Too Short!')
-  //   .max(100, 'Too Long!')
-  //   .required('Required'),
+  source_link: Yup.string()
+    .min(10, 'Too Short!')
+    .max(100, 'Too Long!')
+    .required('Required'),
 })
 
 
@@ -27,7 +27,7 @@ const ExampleForm = () => {
   const industryOptions = sortOptions(industries)
   const categoryOptions = sortOptions(categories)
   const initialValues = {
-    source_link: "https://ocupop.com",
+    source_link: "",
     affiliated_company: "Ocupop",
     description: "This is an example of a description",
     industry: null,
