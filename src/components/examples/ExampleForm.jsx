@@ -15,10 +15,12 @@ import { useIndustries } from '../../hooks/useIndustries'
 import { sortOptions } from '../../common/utils/helpers'
 
 const ValidationSchema = Yup.object().shape({
-  // sourceLink: Yup.string()
-  //   .min(10, 'Too Short!')
-  //   .max(100, 'Too Long!')
-  //   .required('Required'),
+  source_link: Yup.string()
+    .min(3, 'The URL you entered is too short. Please Enter a URL with more than 3 characters')
+    .max(100, 'The URL you entered is too short. Please Enter a URL with less than 100 characters')
+    .required('Please enter a valid URL'),
+  affiliated_company: Yup.string()
+    .required('Pleaes enter the name of the affiliated company'),
 })
 
 
