@@ -13,7 +13,7 @@ $page-header-height-xl: 117px;
 // Color system
 
 $white: #fff !default;
-$gray-100: #F0F0F0;
+$gray-100: #f0f0f0;
 $gray-200: #e9ecef !default;
 $gray-300: #dee2e6 !default;
 $gray-400: #ced4da !default;
@@ -208,6 +208,7 @@ $grid-breakpoints: (
   md: 768px,
   lg: 992px,
   xl: 1200px,
+  xxl: 1600px,
 ) !default;
 
 // Grid containers
@@ -219,6 +220,7 @@ $container-max-widths: (
   md: 720px,
   lg: 960px,
   xl: 1140px,
+  xxl: 1500px,
 ) !default;
 
 // Grid columns

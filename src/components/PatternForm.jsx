@@ -7,7 +7,7 @@ const PatternForm = () => {
     <section className="pb-0">
       <div className="container">
         <div className="row">
-          <div className="col-12 col-md-8">
+          <div className="col-12 col-md-8 col-xl-7">
             <h1>
               Report a<br />
               Dark Pattern

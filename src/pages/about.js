@@ -36,7 +36,7 @@ const AboutPage = () => {
       <section >
         <div className="container">
           <div className="row">
-            <div className="col-12 col-lg-8">
+            <div className="col-12 col-lg-8 col-xl-7">
               <Intro />
               <hr className="bg-primary my-5" />
               <Goals goals={goals} />
@@ -46,7 +46,7 @@ const AboutPage = () => {
               <Partners />
             </div>
 
-            <div className="col-4  d-none d-lg-flex justify-content-center">
+            <div className="col-4 offset-xl-1  d-none d-lg-flex justify-content-center">
               <div className="sticky pt-5">
                 <h3 className="">On This Page</h3>
                 <Scrollspy items={['about', 'our-values', 'team']} offset={-50} currentClassName="active" className="navbar about-nav" >
