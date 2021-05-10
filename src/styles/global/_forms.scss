@@ -116,7 +116,6 @@
   .upload-icon {
     width: 32px;
     height: 27px;
-
     background-image: url(/img/icons/file-upload.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -139,6 +138,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  p {
+    font-size: 1rem;
+    line-height: 1.4rem;
   }
 }
 

@@ -90,7 +90,7 @@ const ExampleForm = () => {
                 component={FileUpload}
                 multiple
                 placeholder="..."
-                hint="The company, platform, product or service that you noticed doing shady stuff."
+                hint=" If you don’t have an image, that’s OK."
                 label="Featured Image"
                 className="mb-5"
               />
@@ -144,7 +144,7 @@ const ExampleForm = () => {
                 type="text"
                 component={TextArea}
                 placeholder="Describe in detail..."
-                hint="Please explain what you experienced in detail and what harm it caused you. If possible, please explain how we can try to recreate your experience."
+                hint="Please explain what you experienced and what harm it caused you. If possible, please explain how we can try to recreate your experience."
                 label="Describe this dark pattern"
                 className="mb-5"
               />
@@ -154,7 +154,7 @@ const ExampleForm = () => {
                 type="text"
                 component={EmailInput}
                 placeholder="Stay informed..."
-                hint="Enter your email if you would like to stay informed."
+                hint="You can optionally share your email so we can reach out if we have any questions. We won’t ever share your email or use it for any other purpose."
                 label="Email (Optional)"
               />
 
