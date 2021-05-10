@@ -13,8 +13,8 @@ const Example = ({ data: { example } }) => {
     patternAttributes: {
       affiliatedCompany,
       description,
-      industry,
     },
+    industries,
     featuredImage: {
       node: {
         localFile
@@ -24,8 +24,6 @@ const Example = ({ data: { example } }) => {
     categories
 
   } = example
-
-// console.log(localFile)
 
   return (
     <>
@@ -54,7 +52,11 @@ const Example = ({ data: { example } }) => {
                 </div>
                 <div className="col-4">
                   <h4>Industry</h4>
-                  <p className="text-small">{industry}</p>
+                  {industries && industries.nodes.map(industry => {
+                    const { id, name } = industry
+                    return (
+                    <p key={ id } className="text-small">{name}</p>
+                  )})}
                 </div>
               </div>
               <div className="row my-5">

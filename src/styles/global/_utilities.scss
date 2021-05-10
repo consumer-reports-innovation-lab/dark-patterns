@@ -730,7 +730,7 @@
     }
   }
   .example-callout {
-    background-color: $primary;
+    // background-color: $primary;
     font-family: "Dela Gothic One", cursive;
     text-transform: uppercase;
     font-size: 1.5rem;
@@ -741,6 +741,19 @@
     top: 50%;
     transform: translateY(-50%);
     padding: 1rem;
+    overflow: hidden;
+    &::before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      z-index: -1;
+      background-color: $primary;
+      left: 0rem;
+      bottom: 0px;
+      overflow: hidden;
+      transform: translateX(-100%);
+    }
   }
   .example-device {
     img {
@@ -748,6 +761,8 @@
       position: absolute;
       right: -4rem;
       bottom: -3rem;
+      opacity: 0;
+      animation: example-device 1s 1.5s forwards;
     }
   }
 }

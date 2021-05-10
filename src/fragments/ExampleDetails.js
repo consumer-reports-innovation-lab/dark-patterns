@@ -18,6 +18,12 @@ export const ExampleDetails = graphql`
         }
       }
     }
+    industries {
+      nodes {
+        id
+        name
+      }
+    }
     tags {
       nodes {
         id
