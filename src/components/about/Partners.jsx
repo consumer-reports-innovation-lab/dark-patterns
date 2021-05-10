@@ -16,11 +16,10 @@ const Partners = () => {
       <div className="row">
         {partners && partners.map(partner => {
           const {id, title, partnerOptions: {logoImage}} = partner
-          const imageData = getImage(logoImage)
+          const imageData = getImage(logoImage?.localFile)
+
           return (
             <div key={id} className="col-4 my-5">
-              {title}
-              <br/>
               {imageData && (
                 <GatsbyImage
                   image={imageData}
@@ -31,12 +30,6 @@ const Partners = () => {
           )
         })}
 
-        {/* <div className="col-4 my-5 d-flex">
-            <img src="/img/cr-id.svg" className="img-fluid" />
-        </div>
-        <div className="col-4 my-5">
-            <img src="/img/dp-id.svg" className="img-fluid"  />
-        </div> */}
       </div>
     </div>
   )
