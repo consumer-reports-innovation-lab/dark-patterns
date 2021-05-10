@@ -55,25 +55,29 @@ const FileUpload = ({
     <>
       <div className={className}>
         <Label label={label} hint={hint} />
-        <input {...getInputProps()} />
-        <div {...getRootProps({ className: `dropzone ${multiple ? 'isMulti' : ''}` })}>
-          <div className={isDragReject ? 'bg-danger p-5' : 'bg-light p-5'}>
-            <p className="text-center py-2 border border-light shadow bg-mid text-white">
-              {!isDragActive && <span>Drag 'n' drop some files here, or click to select files</span>}
-              {isDragActive
-                && (isDragReject ? (
-                  <span>
-                    {multiple
-                      ? 'Sorry... only certain filetypes are accepted!'
-                      : 'Sorry... only one file please!'
-                    }
-                  </span>
-                ) : (
-                  <span>Drop here ...</span>
-                ))}
-            </p>
-            {isFileTooLarge && <div className="text-danger mt-2">File is too large.</div>}
+        <div className="form-group">
+          <input className="form-control"  {...getInputProps()} />
+          <div  {...getRootProps({ className: `dropzone ${multiple ? 'isMulti' : ''}` })}>
+            <div className={isDragReject ? 'file-upload bg-danger p-5' : 'file-upload p-5'}>
+              <div className="upload-icon"></div>
+              <p className="text-center py-2">
+                {!isDragActive && <span>Drag & Drop your file here<br />Or browse files on your device</span>}
+                {isDragActive
+                  && (isDragReject ? (
+                    <span>
+                      {multiple
+                        ? 'Sorry... only certain filetypes are accepted!'
+                        : 'Sorry... only one file please!'
+                      }
+                    </span>
+                  ) : (
+                    <span>Drop here ...</span>
+                  ))}
+              </p>
+              {isFileTooLarge && <div className="text-danger mt-2">File is too large.</div>}
+            </div>
           </div>
+          <p className="form-hint">{hint}</p>
         </div>
         <div className="card-group">
           {value && value.map(file => {
