@@ -69,7 +69,9 @@ const SelectInput = ({
         //   }
         // })}
         />
-        <p className="form-hint">{hint}</p>
+        <div className="form-hint">
+            <p>{hint}</p>
+          </div>
       </div>
     </div>
   )

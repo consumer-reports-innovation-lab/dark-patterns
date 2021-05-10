@@ -88,31 +88,22 @@
   }
 }
 
-.form-hint {
-  font-size: 1rem;
-  line-height: 1.4rem;
-  width: 50%;
-  padding: 0.5rem 1rem;
-  margin-left: 2rem;
-  display: flex;
-  align-items: center;
-  border-left: 4px solid $primary;
-  opacity: 0;
-  // opacity: 1;
-  @include transition();
-  @media (max-width: 768px) {
-    display: none;
-  }
-}
-
-.form-control,
-.dropzone {
-  &:focus {
-    & + .form-hint {
-      opacity: 1;
-    }
-  }
-}
+// .form-hint {
+//   font-size: 1rem;
+//   line-height: 1.4rem;
+//   width: 50%;
+//   padding: 0.5rem 1rem;
+//   margin-left: 2rem;
+//   display: flex;
+//   align-items: center;
+//   border-left: 4px solid $primary;
+//   opacity: 0;
+//   // opacity: 1;
+//   @include transition();
+//   @media (max-width: 768px) {
+//     display: none;
+//   }
+// }
 
 .dropzone {
   cursor: pointer;
@@ -205,6 +196,37 @@
   &.popup {
     &::before {
       background-color: $primary !important;
+    }
+  }
+}
+
+.form-hint {
+  position: relative;
+  width: 50%;
+  p {
+    position: absolute;
+    font-size: 1rem;
+    line-height: 1.4rem;
+
+    padding: 0.5rem 1rem;
+    margin-left: 2rem;
+    display: flex;
+    align-items: center;
+    border-left: 4px solid $primary;
+    opacity: 0;
+    // opacity: 1;
+    @include transition();
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+}
+
+.form-control,
+.dropzone {
+  &:focus {
+    & + .form-hint p {
+      opacity: 1;
     }
   }
 }

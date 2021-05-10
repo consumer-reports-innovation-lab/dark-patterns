@@ -16,7 +16,9 @@ const TextInput = ({ className, innerRef, hint, type, label, placeholder, requir
             required={required}
             ref={innerRef}
           />
-          <p className="form-hint">{hint}</p>
+          <div className="form-hint">
+            <p>{hint}</p>
+          </div>
         </div>
         {touched[field.name] && errors[field.name] && <div className="invalid-feedback d-inline-block">{errors[field.name]}</div>}
       </div>

@@ -13,7 +13,9 @@ const TextArea = ({ className, label, hint, rows, placeholder, type, field, form
           placeholder={placeholder}
           rows={rows}
           type={type} />
-        <p className="form-hint">{hint}</p>
+        <div className="form-hint">
+            <p>{hint}</p>
+          </div>
       </div>
       {touched[field.name] && errors[field.name] && <span className="invalid-feedback d-inline-block">{errors[field.name]}</span>}
     </div>

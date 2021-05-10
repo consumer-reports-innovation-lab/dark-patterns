@@ -75,7 +75,9 @@ const FileUpload = ({
               {isFileTooLarge && <div className="text-danger mt-2">File is too large.</div>}
             </div>
           </div>
-          <p className="form-hint">{hint}</p>
+          <div className="form-hint">
+            <p>{hint}</p>
+          </div>
         </div>
         <div className="card-group">
           {value && value.map(file => {

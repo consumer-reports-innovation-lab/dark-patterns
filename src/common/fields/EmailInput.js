@@ -18,7 +18,9 @@ const EmailInput = ({ className, hint, type, label, placeholder, required, field
           type={type}
           required={required}
         />
-        <p className="form-hint">{hint}</p>
+        <div className="form-hint">
+            <p>{hint}</p>
+          </div>
       </div>
       {touched[field.name] && errors[field.name] && <div className="invalid-feedback">{errors[field.name]}</div>}
     </div>
