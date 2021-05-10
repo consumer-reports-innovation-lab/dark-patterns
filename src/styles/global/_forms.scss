@@ -91,7 +91,7 @@
 .form-hint {
   font-size: 1rem;
   line-height: 1.4rem;
-  width: 40%;
+  width: 50%;
   padding: 0.5rem 1rem;
   margin-left: 2rem;
   display: flex;
@@ -186,6 +186,25 @@
     &.select__option--is-selected {
       background-color: rgba($primary, 1);
       color: $black;
+    }
+  }
+}
+
+.invalid-feedback {
+  color: black;
+  background-color: $red-100;
+  padding: 0.5rem 1rem;
+  border-radius: 100px;
+  width: auto;
+}
+
+.ui {
+  &.inverted,
+  &.right,
+  &.center,
+  &.popup {
+    &::before {
+      background-color: $primary !important;
     }
   }
 }

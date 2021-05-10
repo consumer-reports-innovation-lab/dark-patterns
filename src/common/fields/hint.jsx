@@ -3,10 +3,10 @@ import PropTypes from 'prop-types'
 import { Popup } from 'semantic-ui-react'
 
 const style ={
-  background: "#000",
+  background: "#fed230",
   opacity:.8,
   borderRadius: 0,
-  color: "#fff",
+  color: "#000",
 }
 
 const FieldHint = ({ content }) => {

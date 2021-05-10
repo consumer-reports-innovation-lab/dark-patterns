@@ -8,6 +8,7 @@ import {
   SelectInput,
   FileUpload,
   EmailInput,
+  SwitchInput,
 } from '../../common/fields'
 // import FormikDebug from '../../common/utils/FormikDebug'
 import { useCategories } from '../../hooks/useCategories'
@@ -37,7 +38,8 @@ const ExampleForm = () => {
     source_link: "",
     affiliated_company: "",
     description: "",
-    optional_email: ""
+    optional_email: "",
+    privacy_policy: false
   }
 
   const handleSubmit = (values) => {
@@ -86,16 +88,27 @@ const ExampleForm = () => {
           {({ values, errors, touched, setFieldValue }) => (
             <Form>
 
-              <Field
-                name="featuredImage"
+            <Field
+                name="affiliated_company"
                 type="text"
-                component={FileUpload}
-                multiple
-                placeholder="..."
-                hint=" If you don’t have an image, that’s OK."
-                label="Featured Image"
+                component={TextInput}
+                placeholder="Enter company name..."
+                hint="The company, platform, product or service that you noticed doing shady stuff."
+                label="Affiliated Company (Required)"
                 className="mb-4"
               />
+
+              <Field
+                name="description"
+                type="text"
+                component={TextArea}
+                placeholder="Describe in detail..."
+                hint="Please explain what you experienced and what harm it caused you. If possible, please explain how we can try to recreate your experience."
+                label="Describe this dark pattern (Required)"
+                className="mb-4"
+              />
+
+
 
               <Field
                 name="source_link"
@@ -107,15 +120,7 @@ const ExampleForm = () => {
                 className="mb-4"
               />
 
-              <Field
-                name="affiliated_company"
-                type="text"
-                component={TextInput}
-                placeholder="Enter company name..."
-                hint="The company, platform, product or service that you noticed doing shady stuff."
-                label="Affiliated Company"
-                className="mb-4"
-              />
+
 
               <Field
                 name="industry"
@@ -142,12 +147,13 @@ const ExampleForm = () => {
               />
 
               <Field
-                name="description"
+                name="featuredImage"
                 type="text"
-                component={TextArea}
-                placeholder="Describe in detail..."
-                hint="Please explain what you experienced and what harm it caused you. If possible, please explain how we can try to recreate your experience."
-                label="Describe this dark pattern"
+                component={FileUpload}
+                multiple
+                placeholder="..."
+                hint=" If you don’t have an image, that’s OK."
+                label="Screenshot Image"
                 className="mb-4"
               />
 
@@ -157,18 +163,31 @@ const ExampleForm = () => {
                 component={EmailInput}
                 placeholder="Stay informed..."
                 hint="You can optionally share your email so we can reach out if we have any questions. We won’t ever share your email or use it for any other purpose."
-                label="Email (Optional)"
+                className="mb-4"
+                label="Email"
               />
+
+              <Field
+                name="privacy_policy"
+                type="checkbox"
+                component={SwitchInput}
+                onChange={(e, value) => setFieldValue('privacy_policy', value.checked)}
+                label=""
+              >
+              <span>By submitting this form, I agree to the terms of <a href="">Consumer Reports’ Privacy Policy and User Agreement.</a></span>
+              </Field>
 
               <button
                 type="submit"
-                className="btn btn-primary my-5">
+                className="btn btn-primary my-5"
+                disabled={ values.privacy_policy ? false : true }
+                >
                   Submit
               </button>
 
               {Object.entries(errors).length > 0 && (
 
-                <ul className="border-start border-danger border-5 text-danger mb-5">
+                <ul className="border-start border-danger border-5 text-danger mb-5 d-none">
                   {Object.entries(errors).map(([key, value], i) => {
                     return <li key={key} className={'text-small'}>{value}</li>
                   })}
