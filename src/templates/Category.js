@@ -66,7 +66,6 @@ const Category = ({ data: { category } }) => {
             <div className="row">
               {examples.nodes.map(example => {
                 if (Object.keys(example).length === 0) return
-
                 return (
                   <div key={example.id} className="col-12 col-md-4 my-4">
                     <ExampleCard example={example} className="card-light" />

@@ -68,12 +68,13 @@ const Example = ({ data: { example } }) => {
                   {parse(description)}
                 </div>
               </div>
+
               <div className="row">
-              <div className="col-12">
+                <div className="col-12">
                   <h4>Source</h4>
                   <p className="text-small">{sourceLink}</p>
                 </div>
-                </div>
+              </div>
 
               <div className="row my-5">
                 <div className="col-12">
