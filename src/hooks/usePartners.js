@@ -11,7 +11,7 @@ export const usePartners = () => {
               logoImage {
                 localFile {
                   childImageSharp {
-                    gatsbyImageData(width: 500, quality: 100, layout: CONSTRAINED)
+                    gatsbyImageData(width: 200, quality: 100, layout: CONSTRAINED)
                   }
                 }
               }

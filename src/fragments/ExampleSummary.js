@@ -10,6 +10,7 @@ export const ExampleSummary = graphql`
       affiliatedCompany
       description
       summary
+      sourceLink
     }
     featuredImage {
       node {
