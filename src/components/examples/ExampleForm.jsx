@@ -9,16 +9,15 @@ import {
   FileUpload,
   EmailInput,
 } from '../../common/fields'
-import FormikDebug from '../../common/utils/FormikDebug'
+// import FormikDebug from '../../common/utils/FormikDebug'
 import { useCategories } from '../../hooks/useCategories'
 import { useIndustries } from '../../hooks/useIndustries'
 import { sortOptions } from '../../common/utils/helpers'
 
 const ValidationSchema = Yup.object().shape({
-  // source_link: Yup.string()
-  //   .min(3, 'The URL you entered is too short. Please Enter a URL with more than 3 characters')
-  //   .max(100, 'The URL you entered is too short. Please Enter a URL with less than 100 characters')
-  //   .required('Please enter a valid URL'),
+  description: Yup.string()
+    .min(3, 'The description you entered is too short. Please Enter a longer description')
+    .required('Please describe the pattern you are submitting'),
   affiliated_company: Yup.string()
     .required('Please enter the name of the affiliated company'),
 })
@@ -31,31 +30,34 @@ const ExampleForm = () => {
   const industryOptions = sortOptions(industries)
   const categoryOptions = sortOptions(categories)
   const initialValues = {
-    title: `New submission... ${new Date().toLocaleDateString("en-US").split("/")}`,
+    title: `New submission... ${new Date().toLocaleDateString("en-US")}`,
     industry: null,
     categories: null,
     featured_media: null,
-    fields: {
-      source_link: "",
-      affiliated_company: "",
-      description: "",
-      optional_email: ""
-    }
+    source_link: "",
+    affiliated_company: "",
+    description: "",
+    optional_email: ""
   }
 
   const handleSubmit = (values) => {
-    const { industry, categories, featuredImage } = values
-    console.log(values)
+    const { industry, categories, featuredImage, source_link, affiliated_company, description, optional_email } = values
+
     try {
       // const token = process.env.GATSBY_REST_TOKEN
       const uploadMedia = createMediaFromFile({ file: featuredImage[0], meta: {} })
 
       uploadMedia.then(media => {
         const uploadDraft = createDraft({
-          ...values,
           featured_media: media.data.id,
           categories: categories ? [categories.value] : [],
           industry: industry ? [industry.value] : [],
+          fields: {
+            source_link,
+            affiliated_company,
+            description,
+            optional_email
+          }
         })
 
         uploadDraft.then(response => {
@@ -81,7 +83,7 @@ const ExampleForm = () => {
             resetForm()
           }}
         >
-          {({ values, errors, setFieldValue }) => (
+          {({ values, errors, touched, setFieldValue }) => (
             <Form>
 
               <Field
@@ -95,7 +97,7 @@ const ExampleForm = () => {
               />
 
               <Field
-                name="fields.source_link"
+                name="source_link"
                 type="text"
                 component={TextInput}
                 placeholder="Enter source link..."
@@ -105,7 +107,7 @@ const ExampleForm = () => {
               />
 
               <Field
-                name="fields.affiliated_company"
+                name="affiliated_company"
                 type="text"
                 component={TextInput}
                 placeholder="Enter company name..."
@@ -139,7 +141,7 @@ const ExampleForm = () => {
               />
 
               <Field
-                name="fields.description"
+                name="description"
                 type="text"
                 component={TextArea}
                 placeholder="Describe in detail..."
@@ -149,7 +151,7 @@ const ExampleForm = () => {
               />
 
               <Field
-                name="fields.optional_email"
+                name="optional_email"
                 type="text"
                 component={EmailInput}
                 placeholder="Stay informed..."
@@ -163,15 +165,16 @@ const ExampleForm = () => {
                   Submit
               </button>
 
-              {errors && (
-                <div className="alert alert-danger border-5">
+              {Object.entries(errors).length > 0 && (
+
+                <ul className="border-start border-danger border-5 text-danger mb-5">
                   {Object.entries(errors).map(([key, value], i) => {
-                    return <p key={key}>{value}</p>
+                    return <li key={key} className={'text-small'}>{value}</li>
                   })}
-                </div>
+                </ul>
               )}
 
-              <FormikDebug />
+              {/* <FormikDebug /> */}
             </Form>
           )}
         </Formik>
