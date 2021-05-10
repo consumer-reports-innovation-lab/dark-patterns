@@ -17,13 +17,14 @@ const Partners = () => {
         {partners && partners.map(partner => {
           const {id, title, partnerOptions: {logoImage}} = partner
           const imageData = getImage(logoImage?.localFile)
-
+          console.log(imageData)
           return (
             <div key={id} className="col-4 my-5">
               {imageData && (
                 <GatsbyImage
                   image={imageData}
                   alt={title}
+                  className="img-fluid"
                 />
               )}
             </div>
