@@ -696,3 +696,58 @@
     cursor: zoom-in;
   }
 }
+
+.home-example-wrapper {
+  position: relative;
+  height: 400px;
+
+  .example-interface {
+    background-color: $black;
+    text-align: center;
+    margin: auto 0 auto 25%;
+    width: 60%;
+    height: 80%;
+    padding: 75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    p {
+      color: $white;
+    }
+    .example-btn {
+      background-color: $white;
+      font-family: "Dela Gothic One", cursive;
+      text-transform: uppercase;
+      padding: 0.5rem 2rem;
+      border-radius: 10px;
+    }
+  }
+  .example-callout {
+    background-color: $primary;
+    font-family: "Dela Gothic One", cursive;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    max-width: 200px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 1rem;
+  }
+  .example-device {
+    img {
+      height: 300px;
+      position: absolute;
+      right: -4rem;
+      bottom: -3rem;
+    }
+  }
+}
