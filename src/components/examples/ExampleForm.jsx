@@ -30,7 +30,6 @@ const ExampleForm = () => {
   const industryOptions = sortOptions(industries)
   const categoryOptions = sortOptions(categories)
   const initialValues = {
-    title: `New submission... ${new Date().toLocaleDateString("en-US")}`,
     industry: null,
     categories: null,
     featured_media: null,
@@ -42,29 +41,37 @@ const ExampleForm = () => {
 
   const handleSubmit = (values) => {
     const { industry, categories, featuredImage, source_link, affiliated_company, description, optional_email } = values
-
+    const draft = {
+      title: `New submission... ${new Date().toLocaleDateString("en-US")}`,
+      categories: categories ? [categories.value] : [],
+      industry: industry ? [industry.value] : [],
+      fields: {
+        source_link,
+        affiliated_company,
+        description,
+        optional_email
+      }
+    }
     try {
-      // const token = process.env.GATSBY_REST_TOKEN
-      const uploadMedia = createMediaFromFile({ file: featuredImage[0], meta: {} })
 
-      uploadMedia.then(media => {
-        const uploadDraft = createDraft({
-          featured_media: media.data.id,
-          categories: categories ? [categories.value] : [],
-          industry: industry ? [industry.value] : [],
-          fields: {
-            source_link,
-            affiliated_company,
-            description,
-            optional_email
-          }
+      if (featuredImage) {
+        const uploadMedia = createMediaFromFile({ file: featuredImage[0], meta: {} })
+
+        uploadMedia.then(media => {
+          const uploadDraft = createDraft({
+            featured_media: media.data.id,
+            ...draft
+          })
+
+          uploadDraft.then(response => {
+            console.log(response)
+            return
+          })
         })
+      }
 
-        uploadDraft.then(response => {
-          console.log(response)
+      createDraft(draft)
 
-        })
-      })
 
     } catch (error) {
       console.log(error)
@@ -90,7 +97,6 @@ const ExampleForm = () => {
                 name="featuredImage"
                 type="text"
                 component={FileUpload}
-                multiple
                 placeholder="..."
                 hint=" If you don’t have an image, that’s OK."
                 label="Featured Image"
