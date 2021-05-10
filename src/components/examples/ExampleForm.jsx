@@ -180,7 +180,7 @@ const ExampleForm = () => {
                 onChange={(e, value) => setFieldValue('privacy_policy', value.checked)}
                 label=""
               >
-              <span className="text-small">By submitting this form, I agree to the terms of <a href="">Consumer Reports’ Privacy Policy and User Agreement.</a></span>
+              <span className="text-small">By submitting this form, I agree to the terms of Consumer Reports’ <a href="https://www.consumerreports.org/cro/customerservice/privacy-policy/highlights/index.htm" target="_blank">Privacy Policy</a> and <a href="https://www.consumerreports.org/cro/2015/01/user-agreement/index.htm" target="_blank">User Agreement.</a></span>
               </Field>
 
               <button
