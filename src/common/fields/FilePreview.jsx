@@ -7,7 +7,7 @@ const FilePreview = ({ file, preview }) => {
   const { name, lastModifiedDate, size } = file
   return (
     <div className={`card mt-5`} style={{ maxWidth: '24rem', margin: '1rem' }}>
-      <button className="btn-close"></button>
+      <button type="button" className="btn-close"></button>
       <img src={preview} className="card-img-top" alt="" />
       <div className="card-footer">
          <p className="py-3 text-small">

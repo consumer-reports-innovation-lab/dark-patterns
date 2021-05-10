@@ -100,6 +100,9 @@
   opacity: 0;
   // opacity: 1;
   @include transition();
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
 .form-control,
