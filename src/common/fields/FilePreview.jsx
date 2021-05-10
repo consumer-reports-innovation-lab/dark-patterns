@@ -6,7 +6,7 @@ import { formatFileSize } from '../utils/helpers'
 const FilePreview = ({ file, preview }) => {
   const { name, lastModifiedDate, size } = file
   return (
-    <div key={`file_${i}`} className={`card`} style={{ maxWidth: '24rem', margin: '1rem' }}>
+    <div className={`card`} style={{ maxWidth: '24rem', margin: '1rem' }}>
       <img src={preview} className="card-img-top" alt="" />
       <div className="card-body">
         <p className="p-3 text-small">

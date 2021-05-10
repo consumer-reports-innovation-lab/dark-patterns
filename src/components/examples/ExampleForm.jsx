@@ -90,6 +90,7 @@ const ExampleForm = () => {
                 component={FileUpload}
                 multiple
                 placeholder="..."
+                hint="The company, platform, product or service that you noticed doing shady stuff."
                 label="Featured Image"
                 className="mb-4"
               />

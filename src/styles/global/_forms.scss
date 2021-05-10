@@ -83,6 +83,9 @@
 .form-group {
   display: flex;
   align-items: flex-start;
+  .dropzone {
+    width: 100%;
+  }
 }
 
 .form-hint {
@@ -95,10 +98,12 @@
   align-items: center;
   border-left: 4px solid $primary;
   opacity: 0;
+  // opacity: 1;
   @include transition();
 }
 
-.form-control {
+.form-control,
+.dropzone {
   &:focus {
     & + .form-hint {
       opacity: 1;
