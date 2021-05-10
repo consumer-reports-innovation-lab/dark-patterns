@@ -13,6 +13,7 @@ const Example = ({ data: { example } }) => {
     patternAttributes: {
       affiliatedCompany,
       description,
+      sourceLink,
     },
     industries,
     featuredImage: {
@@ -46,10 +47,12 @@ const Example = ({ data: { example } }) => {
                   <h4>Company</h4>
                   <p className="text-small">{affiliatedCompany}</p>
                 </div>
-                <div className="col-3">
+
+                <div className="col-4">
                   <h4>Date</h4>
                   <p className="text-small">{date}</p>
                 </div>
+
                 <div className="col-4">
                   <h4>Industry</h4>
                   {industries && industries.nodes.map(industry => {
@@ -65,6 +68,13 @@ const Example = ({ data: { example } }) => {
                   {parse(description)}
                 </div>
               </div>
+              <div className="row">
+              <div className="col-12">
+                  <h4>Source</h4>
+                  <p className="text-small">{sourceLink}</p>
+                </div>
+                </div>
+
               <div className="row my-5">
                 <div className="col-12">
                   <h4>Harm Type(s)</h4>
