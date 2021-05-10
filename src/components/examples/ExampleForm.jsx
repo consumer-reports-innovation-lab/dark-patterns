@@ -9,7 +9,7 @@ import {
   FileUpload,
   EmailInput,
 } from '../../common/fields'
-// import FormikDebug from '../../common/utils/FormikDebug'
+import FormikDebug from '../../common/utils/FormikDebug'
 import { useCategories } from '../../hooks/useCategories'
 import { useIndustries } from '../../hooks/useIndustries'
 import { sortOptions } from '../../common/utils/helpers'
@@ -20,7 +20,7 @@ const ValidationSchema = Yup.object().shape({
   //   .max(100, 'The URL you entered is too short. Please Enter a URL with less than 100 characters')
   //   .required('Please enter a valid URL'),
   affiliated_company: Yup.string()
-    .required('Pleaes enter the name of the affiliated company'),
+    .required('Please enter the name of the affiliated company'),
 })
 
 
@@ -61,35 +61,7 @@ const ExampleForm = () => {
         uploadDraft.then(response => {
           console.log(response)
 
-        }
-
-        )
-
-        // setFeedback(response)
-        // createDraft.then(post => {
-        //   console.log("POST:", post)
-        //   setFeedback(post)
-        // })
-        // fetch(`${process.env.GATSBY_REST_URL}/example`, {
-        //   method: "POST",
-        //   headers: {
-        //     'Content-Type': 'application/json',
-        //     'Accept': 'application/json',
-        //     'Authorization': 'Bearer ' + token
-        //   },
-        //   body: JSON.stringify({
-        //     title: `New submission... ${new Date()}`,
-        //     categories: category ? [category.value] : [],
-        //     industry: industry ? [industry.value] : [],
-        //     featured_media: media.data.id,
-        //     fields: values
-        //   })
-        // }).then(response => {
-        //   // return response.json()
-        //   setFeedback(JSON.stringify(response))
-        // }).then(post => {
-        //   console.log(post)
-        // })
+        })
       })
 
     } catch (error) {
@@ -109,7 +81,7 @@ const ExampleForm = () => {
             resetForm()
           }}
         >
-          {({ values, setFieldValue }) => (
+          {({ values, errors, setFieldValue }) => (
             <Form>
 
               <Field
@@ -185,8 +157,21 @@ const ExampleForm = () => {
                 label="Email (Optional)"
               />
 
-              <button type="submit" className="btn btn-primary">Submit</button>
-              {/* <FormikDebug /> */}
+              <button
+                type="submit"
+                className="btn btn-primary my-5">
+                  Submit
+              </button>
+
+              {errors && (
+                <div className="alert alert-danger border-5">
+                  {Object.entries(errors).map(([key, value], i) => {
+                    return <p key={key}>{value}</p>
+                  })}
+                </div>
+              )}
+
+              <FormikDebug />
             </Form>
           )}
         </Formik>
