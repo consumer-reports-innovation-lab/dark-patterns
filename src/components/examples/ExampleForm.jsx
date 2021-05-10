@@ -172,7 +172,7 @@ const ExampleForm = () => {
                 component={TextArea}
                 placeholder="Describe in detail..."
                 hint="Please explain what you experienced in detail and what harm it caused you. If possible, please explain how we can try to recreate your experience."
-                label="Describe this dark pattern (Optional)"
+                label="Describe this dark pattern"
                 className="mb-4"
               />
 
