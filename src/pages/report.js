@@ -1,10 +1,10 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import PatternForm from '../components/PatternForm'
+// import PropTypes from 'prop-types'
+import PostExample from '../components/examples/PostExample'
 
 const report = () => {
   return (
-    <PatternForm />
+    <PostExample />
   )
 }
 

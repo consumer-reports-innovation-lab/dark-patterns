@@ -66,9 +66,8 @@ const IndustryExamples = () => {
                   const { slug, name } = example
                   return (
                     <Tab
-                    className=" tab-nav-link"
-                      key={`${slug}-button`}
-                    >
+                      className=" tab-nav-link"
+                      key={`${slug}_button`}>
                       {name}
                     </Tab>
                   )
@@ -77,7 +76,7 @@ const IndustryExamples = () => {
               {industryExamples && industryExamples.map(example => {
                 const { slug, name, description, exampleCopy, imageSrc, link } = example
                 return (
-                  <TabPanel>
+                  <TabPanel key={`${slug}_panel`}>
                     <div key={slug} className="row mt-4">
                       <div className="col-12 col-lg-7 ">
 
