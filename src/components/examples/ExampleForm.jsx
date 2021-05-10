@@ -128,7 +128,7 @@ const ExampleForm = () => {
                 component={TextInput}
                 placeholder="Enter source link..."
                 hint="Where should we go to try and recreate your experience?"
-                label="Source Link"
+                label="Source Link (ex. Link to website, app, tweet or post)"
                 className="mb-4"
               />
 
