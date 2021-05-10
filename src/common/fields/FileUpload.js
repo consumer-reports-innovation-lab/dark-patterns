@@ -58,9 +58,10 @@ const FileUpload = ({
         <div className="form-group">
           <input className="form-control"  {...getInputProps()} />
           <div  {...getRootProps({ className: `dropzone ${multiple ? 'isMulti' : ''}` })}>
-            <div className={isDragReject ? 'bg-danger p-5' : 'bg-light p-5'}>
-              <p className="text-center py-2 border border-light shadow bg-mid text-white">
-                {!isDragActive && <span>Drag 'n' drop some files here, or click to select files</span>}
+            <div className={isDragReject ? 'file-upload bg-danger p-5' : 'file-upload p-5'}>
+              <div className="upload-icon"></div>
+              <p className="text-center py-2">
+                {!isDragActive && <span>Drag & Drop your file here<br />Or browse files on your device</span>}
                 {isDragActive
                   && (isDragReject ? (
                     <span>

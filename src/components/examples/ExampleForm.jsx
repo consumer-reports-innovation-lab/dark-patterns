@@ -92,7 +92,7 @@ const ExampleForm = () => {
                 placeholder="..."
                 hint="The company, platform, product or service that you noticed doing shady stuff."
                 label="Featured Image"
-                className="mb-4"
+                className="mb-5"
               />
 
               <Field
@@ -102,7 +102,7 @@ const ExampleForm = () => {
                 placeholder="Enter source link..."
                 hint="Where should we go to try and recreate your experience?"
                 label="Source Link (ex. Link to website, app, tweet or post)"
-                className="mb-4"
+                className="mb-5"
               />
 
               <Field
@@ -112,7 +112,7 @@ const ExampleForm = () => {
                 placeholder="Enter company name..."
                 hint="The company, platform, product or service that you noticed doing shady stuff."
                 label="Affiliated Company"
-                className="mb-4"
+                className="mb-5"
               />
 
               <Field
@@ -124,7 +124,7 @@ const ExampleForm = () => {
                 hint="Choose from the most commonly effected industries."
                 placeholder="Select industry..."
                 label="Industry"
-                className="mb-4"
+                className="mb-5"
               />
 
               <Field
@@ -136,7 +136,7 @@ const ExampleForm = () => {
                 hint="Choose from the categories of harms."
                 placeholder="Select category..."
                 label="What harm did this cause you?"
-                className="mb-4"
+                className="mb-5"
               />
 
               <Field
@@ -146,7 +146,7 @@ const ExampleForm = () => {
                 placeholder="Describe in detail..."
                 hint="Please explain what you experienced in detail and what harm it caused you. If possible, please explain how we can try to recreate your experience."
                 label="Describe this dark pattern"
-                className="mb-4"
+                className="mb-5"
               />
 
               <Field

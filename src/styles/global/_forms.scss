@@ -111,6 +111,37 @@
   }
 }
 
+.dropzone {
+  cursor: pointer;
+  .upload-icon {
+    width: 32px;
+    height: 27px;
+
+    background-image: url(/img/icons/file-upload.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .file-upload {
+    background-image: repeating-linear-gradient(
+        -21deg,
+        #333333,
+        #333333 6px,
+        transparent 6px,
+        transparent 15px,
+        #333333 15px
+      ),
+      repeating-linear-gradient(69deg, #333333, #333333 6px, transparent 6px, transparent 15px, #333333 15px),
+      repeating-linear-gradient(159deg, #333333, #333333 6px, transparent 6px, transparent 15px, #333333 15px),
+      repeating-linear-gradient(249deg, #333333, #333333 6px, transparent 6px, transparent 15px, #333333 15px);
+    background-size: 1px 100%, 100% 1px, 1px 100%, 100% 1px;
+    background-position: 0 0, 0 0, 100% 0, 0 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 .select-container {
   width: 100%;
   .select__placeholder {
