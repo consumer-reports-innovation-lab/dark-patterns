@@ -137,6 +137,7 @@
     border: 0;
   }
   .select__option {
+    text-transform: capitalize;
     &.select__option--is-focused {
       background-color: rgba($primary, 0.5);
     }

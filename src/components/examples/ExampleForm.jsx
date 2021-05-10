@@ -9,16 +9,16 @@ import {
   FileUpload,
   EmailInput,
 } from '../../common/fields'
-import FormikDebug from '../../common/utils/FormikDebug'
+// import FormikDebug from '../../common/utils/FormikDebug'
 import { useCategories } from '../../hooks/useCategories'
 import { useIndustries } from '../../hooks/useIndustries'
 import { sortOptions } from '../../common/utils/helpers'
 
 const ValidationSchema = Yup.object().shape({
-  source_link: Yup.string()
-    .min(3, 'The URL you entered is too short. Please Enter a URL with more than 3 characters')
-    .max(100, 'The URL you entered is too short. Please Enter a URL with less than 100 characters')
-    .required('Please enter a valid URL'),
+  // source_link: Yup.string()
+  //   .min(3, 'The URL you entered is too short. Please Enter a URL with more than 3 characters')
+  //   .max(100, 'The URL you entered is too short. Please Enter a URL with less than 100 characters')
+  //   .required('Please enter a valid URL'),
   affiliated_company: Yup.string()
     .required('Pleaes enter the name of the affiliated company'),
 })
@@ -31,15 +31,15 @@ const ExampleForm = () => {
   const industryOptions = sortOptions(industries)
   const categoryOptions = sortOptions(categories)
   const initialValues = {
-    title: `New submission... ${new Date()}`,
+    title: `New submission... ${new Date().toLocaleDateString("en-US").split("/")}`,
     industry: null,
     categories: null,
     featured_media: null,
     fields: {
-      source_link: "https://ocupop.com",
-      affiliated_company: "Ocupop",
-      description: "This is an example of a description",
-      optional_email: "t@ocupop.com"
+      source_link: "",
+      affiliated_company: "",
+      description: "",
+      optional_email: ""
     }
   }
 
@@ -51,8 +51,6 @@ const ExampleForm = () => {
       const uploadMedia = createMediaFromFile({ file: featuredImage[0], meta: {} })
 
       uploadMedia.then(media => {
-        // console.log("Media:", media.data.id)
-        // values.featured_media
         const uploadDraft = createDraft({
           ...values,
           featured_media: media.data.id,
@@ -62,6 +60,7 @@ const ExampleForm = () => {
 
         uploadDraft.then(response => {
           console.log(response)
+
         }
 
         )
@@ -100,7 +99,6 @@ const ExampleForm = () => {
 
   return (
     <>
-      <h1>Sandbox: Form</h1>
       {!feedback ? (
         <Formik
           enableReinitialize
@@ -188,7 +186,7 @@ const ExampleForm = () => {
               />
 
               <button type="submit" className="btn btn-primary">Submit</button>
-              <FormikDebug />
+              {/* <FormikDebug /> */}
             </Form>
           )}
         </Formik>
