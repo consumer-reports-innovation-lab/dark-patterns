@@ -7,6 +7,7 @@ export const useCategories = () => {
           edges {
             node {
               id
+              termTaxonomyId
               uri
               name
               description
@@ -14,6 +15,7 @@ export const useCategories = () => {
               wpChildren {
                 nodes {
                   id
+                  termTaxonomyId
                   name
                   description
                 }
