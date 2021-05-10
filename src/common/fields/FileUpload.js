@@ -1,8 +1,6 @@
 import React, { useCallback, useState, useEffect } from 'react'
 // import PropTypes from 'prop-types'
-// import { useSelector } from 'react-redux'
 import { useDropzone } from 'react-dropzone'
-import { createMediaFromFile } from '../wp/wpActions'
 import Label from './label'
 import FilePreview from './FilePreview'
 
@@ -81,7 +79,7 @@ const FileUpload = ({
         </div>
         <div className="card-group">
           {value && value.map(file => {
-            return <FilePreview key={file.path} file={file} preview={URL.createObjectURL(file)} />
+            return <FilePreview key={file.path} file={file} preview={URL.createObjectURL(file)} handleDelete={onFileDelete} />
           })}
         </div>
       </div>
