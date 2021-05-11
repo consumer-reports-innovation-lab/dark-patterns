@@ -71,8 +71,8 @@ const Example = ({ data: { example } }) => {
 
               <div className="row">
                 <div className="col-12">
-                  <h4>Source</h4>
-                  <p className="text-small">{sourceLink}</p>
+                  <h4>Source Link</h4>
+                  <a href="{sourceLink}" target="_blank">View Dark Pattern</a>
                 </div>
               </div>
 

@@ -26,5 +26,7 @@
   .nav-link {
     color: $white;
     position: relative;
+    border-bottom: none;
+    transition: 0.2s;
   }
 }

@@ -71,3 +71,13 @@ em {
 i {
   letter-spacing: 0;
 }
+
+a {
+  color: $black;
+  position: relative;
+  border-bottom: 2px solid $primary;
+  &:hover {
+    color: $black;
+    opacity: 0.6;
+  }
+}

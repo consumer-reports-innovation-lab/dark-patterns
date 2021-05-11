@@ -141,6 +141,7 @@
   font-size: 0.875rem;
   position: relative;
   padding-left: 12px;
+  border-bottom: none;
   &::before {
     content: "";
     position: absolute;
@@ -639,7 +640,7 @@
 
 .tab-nav-link {
   color: $black;
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 300;
   font-family: "Averta", sans-serif !important;
   text-transform: capitalize !important;

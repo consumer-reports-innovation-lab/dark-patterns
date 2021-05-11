@@ -21,14 +21,14 @@ const FooterMenu = () => {
               </span>
             </li>
             <li className="nav-item text-end">
-              <Link to="/privacy-policy" className="nav-link">
-                Privacy Policy
+              <Link to="/how-we-use-data" className="nav-link">
+                How We'll Use Your Data
               </Link>
             </li>
             <li className="nav-item text-end">
-              <Link to="/TOS" className="nav-link">
-                Terms of Service
-              </Link>
+              <a href="https://www.consumerreports.org/cro/2015/01/user-agreement/index.htm" className="nav-link" target="_blank">
+                User Agreement
+              </a>
             </li>
           </ul>
         </nav>

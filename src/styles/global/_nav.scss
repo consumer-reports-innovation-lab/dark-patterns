@@ -9,9 +9,13 @@
     text-transform: uppercase;
     font-size: 1.375rem;
     font-family: "Dela Gothic One", cursive;
+    border-bottom: none;
     img {
       height: 32px;
       margin: 8px 0;
+    }
+    &:hover {
+      opacity: 1;
     }
   }
 
