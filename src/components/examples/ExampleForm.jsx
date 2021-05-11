@@ -146,7 +146,7 @@ const ExampleForm = () => {
                 type="text"
                 component={SelectInput}
                 options={categoryOptions}
-                onChange={value => setFieldValue('category', value)}
+                onChange={value => setFieldValue('categories', value)}
                 hint="Choose from the categories of harms."
                 placeholder="Select category..."
                 label="What harm did this cause you?"
