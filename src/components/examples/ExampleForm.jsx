@@ -146,7 +146,7 @@ const ExampleForm = () => {
                 type="text"
                 component={SelectInput}
                 options={categoryOptions}
-                onChange={value => setFieldValue('category', value)}
+                onChange={value => setFieldValue('categories', value)}
                 hint="Choose from the categories of harms."
                 placeholder="Select category..."
                 label="What harm did this cause you?"
@@ -180,7 +180,7 @@ const ExampleForm = () => {
                 onChange={(e, value) => setFieldValue('privacy_policy', value.checked)}
                 label=""
               >
-              <span className="mt-n3" >By submitting this form, I agree to the terms of Consumer Reports’ <a href="https://www.consumerreports.org/cro/customerservice/privacy-policy/highlights/index.htm" target="_blank">Privacy Policy</a> and <a href="https://www.consumerreports.org/cro/2015/01/user-agreement/index.htm" target="_blank">User Agreement</a>.</span>
+                <span className="mt-n3" >By submitting this form, I agree to the terms of Consumer Reports’ <a href="https://www.consumerreports.org/cro/customerservice/privacy-policy/highlights/index.htm" target="_blank">Privacy Policy</a> and <a href="https://www.consumerreports.org/cro/2015/01/user-agreement/index.htm" target="_blank">User Agreement</a>.</span>
               </Field>
 
               <button
