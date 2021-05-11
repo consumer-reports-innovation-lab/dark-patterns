@@ -4,7 +4,7 @@ import Scrollspy from 'react-scrollspy'
 import Intro from "../components/about/Intro"
 import Goals from "../components/about/Goals"
 import Team from "../components/about/Team"
-import Partners from "../components/about/Partners"
+import Advisory from "../components/about/Advisory"
 import CTA from "../components/about/CTA"
 
 
@@ -43,7 +43,7 @@ const AboutPage = () => {
               <hr className="bg-primary my-5" />
               <Team />
               <hr className="bg-primary my-5" />
-              <Partners />
+              <Advisory />
             </div>
 
             <div className="col-4 offset-xl-1  d-none d-lg-flex justify-content-center">
@@ -53,7 +53,7 @@ const AboutPage = () => {
                   <li className="nav-item"><a className="nav-link" href="#about">About</a></li>
                   <li className="nav-item"><a className="nav-link" href="#our-values">Our Values</a></li>
                   <li className="nav-item"><a className="nav-link" href="#team">Team</a></li>
-                  <li className="nav-item"><a className="nav-link" href="#partners">Partners</a></li>
+                  <li className="nav-item"><a className="nav-link" href="#advisory">Advisory</a></li>
                 </Scrollspy>
               </div>
             </div>

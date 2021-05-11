@@ -1,6 +1,6 @@
 import { useStaticQuery, graphql } from "gatsby"
 
-export const usePartners = () => {
+export const useAdvisory = () => {
   const data = useStaticQuery(graphql`
       query Partners {
         allWpPartner(sort: {order: DESC, fields: title}) {
@@ -21,7 +21,7 @@ export const usePartners = () => {
       }
     `
   )
-  const partners = data.allWpPartner.nodes
+  const advisory = data.allWpPartner.nodes
 
-  return { partners }
+  return { advisory }
 }

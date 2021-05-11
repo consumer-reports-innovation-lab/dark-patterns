@@ -1,20 +1,20 @@
 import React from "react"
 // import PropTypes from 'prop-types'
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { usePartners } from '../../hooks/usePartners'
+import { useAdvisory } from '../../hooks/useAdvisory'
 
-const Partners = () => {
-  const { partners } = usePartners()
+const Advisory = () => {
+  const { advisory } = useAdvisory()
 
   return (
-    <div id="partners">
+    <div id="advisory">
       <div className="row">
         <div className="col-12">
-          <h2>Partners</h2>
+          <h2>Advisory</h2>
         </div>
       </div>
       <div className="row">
-        {partners && partners.map(partner => {
+        {advisory && advisory.map(partner => {
           const {id, title, partnerOptions: {logoImage}} = partner
           const imageData = getImage(logoImage?.localFile)
           console.log(imageData)
@@ -36,12 +36,12 @@ const Partners = () => {
   )
 }
 
-Partners.propTypes = {
-  // partners: PropTypes.instanceOf(Array)
+Advisory.propTypes = {
+  // advisory: PropTypes.instanceOf(Array)
 }
 
-Partners.defaultProps = {
-  // partners: []
+Advisory.defaultProps = {
+  // advisory: []
 }
 
-export default Partners
+export default Advisory
