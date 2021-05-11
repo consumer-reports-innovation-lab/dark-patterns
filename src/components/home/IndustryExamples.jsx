@@ -67,6 +67,7 @@ const IndustryExamples = () => {
                   return (
                     <Tab
                       className=" tab-nav-link"
+                      tabindex="0"
                       key={`${slug}_button`}>
                       {name}
                     </Tab>
