@@ -2,7 +2,9 @@ import React from "react";
 import { Link } from "gatsby";
 // import PropTypes from 'prop-types'
 
+
 const PrimaryMenu = (props) => {
+
   return (
     <nav className="navbar navbar-expand-md navbar-light" id="mainnav">
       <div className="container-fluid">
@@ -37,6 +39,7 @@ const PrimaryMenu = (props) => {
                 to="/sightings"
                 className="nav-link"
                 activeClassName="active"
+                partiallyActive={true}
               >
                 Sightings
               </Link>

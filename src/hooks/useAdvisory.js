@@ -3,10 +3,11 @@ import { useStaticQuery, graphql } from "gatsby"
 export const useAdvisory = () => {
   const data = useStaticQuery(graphql`
       query Partners {
-        allWpPartner(sort: {order: DESC, fields: title}) {
+        allWpPartner(sort: {order: DESC, fields: date}) {
           nodes {
             id
             title
+            date
             partnerOptions {
               logoImage {
                 localFile {
