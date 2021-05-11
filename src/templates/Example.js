@@ -71,8 +71,11 @@ const Example = ({ data: { example } }) => {
 
               <div className="row">
                 <div className="col-12">
-                  <h4>Source Link</h4>
-                  <a href="{sourceLink}" target="_blank">View Dark Pattern</a>
+                  <h4>Where can you find this?</h4>
+                  { sourceLink.startsWith('http')
+                    ? <a href={sourceLink} target="_blank">View Dark Pattern</a>
+                    : <p className="text-small">{sourceLink}</p>
+                  }
                 </div>
               </div>
 
