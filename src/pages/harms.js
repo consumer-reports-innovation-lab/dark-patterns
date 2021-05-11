@@ -25,7 +25,7 @@ const CategoriesPage = () => {
                 Report a Pattern
               </Link>
               <Link to="/sightings" className="btn btn-primary">
-                Wall of Shame
+                Sightings
               </Link>
             </div>
           </div>
