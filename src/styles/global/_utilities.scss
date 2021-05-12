@@ -713,9 +713,8 @@
 .home-example-wrapper {
   position: relative;
   height: 400px;
-
   .example-interface {
-    background-color: $black;
+    // background-color: $black;
     text-align: center;
     margin: auto 0 auto 25%;
     width: 60%;
@@ -730,9 +729,12 @@
     left: 0;
     bottom: 0;
     right: 0;
-
+    overflow: hidden;
     p {
       color: $white;
+      z-index: 1;
+      font-family: "Roboto Mono";
+      font-variation-settings: "wght" 300;
     }
     .example-btn {
       background-color: $white;
@@ -740,32 +742,67 @@
       text-transform: uppercase;
       padding: 0.5rem 2rem;
       border-radius: 10px;
+      z-index: 1;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background-color: $black;
+      left: 0rem;
+      bottom: 0px;
+      overflow: hidden;
+      transform: translateX(-100%);
+      animation: translate-in 0.5s forwards;
     }
   }
   .example-callout {
-    // background-color: $primary;
+    // background-color: blue;
     font-family: "Dela Gothic One", cursive;
     text-transform: uppercase;
     font-size: 1.5rem;
     line-height: 1.8rem;
-    max-width: 200px;
+    width: 250px;
     position: absolute;
     left: 0;
     top: 50%;
     transform: translateY(-50%);
     padding: 1rem;
     overflow: hidden;
+
     &::before {
       content: "";
       position: absolute;
       height: 100%;
-      width: 100%;
+      width: 80%;
       z-index: -1;
       background-color: $primary;
       left: 0rem;
       bottom: 0px;
       overflow: hidden;
       transform: translateX(-100%);
+      animation: translate-in 0.5s 1s forwards;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      height: 15px;
+      width: 50px;
+      // background-color: red;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background-image: url(/img/icons/arrow.svg);
+      background-repeat: no-repeat;
+      transform: translateX(-50px);
+      opacity: 0;
+      animation: example-arrow 0.75s 1.75s forwards;
+    }
+    p {
+      opacity: 0;
+      max-width: 200px;
+      animation: opacity 1s 1.2s forwards;
     }
   }
   .example-device {
@@ -775,7 +812,7 @@
       right: -4rem;
       bottom: -3rem;
       opacity: 0;
-      animation: example-device 1s 1.5s forwards;
+      animation: example-device 1.75s 1s forwards;
     }
   }
 }
