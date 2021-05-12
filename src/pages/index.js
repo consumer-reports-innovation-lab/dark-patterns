@@ -8,9 +8,12 @@ import Layout from '../containers/Layout'
 import SEO from '../containers/seo'
 
 const Home = () => {
+  const pageSEO = {
+    title: "Welcome to the Dark Patterns Tip Line"
+  }
   return (
     <Layout>
-      <SEO />
+      <SEO pageSEO={pageSEO} />
       <Intro />
 
       <IndustryExamples />

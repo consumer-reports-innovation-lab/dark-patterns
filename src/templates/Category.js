@@ -13,7 +13,7 @@ const Category = ({ data: { category } }) => {
 
   return (
     <Layout>
-      <SEO />
+      <SEO pageSEO={category.seo} />
       <section className="pt-5">
         <div className="container mt-n5">
           <div className="row mb-4">
@@ -107,6 +107,7 @@ export const pageQuery = graphql`
           ...ExampleSummary
         }
       }
+      ...CategorySEO
     }
   }
 `

@@ -5,9 +5,12 @@ import Layout from '../containers/Layout'
 import SEO from '../containers/seo'
 
 const report = () => {
+  const pageSEO = {
+    title: "Report a Dark Pattern to the Tip Line"
+  }
   return (
     <Layout>
-      <SEO />
+      <SEO pageSEO={pageSEO} />
       <PostExample />
     </Layout>
   )

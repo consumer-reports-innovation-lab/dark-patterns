@@ -28,9 +28,10 @@ const Example = ({ data: { example } }) => {
 
   } = example
 
+
   return (
     <Layout>
-      <SEO />
+      <SEO pageSEO={example.seo} />
       <section className="pt-5">
         <div className="container">
           <div className="row mb-4">
@@ -135,6 +136,7 @@ export const pageQuery = graphql`
   query ExampleQuery($id: String!) {
     example: wpExample(id: { eq: $id }) {
       ...ExampleDetails
+      ...ExampleSEO
     }
   }
 `

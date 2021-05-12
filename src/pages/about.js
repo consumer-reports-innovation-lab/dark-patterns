@@ -10,6 +10,9 @@ import Layout from "../containers/Layout"
 import SEO from '../containers/seo'
 
 const AboutPage = () => {
+  const pageSEO = {
+    title: "About Us"
+  }
   const goals = [
     {
       slug: "we-ground-our-work-in-human-centered-perspectives.",
@@ -34,7 +37,7 @@ const AboutPage = () => {
 
   return (
     <Layout>
-      <SEO />
+      <SEO pageSEO={pageSEO} />
       <section >
         <div className="container">
           <div className="row">

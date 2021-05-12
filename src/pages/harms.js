@@ -7,10 +7,12 @@ import SEO from '../containers/seo'
 
 const CategoriesPage = () => {
   const { categories } = useCategories()
-
+  const pageSEO = {
+    title: "Harms"
+  }
   return (
     <Layout>
-      <SEO />
+      <SEO pageSEO={pageSEO} />
       <section>
         <div className="container">
           <div className="row">
