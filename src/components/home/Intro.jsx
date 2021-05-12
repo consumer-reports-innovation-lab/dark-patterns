@@ -26,6 +26,68 @@ const Intro = () => {
           </div>
            <div className="col-12 col-md-6 d-none d-md-block position-relative">
               <div className="hero-graphic">
+                <div className="phone-screen">
+                  <div className="container-fluid px-0">
+                    <div className="row mb-5">
+                      <div className="col-12 text-center">
+                        <span className="text-white h3">Checkout</span>
+                      </div>
+                    </div>
+                    <div className="row px-3 px-md-5 my-4">
+                      <div className="col-6">
+                        <span className="text-mono text-white">Subtotal</span>
+                      </div>
+                      <div className="col-6 text-end">
+                        <span className="text-mono text-white">$22.10</span>
+                      </div>
+                    </div>
+                    <div className="row px-3 px-md-5 my-4">
+                      <div className="col-6">
+                        <span className="text-mono text-white">Delivery fee</span>
+                      </div>
+                      <div className="col-6 text-end">
+                        <span className="text-mono text-white">$1.49</span>
+                      </div>
+                    </div>
+                    <div className="row px-3 px-md-5 my-4 phone-highlight">
+                      <div className="col-6">
+                        <span className="text-mono text-white">Tax and fees</span>
+                      </div>
+                      <div className="col-6 text-end">
+                        <span className="text-mono text-white">$6.01</span>
+                      </div>
+                    </div>
+                    <div className="row px-3 px-md-5 my-4">
+                      <div className="col-6">
+                        <span className="text-mono text-white">Driver tip</span>
+                      </div>
+                      <div className="col-6 text-end">
+                        <span className="text-mono text-white">$5.92</span>
+                      </div>
+                    </div>
+                    <div className="row px-3 px-md-5">
+                      <div className="col-12  border-bottom"></div>
+                    </div>
+                    <div className="row px-3 px-md-5 my-5">
+                      <div className="col-6">
+                        <span className="text-mono text-white"><strong>Total</strong></span>
+                      </div>
+                      <div className="col-6 text-end">
+                        <span className="text-mono text-white"><strong>$35.52</strong></span>
+                      </div>
+                    </div>
+                    <div className="row  bg-primary py-3 justify-content-center">
+                      <div className="col-10 text-center py-3">
+                        <span className="text-mono pb-3"><strong>Service fee</strong></span>
+                        <br />
+                        <br />
+                        <span className="text-mono">This 15% fee helps us cover operating costs</span>
+
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
           </div>
         </div>
