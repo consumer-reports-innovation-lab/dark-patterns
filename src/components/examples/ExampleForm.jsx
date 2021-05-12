@@ -170,7 +170,7 @@ const ExampleForm = () => {
                 type="text"
                 component={EmailInput}
                 placeholder="For outreach in case we have questions"
-                hint="You can optionally share your email so we can reach out if we have any questions. We won’t ever share your email or use it for any other purpose."
+                hint="You can optionally share your email so we can reach out if we have any questions. We won’t ever share your email."
                 className="mb-4"
                 label="Email (Optional)"
               />
