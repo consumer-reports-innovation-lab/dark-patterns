@@ -17,7 +17,7 @@ const FooterMenu = () => {
           <ul className="navbar-nav">
             <li className="nav-item content-center text-end">
               <span className="nav-link">
-                &copy; Consumer Reports {new Date().getFullYear()}
+                &copy; {new Date().getFullYear()} Consumer Reports, Inc
               </span>
             </li>
             <li className="nav-item text-end">
