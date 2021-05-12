@@ -7,7 +7,7 @@ import SEO from '../containers/seo'
 
 const Page = ({ data: { page } }) => {
   const { title, content, featuredImage } = page
-  const imageData = featuredImage?.localFile
+  // const imageData = featuredImage?.localFile
 
   return (
     <Layout>
@@ -17,7 +17,7 @@ const Page = ({ data: { page } }) => {
           <div className="row">
             <div className="col-12">
               <h1>{title}</h1>
-              {parse(content)}
+              {content && parse(content)}
             </div>
           </div>
         </div>
