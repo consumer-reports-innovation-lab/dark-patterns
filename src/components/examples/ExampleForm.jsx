@@ -200,7 +200,7 @@ const ExampleForm = () => {
                   : 'd-none'
                 }>
                   {Object.entries(errors).map(([key, value], i) => {
-                    return <li key={key} className={'text-small'}>{value}</li>
+                    return <li key={key} >{value}</li>
                   })}
                 </ul>
               )}

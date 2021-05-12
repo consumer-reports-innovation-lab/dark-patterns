@@ -28,7 +28,7 @@ const OurPurpose = () => {
                   alt=""
                   src="/img/logos/logo-icon.svg"
                 />
-                <div className="text-small">
+                <div >
                   <h4>Engage</h4>
                   <p>
                     Engage and encourage people to submit their stories of
@@ -42,7 +42,7 @@ const OurPurpose = () => {
                   alt=""
                   src="/img/logos/logo-icon.svg"
                 />
-                <div className="text-small">
+                <div >
                   <h4>Inform</h4>
                   <p>
                     Inform the public on how to avoid devious design tactics
@@ -57,7 +57,7 @@ const OurPurpose = () => {
                   alt=""
                   src="/img/logos/logo-icon.svg"
                 />
-                <div className="text-small">
+                <div>
                   <h4>Empower</h4>
                   <p>
                     Empower policymakers and advocates with evidence that illustrates real-life harms of deception online.
@@ -70,7 +70,7 @@ const OurPurpose = () => {
                   alt=""
                   src="/img/logos/logo-icon.svg"
                 />
-                <div className="text-small">
+                <div >
                   <h4>Change</h4>
                   <p>
                     Change the status quo by advocating for stronger consumer

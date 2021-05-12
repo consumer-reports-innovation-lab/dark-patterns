@@ -45,12 +45,12 @@ const Example = ({ data: { example } }) => {
               <div className="row  mt-5">
                 <div className="col-4">
                   <h4>Company</h4>
-                  <p className="text-small">{affiliatedCompany}</p>
+                  <p >{affiliatedCompany}</p>
                 </div>
 
                 <div className="col-4">
                   <h4>Date</h4>
-                  <p className="text-small">{date}</p>
+                  <p >{date}</p>
                 </div>
 
                 <div className="col-4">
@@ -58,7 +58,7 @@ const Example = ({ data: { example } }) => {
                   {industries && industries.nodes.map(industry => {
                     const { id, name } = industry
                     return (
-                    <p key={ id } className="text-small">{name}</p>
+                    <p key={ id } >{name}</p>
                   )})}
                 </div>
               </div>
@@ -74,7 +74,7 @@ const Example = ({ data: { example } }) => {
                   <h4>Where can you find this?</h4>
                   { sourceLink.startsWith('http')
                     ? <a href={sourceLink} target="_blank">View Dark Pattern</a>
-                    : <p className="text-small">{sourceLink}</p>
+                    : <p >{sourceLink}</p>
                   }
                 </div>
               </div>
