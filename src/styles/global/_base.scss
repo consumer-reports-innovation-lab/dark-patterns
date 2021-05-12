@@ -75,3 +75,10 @@ hr {
   height: 2px !important;
   opacity: 1;
 }
+
+::selection {
+  background: #ffed92;
+}
+::-moz-selection {
+  background: #ffed92;
+}

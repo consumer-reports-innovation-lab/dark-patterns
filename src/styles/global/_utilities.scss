@@ -113,6 +113,10 @@
   text-transform: underline !important;
 }
 
+.text-mono {
+  font-family: "Roboto Mono";
+}
+
 .text-hero {
   font-size: 4rem;
 }
@@ -641,7 +645,7 @@
 .tab-nav-link {
   color: $black;
   font-size: 1.25rem;
-  font-weight: 300;
+  font-weight: 400;
   font-family: "Averta", sans-serif !important;
   text-transform: capitalize !important;
   list-style: none;
@@ -649,10 +653,13 @@
   margin: 0.5rem 1.5rem;
   text-align: center;
   cursor: pointer;
+  opacity: 0.7;
+  transition: 0.2s;
   &:hover,
   &:focus {
     color: $black;
     text-decoration: none;
+    opacity: 1;
     &::before {
       content: "";
       animation: none !important;
@@ -660,6 +667,7 @@
   }
   &.react-tabs__tab--selected {
     background-color: transparent;
+    opacity: 1;
     &::after {
       content: "";
       width: 0;
@@ -677,142 +685,10 @@
   }
 }
 
-.hero-graphic {
-  &::before {
-    content: "";
-    position: absolute;
-    height: 75%;
-    width: 185%;
-    // background-color: $primary;
-    right: -100%;
-    bottom: 0px;
-    box-shadow: inset 0.1px 0px 0px 0px $primary;
-    animation: highlight 0.75s 0.5s forwards cubic-bezier(0.95, 0.05, 0.795, 0.035);
-  }
-  &::after {
-    content: "";
-    width: 120%;
-    height: 150%;
-    background-image: url(/img/phone-placeholder.png);
-    position: absolute;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: bottom;
-    bottom: -100px;
-  }
-}
-
 .magnify {
   button {
     cursor: -moz-zoom-in;
     cursor: -webkit-zoom-in;
     cursor: zoom-in;
-  }
-}
-
-.home-example-wrapper {
-  position: relative;
-  height: 400px;
-  .example-interface {
-    // background-color: $black;
-    text-align: center;
-    margin: auto 0 auto 25%;
-    width: 60%;
-    height: 80%;
-    padding: 75px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    overflow: hidden;
-    p {
-      color: $white;
-      z-index: 1;
-      font-family: "Roboto Mono";
-      font-variation-settings: "wght" 300;
-    }
-    .example-btn {
-      background-color: $white;
-      font-family: "Dela Gothic One", cursive;
-      text-transform: uppercase;
-      padding: 0.5rem 2rem;
-      border-radius: 10px;
-      z-index: 1;
-    }
-    &::before {
-      content: "";
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      background-color: $black;
-      left: 0rem;
-      bottom: 0px;
-      overflow: hidden;
-      transform: translateX(-100%);
-      animation: translate-in 0.5s forwards;
-    }
-  }
-  .example-callout {
-    // background-color: blue;
-    font-family: "Dela Gothic One", cursive;
-    text-transform: uppercase;
-    font-size: 1.5rem;
-    line-height: 1.8rem;
-    width: 250px;
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    padding: 1rem;
-    overflow: hidden;
-
-    &::before {
-      content: "";
-      position: absolute;
-      height: 100%;
-      width: 80%;
-      z-index: -1;
-      background-color: $primary;
-      left: 0rem;
-      bottom: 0px;
-      overflow: hidden;
-      transform: translateX(-100%);
-      animation: translate-in 0.5s 1s forwards;
-    }
-    &::after {
-      content: "";
-      position: absolute;
-      height: 15px;
-      width: 50px;
-      // background-color: red;
-      right: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      background-image: url(/img/icons/arrow.svg);
-      background-repeat: no-repeat;
-      transform: translateX(-50px);
-      opacity: 0;
-      animation: example-arrow 0.75s 1.75s forwards;
-    }
-    p {
-      opacity: 0;
-      max-width: 200px;
-      animation: opacity 1s 1.2s forwards;
-    }
-  }
-  .example-device {
-    img {
-      height: 300px;
-      position: absolute;
-      right: -4rem;
-      bottom: -3rem;
-      opacity: 0;
-      animation: example-device 1.75s 1s forwards;
-    }
   }
 }

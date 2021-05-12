@@ -1,1 +1,206 @@
 // Add page specific styles
+.hero-graphic {
+  width: 120%;
+  height: 100%;
+  position: relative;
+  background-size: cover;
+  z-index: 1;
+  .phone-screen {
+    position: absolute;
+    overflow: hidden;
+    // background-color: blue;
+    z-index: 1;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 65%;
+    height: 95%;
+    .phone-highlight {
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        z-index: -1;
+        height: 30px;
+        background-color: $primary;
+        padding: 5px;
+        top: -6px;
+        left: 0;
+      }
+    }
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    height: 75%;
+    width: 200%;
+    z-index: -1;
+    right: -100%;
+    bottom: 0px;
+    box-shadow: inset 0.1px 0px 0px 0px $primary;
+    animation: highlight 0.75s 0.5s forwards cubic-bezier(0.95, 0.05, 0.795, 0.035);
+  }
+  &::after {
+    content: "";
+    width: 100%;
+    height: 150%;
+    background-image: url(/img/phone-placeholder.png);
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+    bottom: -100px;
+  }
+  @media (min-width: 1200px) {
+    .phone-screen {
+      // background-color: blue;
+      height: 110%;
+    }
+    &::before {
+      width: 195%;
+    }
+  }
+  @media (min-width: 1600px) {
+    .phone-screen {
+      // background-color: blue;
+      width: 44%;
+      height: 130%;
+      left: calc(50% + -75px);
+    }
+    &::before {
+      width: 195%;
+    }
+    &::after {
+      height: 165%;
+      left: -75px;
+    }
+  }
+}
+
+.home-example-wrapper {
+  position: relative;
+  height: 400px;
+  .example-interface {
+    text-align: center;
+    margin: auto 0 auto 25%;
+    width: 60%;
+    height: 70%;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+    img {
+      z-index: 1;
+      max-height: 100%;
+    }
+    span {
+      color: $white;
+      z-index: 1;
+      font-family: "Roboto Mono";
+      font-variation-settings: "wght" 300;
+      font-size: 1.35rem;
+      line-height: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .example-btn {
+      background-color: $white;
+      font-family: "Dela Gothic One", cursive;
+      text-transform: uppercase;
+      padding: 0.5rem 2rem;
+      border-radius: 10px;
+      z-index: 1;
+      color: $black;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background-color: $black;
+      left: 0rem;
+      bottom: 0px;
+      overflow: hidden;
+      transform: translateX(-100%);
+      animation: translate-in 0.5s forwards;
+    }
+  }
+  .example-callout {
+    font-family: "Dela Gothic One", cursive;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+    width: 250px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 1rem 50px 1rem 1rem;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 80%;
+      z-index: -1;
+      background-color: $primary;
+      left: 0rem;
+      bottom: 0px;
+      overflow: hidden;
+      transform: translateX(-100%);
+      animation: translate-in 0.5s 1.25s forwards;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: calc(50% - 7px);
+      right: 0;
+      transform: translateY(-50%);
+      height: 15px;
+      width: 50px;
+      background-image: url(/img/icons/arrow.svg);
+      background-repeat: no-repeat;
+      transform: translateX(-50px);
+      opacity: 0;
+      animation: example-arrow 0.75s 1.75s forwards;
+    }
+    span {
+      opacity: 0;
+      max-width: 200px;
+      animation: opacity 1s 1.4s forwards;
+    }
+    &#social-media {
+      top: 57%;
+    }
+    &#smart-devices {
+      top: 69%;
+    }
+    &#financial-and-insurance {
+      top: 48%;
+    }
+    &#health-and-wellness {
+      top: 53%;
+    }
+    &#education {
+      top: 68%;
+    }
+  }
+  .example-device {
+    img {
+      height: 275px;
+      position: absolute;
+      right: -5rem;
+      bottom: -2rem;
+      opacity: 0;
+      z-index: 1;
+      animation: example-device 1s 0.25s forwards;
+    }
+  }
+}
