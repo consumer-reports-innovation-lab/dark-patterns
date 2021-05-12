@@ -27,6 +27,7 @@
   &:hover,
   &:focus,
   &:active {
+    opacity: 1;
     &::before {
       transform: translateX(0);
     }
