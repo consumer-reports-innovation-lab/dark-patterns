@@ -49,12 +49,12 @@ const Intro = () => {
                         <span className="text-mono text-white">$1.49</span>
                       </div>
                     </div>
-                    <div className="row px-3 px-md-5 my-4 phone-highlight">
+                    <div className="row px-3 px-md-5 my-4 phone-highlight position-relative">
                       <div className="col-6">
-                        <span className="text-mono text-white">Tax and fees</span>
+                        <span className="text-mono ">Tax and fees</span>
                       </div>
                       <div className="col-6 text-end">
-                        <span className="text-mono text-white">$6.01</span>
+                        <span className="text-mono ">$6.01</span>
                       </div>
                     </div>
                     <div className="row px-3 px-md-5 my-4">
