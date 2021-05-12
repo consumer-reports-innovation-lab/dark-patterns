@@ -6,7 +6,8 @@ import Goals from "../components/about/Goals"
 import Team from "../components/about/Team"
 import Advisory from "../components/about/Advisory"
 import CTA from "../components/about/CTA"
-
+import Layout from "../containers/Layout"
+import SEO from '../containers/seo'
 
 const AboutPage = () => {
   const goals = [
@@ -32,7 +33,8 @@ const AboutPage = () => {
 
 
   return (
-    <>
+    <Layout>
+      <SEO />
       <section >
         <div className="container">
           <div className="row">
@@ -63,7 +65,7 @@ const AboutPage = () => {
       </section>
 
       <CTA />
-    </>
+    </Layout>
   )
 }
 

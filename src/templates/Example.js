@@ -5,6 +5,8 @@ import parse from "html-react-parser"
 import ZoomImage from 'react-medium-image-zoom'
 import CTA from '../components/about/CTA'
 import RelatedExamples from '../components/examples/RelatedExamples'
+import Layout from '../containers/Layout'
+import SEO from '../containers/seo'
 
 const Example = ({ data: { example } }) => {
   const {
@@ -27,7 +29,8 @@ const Example = ({ data: { example } }) => {
   } = example
 
   return (
-    <>
+    <Layout>
+      <SEO />
       <section className="pt-5">
         <div className="container">
           <div className="row mb-4">
@@ -58,8 +61,9 @@ const Example = ({ data: { example } }) => {
                   {industries && industries.nodes.map(industry => {
                     const { id, name } = industry
                     return (
-                    <p key={ id } >{name}</p>
-                  )})}
+                      <p key={id} >{name}</p>
+                    )
+                  })}
                 </div>
               </div>
               <div className="row my-5">
@@ -72,7 +76,7 @@ const Example = ({ data: { example } }) => {
               <div className="row">
                 <div className="col-12">
                   <h4>Where can you find this?</h4>
-                  { sourceLink.startsWith('http')
+                  {sourceLink.startsWith('http')
                     ? <a href={sourceLink} target="_blank">View Dark Pattern</a>
                     : <p >{sourceLink}</p>
                   }
@@ -94,25 +98,25 @@ const Example = ({ data: { example } }) => {
               </div>
 
               {tags.nodes.length > 0 && (
-              <div className="row my-4">
-                <div className="col-12">
-                  <h4>Tags</h4>
-                  {tags && tags.nodes.map(tag => {
-                    const { id, name } = tag
-                    return <div key={id} className="tag">{name}</div>
-                  })}
+                <div className="row my-4">
+                  <div className="col-12">
+                    <h4>Tags</h4>
+                    {tags && tags.nodes.map(tag => {
+                      const { id, name } = tag
+                      return <div key={id} className="tag">{name}</div>
+                    })}
+                  </div>
                 </div>
-              </div>
               )}
 
 
             </div>
             <div className="col-12 col-md-6">
               <div className="magnify">
-              <ZoomImage overlayBgColorEnd={`rgba(0,0,0,0.7)`}>
-                <GatsbyImage image={getImage(localFile)} alt={title} />
-              </ZoomImage>
-                  </div>
+                <ZoomImage overlayBgColorEnd={`rgba(0,0,0,0.7)`}>
+                  <GatsbyImage image={getImage(localFile)} alt={title} />
+                </ZoomImage>
+              </div>
 
             </div>
           </div>
@@ -123,7 +127,7 @@ const Example = ({ data: { example } }) => {
 
       <RelatedExamples example={example} heading={`More Sightings`} />
 
-    </>
+    </Layout>
   )
 }
 

@@ -2,20 +2,15 @@ import React from "react"
 import { Link } from "gatsby"
 import CategoryCard from "../components/categories/CategoryCard"
 import { useCategories } from '../hooks/useCategories'
+import Layout from "../containers/Layout"
+import SEO from '../containers/seo'
 
 const CategoriesPage = () => {
   const { categories } = useCategories()
-  console.log(categories)
-  // const categories = [
-  //   {
-  //     slug: "bias-discrimination",
-  //     name: "Bias & Discrimination",
-  //     description: "A person who contributes user data to a product or service experiences unfair impacts based on demographic identifiers such as age, race, and gender.",
-  //     url: "/category/bias-discrimination"
-  //   }
-  // ]
+
   return (
-    <>
+    <Layout>
+      <SEO />
       <section>
         <div className="container">
           <div className="row">
@@ -49,7 +44,7 @@ const CategoriesPage = () => {
           </div>
         </div>
       </section>
-    </>
+    </Layout>
   )
 }
 

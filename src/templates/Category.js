@@ -4,13 +4,16 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import parse from "html-react-parser"
 import ExampleCard from '../components/examples/ExampleCard'
 import CTA from '../components/about/CTA'
+import Layout from '../containers/Layout'
+import SEO from '../containers/seo'
 
 const Category = ({ data: { category } }) => {
   const { name, description, examples, categoryFeaturedImage } = category
   const imageData = categoryFeaturedImage?.featuredImage?.localFile
 
   return (
-    <>
+    <Layout>
+      <SEO />
       <section className="pt-5">
         <div className="container mt-n5">
           <div className="row mb-4">
@@ -78,7 +81,7 @@ const Category = ({ data: { category } }) => {
       ) : (
         <CTA />
       )}
-    </>
+    </Layout>
   )
 }
 

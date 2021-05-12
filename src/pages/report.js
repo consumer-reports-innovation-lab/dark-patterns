@@ -1,10 +1,15 @@
 import React from 'react'
 // import PropTypes from 'prop-types'
 import PostExample from '../components/examples/PostExample'
+import Layout from '../containers/Layout'
+import SEO from '../containers/seo'
 
 const report = () => {
   return (
-    <PostExample />
+    <Layout>
+      <SEO />
+      <PostExample />
+    </Layout>
   )
 }
 
