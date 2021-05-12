@@ -14,8 +14,9 @@ const Page = ({ data: { page } }) => {
       <section className="pt-5">
         <div className="container">
           <div className="row">
-            <div className="col-12">
-              <h1>{title}</h1>
+            <div className="col-12 col-md-8">
+              <h1 className="mb-5">{title}</h1>
+
               {content && parse(content)}
             </div>
           </div>
