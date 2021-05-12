@@ -7,8 +7,8 @@ const Intro = () => {
     <section className="pb-0">
       <div className="container">
         <div className="row">
-          <div className="col-12 col-md-6">
-            <h1>Dark patterns<br />spotted by people like you</h1>
+          <div className="col-12 col-md-8 col-lg-7">
+            <h1>Dark patterns<br />spotted by people<br />like you</h1>
             <p>
               Frustrated people all over the world have found dark patterns even on mainstream websites and apps. Click around to see some examples of how these dark patterns hurt people, and better understand the techniques companies use to trick you into doing what they want.
               </p>

@@ -28,8 +28,8 @@ const [menuOpen, setMenuOpen] = useState( false );
         </button>
         <div
           className={ menuOpen
-          ? 'collapse navbar-collapse justify-content-md-end'
-          : 'collapsed navbar-collapse justify-content-md-end'
+          ? 'collapsed navbar-collapse justify-content-md-end'
+          : 'collapse navbar-collapse justify-content-md-end'
           }
           id="navbarNav"
         >
