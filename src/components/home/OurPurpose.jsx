@@ -8,7 +8,7 @@ const OurPurpose = () => {
     <section className="bg-dark">
       <div className="container">
         <div className="row content-center">
-          <div className="col-12 col-md-6 col-lg-6 mb-5 pb-5">
+          <div className="col-12 col-lg-6 ">
             <h2>Our Purpose</h2>
             <p>
               The Dark Patterns Tip Line is a platform people can use to submit deceptive designs they encounter in everyday digital products and services. Through crowdsourcing human stories of digital manipulation and amplifying people’s voices, we will raise awareness of the real-life harms that result from deceptive design.
@@ -20,7 +20,7 @@ const OurPurpose = () => {
               About Us
               </Link>
           </div>
-          <div className="col-12 col-md-6 offset-lg-1 col-lg-5 d-flex flex-column justify-content-center align-items-start">
+          <div className="col-12  offset-lg-1 col-lg-5 d-flex flex-column justify-content-center align-items-start">
             <ul className="icon-list">
               <li className="align-items-start mb-5">
                 <img
