@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "gatsby";
 // import PropTypes from 'prop-types'
 
-
 const PrimaryMenu = (props) => {
+
+const [menuOpen, setMenuOpen] = useState( false );
 
   return (
     <nav className="navbar navbar-expand-md navbar-light" id="mainnav">
@@ -21,11 +22,15 @@ const PrimaryMenu = (props) => {
           aria-controls="navbarNav"
           aria-expanded="false"
           aria-label="Toggle navigation"
+          onClick={() => setMenuOpen(!menuOpen) }
         >
           Menu
         </button>
         <div
-          className="collapse navbar-collapse justify-content-md-end"
+          className={ menuOpen
+          ? 'collapsed navbar-collapse justify-content-md-end'
+          : 'collapse navbar-collapse justify-content-md-end'
+          }
           id="navbarNav"
         >
           <ul className="navbar-nav">
@@ -58,8 +63,11 @@ const PrimaryMenu = (props) => {
         </div>
       </div>
     </nav>
+
   );
 };
+
+
 
 PrimaryMenu.propTypes = {};
 

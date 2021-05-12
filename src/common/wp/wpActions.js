@@ -40,7 +40,9 @@ export async function createDraft(data) {
       data: JSON.stringify(data)
     })
 
+    console.log('draft', draft)
     return draft
+
 
   } catch (error) {
     console.log(error)

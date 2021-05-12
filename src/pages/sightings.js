@@ -10,9 +10,13 @@ import { useCategories } from '../hooks/useCategories'
 import { useExamples } from '../hooks/useExamples'
 import Intro from '../components/examples/Intro'
 import ExampleCard from "../components/examples/ExampleCard"
-import { objectToArray } from '../common/utils/helpers'
+import Layout from "../containers/Layout"
+import SEO from '../containers/seo'
 
 const ExamplesPage = () => {
+  const pageSEO = {
+    title: "Dark Pattern Sightings"
+  }
   const { categories } = useCategories()
   const { examples } = useExamples()
   const [filteredExamples, setFilteredExamples] = useState([])
@@ -35,7 +39,8 @@ const ExamplesPage = () => {
   }
 
   return (
-    <>
+    <Layout>
+      <SEO pageSEO={pageSEO} />
       <Intro />
       <section>
         <div className="container">
@@ -97,7 +102,7 @@ const ExamplesPage = () => {
           </div>
         </div>
       </section>
-    </>
+    </Layout>
   )
 }
 

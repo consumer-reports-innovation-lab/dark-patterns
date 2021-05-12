@@ -6,9 +6,13 @@ import Goals from "../components/about/Goals"
 import Team from "../components/about/Team"
 import Advisory from "../components/about/Advisory"
 import CTA from "../components/about/CTA"
-
+import Layout from "../containers/Layout"
+import SEO from '../containers/seo'
 
 const AboutPage = () => {
+  const pageSEO = {
+    title: "About Us"
+  }
   const goals = [
     {
       slug: "we-ground-our-work-in-human-centered-perspectives.",
@@ -32,7 +36,8 @@ const AboutPage = () => {
 
 
   return (
-    <>
+    <Layout>
+      <SEO pageSEO={pageSEO} />
       <section >
         <div className="container">
           <div className="row">
@@ -63,7 +68,7 @@ const AboutPage = () => {
       </section>
 
       <CTA />
-    </>
+    </Layout>
   )
 }
 

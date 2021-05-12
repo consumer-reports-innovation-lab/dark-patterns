@@ -21,8 +21,8 @@ const FooterMenu = () => {
               </span>
             </li>
             <li className="nav-item text-end">
-              <Link to="/how-we-use-data" className="nav-link">
-                How We'll Use Your Data
+              <Link to="/how-we-use-submission" className="nav-link">
+                How We'll Use Your Submission
               </Link>
             </li>
             <li className="nav-item text-end">

@@ -10,7 +10,7 @@ import {
   EmailInput,
   SwitchInput,
 } from '../../common/fields'
-// import FormikDebug from '../../common/utils/FormikDebug'
+import FormikDebug from '../../common/utils/FormikDebug'
 import { useCategories } from '../../hooks/useCategories'
 import { useIndustries } from '../../hooks/useIndustries'
 import { sortOptions } from '../../common/utils/helpers'
@@ -67,13 +67,12 @@ const ExampleForm = () => {
 
           uploadDraft.then(response => {
             console.log(response)
-            return
+            return response
           })
         })
       }
 
-      createDraft(draft)
-
+      createDraft(draft).then(response => response)
 
     } catch (error) {
       console.log(error)
@@ -88,11 +87,18 @@ const ExampleForm = () => {
           initialValues={initialValues}
           validationSchema={ValidationSchema}
           onSubmit={(values, { resetForm }) => {
-            handleSubmit(values)
-            resetForm()
+            const response = handleSubmit(values)
+            response.then( response => {
+              if (response.status === 201){
+                console.log(response.status)
+                resetForm()
+              }
+            })
+
+
           }}
         >
-          {({ values, errors, touched, setFieldValue }) => (
+          {({ values, errors, touched, isSubmitting , setFieldValue }) =>  (
             <Form>
 
             <Field
@@ -115,8 +121,6 @@ const ExampleForm = () => {
                 className="mb-4"
               />
 
-
-
               <Field
                 name="source_link"
                 type="text"
@@ -126,8 +130,6 @@ const ExampleForm = () => {
                 label="Where did you find this dark pattern? (ex. Include source or link to website, app, tweet or post)"
                 className="mb-4"
               />
-
-
 
               <Field
                 name="industry"
@@ -187,28 +189,53 @@ const ExampleForm = () => {
                 type="submit"
                 className="btn btn-primary my-5"
                 disabled={ values.privacy_policy ? false : true }
+                // onClick={() => setSubmitStatus(true)}
                 >
                   Submit
               </button>
 
               {Object.entries(errors).length > 0 && (
-
-                <ul className="border-start border-danger border-5 text-danger mb-5 d-none">
+                <ul className={ isSubmitting
+                  ? 'border-start border-danger border-5 text-danger mb-5'
+                  : 'd-none'
+                }>
                   {Object.entries(errors).map(([key, value], i) => {
-                    return <li key={key} className={'text-small'}>{value}</li>
+                    return <li key={key} >{value}</li>
                   })}
                 </ul>
               )}
 
-              {/* <FormikDebug /> */}
+              <FormikDebug />
+              { isSubmitting ? (
+                <section className="d-flex">
+                  <div className="container">
+                    <div className="row">
+                      <div className="col-12 col-md-8 col-lg-7">
+                        <h3 className="highlighter">Your submission has been received.</h3>
+                        <h4 className="ms-2 my-4 text-mid">Thank you for sharing a dark pattern with us.</h4>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              ) : (
+                <></>
+              )
+            }
             </Form>
           )}
         </Formik>
+
+
       ):(
         <div className="alert alert-warning">
           {feedback}
         </div>
       )}
+
+
+
+
+
     </>
   )
 }

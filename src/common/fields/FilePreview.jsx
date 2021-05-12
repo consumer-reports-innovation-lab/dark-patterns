@@ -13,7 +13,7 @@ const FilePreview = ({ file, preview, handleDelete  }) => {
       />
       <img src={preview} className="card-img-top" alt="" />
       <div className="card-footer">
-         <p className="py-3 text-small">
+         <p className="py-3 ">
           {name}<br />
           <small className="text-muted pt-4">Last updated <TimeAgo date={lastModifiedDate} /></small>
         </p>

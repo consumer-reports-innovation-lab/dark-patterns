@@ -25,7 +25,7 @@ const SEO = ({ pageSEO, meta, className }) => {
         { name: 'og:type', content: "website" },
         { name: "og:title", content: seo.opengraphTitle ? seo.opengraphTitle : seo.title },
         { name: "og:description", content: seo.metaDesc ? seo.metaDesc : seo.description },
-        { name: "og:url", content: seo.opengraphUrl ? seo.opengraphUrl.replace('https://librestream.gatsbyjs.io', 'https://librestream.com') : seo.siteUrl },
+        { name: "og:url", content: seo.opengraphUrl ? seo.opengraphUrl : seo.siteUrl },
         { name: "og:site_name", content: seo.opengraphSiteName ? seo.opengraphSiteName : seo.title },
         { name: "article:publisher", content: seo.facebook.url ? seo.facebook.url : seo.siteUrl },
         { name: "article:modified_time", content: seo.opengraphModifiedTime },

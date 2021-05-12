@@ -67,7 +67,7 @@ const IndustryExamples = () => {
                   return (
                     <Tab
                       className=" tab-nav-link"
-                      tabindex="0"
+                      tabIndex="0"
                       key={`${slug}_button`}>
                       {name}
                     </Tab>
@@ -89,7 +89,8 @@ const IndustryExamples = () => {
                             <span className="example-btn">Start</span>
                           </div>
                           <div className="example-callout">
-                            Personal data can be shared with others
+                            <p>Personal data can be shared with others</p>
+
                           </div>
                           <div className="example-device">
                             <img
