@@ -1,5 +1,34 @@
 const path = require(`path`)
 
+const createStandalonePages = async ({ pages, gatsbyUtilities }) =>
+  Promise.all(
+    pages.map(page => {
+      if (!page) return
+
+      // createPage is an action passed to createPages
+      // See https://www.gatsbyjs.com/docs/actions#createPage for more info
+      return gatsbyUtilities.actions.createPage({
+        // Use the WordPress uri as the Gatsby page path
+        // This is a good idea so that internal links and menus work 👍
+        path: page.uri,
+
+        // use the page template as the page component
+        component: path.resolve(`./src/templates/Page.js`),
+
+        // `context` is available in the template as a prop and
+        // as a variable in GraphQL.
+        context: {
+          // we need to add the post id here
+          // so our blog post template knows which blog post
+          // the current page is (when you open it in a browser)
+          id: page.id,
+
+        },
+      })
+
+
+    })
+  )
 const createExamplePages = async ({ examples, gatsbyUtilities }) =>
   Promise.all(
     examples.map(({ previous, example, next }) =>
@@ -61,6 +90,34 @@ const createCategoryPages = async ({ categories, gatsbyUtilities }) =>
 
     })
   )
+
+async function getPages({ graphql, reporter }) {
+  const graphqlResult = await graphql(/* GraphQL */ `
+    query WpPages {
+      # Query all WordPress blog posts sorted by date
+      allWpPage(sort: { fields: [date], order: DESC }) {
+        nodes {
+          id
+          uri
+          template {
+            templateName
+          }
+        }
+      }
+    }
+  `)
+
+  if (graphqlResult.errors) {
+    reporter.panicOnBuild(
+      `There was an error loading your blog posts`,
+      graphqlResult.errors
+    )
+    return
+  }
+  const pages = graphqlResult.data.allWpPage.nodes
+
+  return pages
+}
 
 async function getExamples({ graphql, reporter }) {
   const graphqlResult = await graphql(/* GraphQL */ `
@@ -124,9 +181,11 @@ async function getCategories({ graphql, reporter }) {
 
 exports.createPages = async gatsbyUtilities => {
   // Query the GraphQL server
+  const pages = await getPages(gatsbyUtilities)
   const examples = await getExamples(gatsbyUtilities)
   const categories = await getCategories(gatsbyUtilities)
 
+  await createStandalonePages({ pages, gatsbyUtilities })
   await createExamplePages({ examples, gatsbyUtilities })
   await createCategoryPages({ categories, gatsbyUtilities })
 
