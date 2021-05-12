@@ -6,8 +6,7 @@ import Layout from '../containers/Layout'
 import SEO from '../containers/seo'
 
 const Page = ({ data: { page } }) => {
-  const { title, content, featuredImage } = page
-  // const imageData = featuredImage?.localFile
+  const { title, content } = page
 
   return (
     <Layout>
