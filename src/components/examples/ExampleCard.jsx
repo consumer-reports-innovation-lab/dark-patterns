@@ -24,7 +24,7 @@ const {
 
 
   return (
-    <Link to={uri} >
+    <Link to={uri.replace('example', 'sightings')} >
     <div className="card">
       <div className="card-body">
         <div className="card-image">

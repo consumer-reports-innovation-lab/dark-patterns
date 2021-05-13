@@ -3,8 +3,7 @@ import { Link } from "gatsby";
 // import PropTypes from 'prop-types'
 
 const PrimaryMenu = (props) => {
-
-const [menuOpen, setMenuOpen] = useState( false );
+  const [menuOpen, setMenuOpen] = useState( false )
 
   return (
     <nav className="navbar navbar-expand-md navbar-light" id="mainnav">
@@ -35,7 +34,11 @@ const [menuOpen, setMenuOpen] = useState( false );
         >
           <ul className="navbar-nav">
             <li className="nav-item">
-              <Link to="/harms" className="nav-link" activeClassName="active">
+              <Link
+                to="/harms"
+                className="nav-link"
+                activeClassName="active"
+                partiallyActive={true}>
                 Harms
               </Link>
             </li>
@@ -44,8 +47,7 @@ const [menuOpen, setMenuOpen] = useState( false );
                 to="/sightings"
                 className="nav-link"
                 activeClassName="active"
-                partiallyActive={true}
-              >
+                partiallyActive={true}>
                 Sightings
               </Link>
             </li>
