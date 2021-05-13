@@ -19,7 +19,7 @@ const SEO = ({ pageSEO, meta, links, className }) => {
         class: className
       }}
       title={seo.title}
-      titleTemplate={`${seo.title}`}
+      titleTemplate={`${seo.title} - Dark Pattern Tipline`}
       meta={[
         { name: 'description', content: seo.metaDesc ? seo.metaDesc : seo.description },
         { name: 'og:type', content: "website" },
