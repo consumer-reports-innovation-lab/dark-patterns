@@ -7,7 +7,9 @@ const website = require('./siteconfig')
 const pathPrefix = website.pathPrefix === '/' ? '' : website.pathPrefix
 
 module.exports = {
-  flags: {},
+  flags: {
+    DEV_SSR: false
+  },
   pathPrefix: website.pathPrefix,
   siteMetadata: {
     siteUrl: website.url + pathPrefix, // For gatsby-plugin-sitemap
@@ -86,7 +88,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `static/img/logo-icon.png`, // This path is relative to the root of the site.
+        icon: `./static/img/logo-icon.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-react-helmet`,
