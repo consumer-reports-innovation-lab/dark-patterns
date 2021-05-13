@@ -18,6 +18,7 @@ export async function createMediaFromFile({ file, metaData }) {
       url: `${restUrl}/media`,
       data: data
     })
+
     return media
 
   } catch (error) {
@@ -40,7 +41,6 @@ export async function createDraft(data) {
       data: JSON.stringify(data)
     })
 
-    console.log('draft', draft)
     return draft
 
 
@@ -48,4 +48,28 @@ export async function createDraft(data) {
     console.log(error)
   }
 
+}
+
+export async function getToken() {
+  try {
+    const response = await axios({
+      method: 'post',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+      },
+      url: `https://staging-darkpatterns.kinsta.cloud/wp-json/jwt-auth/v1/token`,
+      data: JSON.stringify({
+        username: process.env.GATSBY_WP_USERNAME,
+        password: process.env.GATSBY_WP_PASSWORD
+      })
+    })
+
+
+    return response.data.token
+
+
+  } catch (error) {
+    console.log(error)
+  }
 }
