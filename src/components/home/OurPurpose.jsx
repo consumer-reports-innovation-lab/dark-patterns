@@ -8,7 +8,7 @@ const OurPurpose = () => {
     <section className="bg-dark">
       <div className="container">
         <div className="row content-center">
-          <div className="col-12 col-md-6 col-lg-6 mb-5 pb-5">
+          <div className="col-12 col-lg-6 ">
             <h2>Our Purpose</h2>
             <p>
               The Dark Patterns Tip Line is a platform people can use to submit deceptive designs they encounter in everyday digital products and services. Through crowdsourcing human stories of digital manipulation and amplifying people’s voices, we will raise awareness of the real-life harms that result from deceptive design.
@@ -20,7 +20,39 @@ const OurPurpose = () => {
               About Us
               </Link>
           </div>
-          <div className="col-12 col-md-6 offset-lg-1 col-lg-5 d-flex flex-column justify-content-center align-items-start">
+          <div className="col-12 offset-lg-1 col-lg-5 mt-5 mt-lg-0">
+            <div className="row">
+              <div className="col-12 col-md-6 col-lg-12 mt-4 mt-lg-0">
+                <h4>Engage</h4>
+                  <p>
+                    Engage and encourage people to submit their stories of
+                    dark patterns online.
+                  </p>
+              </div>
+              <div className="col-12 col-md-6 col-lg-12 mt-4">
+                <h4>Inform</h4>
+                <p>
+                    Inform the public on how to avoid devious design tactics
+                    they may encounter in everyday use of online products and
+                    services.
+                </p>
+              </div>
+              <div className="col-12 col-md-6 col-lg-12 mt-4">
+                <h4>Empower</h4>
+                  <p>
+                    Empower policymakers and advocates with evidence that illustrates real-life harms of deception online.
+                    </p>
+              </div>
+              <div className="col-12 col-md-6 col-lg-12 mt-4">
+                <h4>Change</h4>
+                  <p>
+                    Change the status quo by advocating for stronger consumer
+                    protections and holding companies accountable.
+                    </p>
+              </div>
+            </div>
+          </div>
+          {/* <div className="col-12  offset-lg-1 col-lg-5 d-flex flex-column justify-content-center align-items-start">
             <ul className="icon-list">
               <li className="align-items-start mb-5">
                 <img
@@ -79,7 +111,7 @@ const OurPurpose = () => {
                 </div>
               </li>
             </ul>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

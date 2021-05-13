@@ -23,10 +23,31 @@
 
 #pageFooter {
   background-color: $black;
-  .nav-link {
-    color: $white;
-    position: relative;
-    border-bottom: none;
-    transition: 0.2s;
+  .text-mono {
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+  }
+  .navbar-nav {
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    justify-content: flex-end;
+    .nav-item {
+      .nav-link {
+        color: $white;
+        position: relative;
+        display: inline-block;
+        margin: 0 0.25rem;
+        transition: 0.2s;
+      }
+    }
+    @media (max-width: 990px) {
+      flex-direction: column;
+      align-items: flex-end;
+    }
+    @media (max-width: 768px) {
+      align-items: flex-start;
+      margin-top: 1.5rem;
+    }
   }
 }

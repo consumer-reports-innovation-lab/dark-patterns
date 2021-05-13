@@ -142,7 +142,7 @@
 .select-container {
   width: 100%;
   .select__placeholder {
-    font-size: 14px;
+    font-size: 1.2rem;
     font-weight: 300;
     margin: 0;
   }
@@ -221,7 +221,9 @@
     }
   }
 }
-
+.form-control {
+  font-size: 1.2rem;
+}
 .form-control,
 .dropzone {
   &:focus {

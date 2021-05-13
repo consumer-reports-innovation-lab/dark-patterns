@@ -108,7 +108,7 @@ const ExampleForm = () => {
                 placeholder="Enter company name..."
                 hint="The company, platform, product or service that you noticed doing shady stuff."
                 label="Affiliated Company (Required)"
-                className="mb-4"
+                className="mb-5"
               />
 
               <Field
@@ -118,7 +118,7 @@ const ExampleForm = () => {
                 placeholder="Describe in detail..."
                 hint="Please explain what you experienced and what harm it caused you. If possible, please explain how we can try to recreate your experience."
                 label="Describe this dark pattern (Required)"
-                className="mb-4"
+                className="mb-5"
               />
 
               <Field
@@ -140,7 +140,7 @@ const ExampleForm = () => {
                 hint="Choose from the most commonly effected industries."
                 placeholder="Select industry..."
                 label="Industry"
-                className="mb-4"
+                className="mb-5"
               />
 
               <Field
@@ -152,7 +152,7 @@ const ExampleForm = () => {
                 hint="Choose from the categories of harms."
                 placeholder="Select category..."
                 label="What harm did this cause you?"
-                className="mb-4"
+                className="mb-5"
               />
 
               <Field
@@ -162,7 +162,7 @@ const ExampleForm = () => {
                 placeholder="..."
                 hint=" If you don’t have an image, that’s OK."
                 label="Screenshot Image"
-                className="mb-4"
+                className="mb-5"
               />
 
               <Field
@@ -170,8 +170,8 @@ const ExampleForm = () => {
                 type="text"
                 component={EmailInput}
                 placeholder="For outreach in case we have questions"
-                hint="You can optionally share your email so we can reach out if we have any questions. We won’t ever share your email or use it for any other purpose."
-                className="mb-4"
+                hint="You can optionally share your email so we can reach out if we have any questions. We won’t ever share your email."
+                className="mb-5"
                 label="Email (Optional)"
               />
 

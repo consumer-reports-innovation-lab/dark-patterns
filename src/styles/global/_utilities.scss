@@ -584,6 +584,12 @@
   }
 }
 
+.fullheight {
+  height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
 .list-icon {
   min-width: 50px;
   max-width: 50px;

@@ -18,7 +18,7 @@ const Intro = () => {
               Every day, we’re exploited for profit through{" "}
               <strong>dark patterns</strong>: design tactics used in websites and apps to persuade you into doing things you probably would not do otherwise.
               </p>
-            <p >
+            <p className="text-mid">
               <strong>
                 We need to take a stand against dark patterns—and you can help by reporting a dark pattern today. It will help us fight back against companies using manipulative dark patterns to take our private information, money, and time. You deserve respect, online and off.
 
