@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
 // import PropTypes from 'prop-types'
 
 const FooterMenu = () => {
@@ -8,12 +7,6 @@ const FooterMenu = () => {
     <div className="container">
       <div className="row py-5">
 
-          {/* <StaticImage
-            src="../../assets/global/cr-id-reversed.svg"
-            alt="Consumer Reports"
-            className="img-fluid "
-            height={50}
-          /> */}
           <div className="col-12 col-md-7 col-lg-4 d-flex align-items-center">
             <span className="text-mono text-mid ">An experiment incubated by the CR Digital Lab</span>
           </div>
