@@ -8,7 +8,7 @@ const FooterMenu = () => {
       <div className="row py-5">
 
           <div className="col-12 col-md-7 col-lg-4 d-flex align-items-center">
-            <span className="text-mono text-mid ">An experiment incubated by the CR Digital Lab</span>
+            <span className="text-mono text-mid ">An experiment incubated by the <a className="text-mid" href="https://digital-lab.consumerreports.org/" target="_blank">CR Digital Lab</a></span>
           </div>
           <div className="col-12 col-md-5 col-lg-8">
             <ul className="navbar-nav">
