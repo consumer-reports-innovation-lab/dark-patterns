@@ -35,7 +35,11 @@ const [menuOpen, setMenuOpen] = useState( false );
         >
           <ul className="navbar-nav">
             <li className="nav-item">
-              <Link to="/harms" className="nav-link" activeClassName="active">
+              <Link
+                to="/harms"
+                className="nav-link"
+                activeClassName="active"
+                partiallyActive={true}>
                 Harms
               </Link>
             </li>
