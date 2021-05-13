@@ -58,7 +58,7 @@ const OurPurpose = () => {
                 <img
                   className="list-icon mt-2"
                   alt=""
-                  src="/img/logos/logo-icon.svg"
+                  src="/img/logo-icon.svg"
                 />
                 <div >
                   <h4>Engage</h4>
@@ -72,7 +72,7 @@ const OurPurpose = () => {
                 <img
                   className="list-icon mt-2"
                   alt=""
-                  src="/img/logos/logo-icon.svg"
+                  src="/img/logo-icon.svg"
                 />
                 <div >
                   <h4>Inform</h4>
@@ -87,7 +87,7 @@ const OurPurpose = () => {
                 <img
                   className="list-icon mt-2"
                   alt=""
-                  src="/img/logos/logo-icon.svg"
+                  src="/img/logo-icon.svg"
                 />
                 <div>
                   <h4>Empower</h4>
@@ -100,7 +100,7 @@ const OurPurpose = () => {
                 <img
                   className="list-icon mt-2"
                   alt=""
-                  src="/img/logos/logo-icon.svg"
+                  src="/img/logo-icon.svg"
                 />
                 <div >
                   <h4>Change</h4>

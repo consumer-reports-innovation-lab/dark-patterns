@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useSiteMetadata } from '../hooks/useSiteMetadata'
 
-const SEO = ({ pageSEO, meta, className }) => {
+const SEO = ({ pageSEO, meta, links, className }) => {
   const { defaultSEO } = useSiteMetadata()
   const seo = {
     ...defaultSEO,
@@ -36,20 +36,30 @@ const SEO = ({ pageSEO, meta, className }) => {
         { name: "twitter:creator", content: `@${seo.twitter.username}` },
         { name: "twitter:site", content: `@${seo.twitter.username}` },
       ].concat(meta)}
+      links={[
+        { rel: "preconnect", href: "https://cdn.cr.org/", crossOrigin: "true" },
+        { rel: "preload", href: "https://cdn.cr.org/crux/fonts/v1/AvertaW01-Light.woff2?v=1.0.1", as: "font", crossOrigin: "true" },
+        { rel: "preload", href: "https://cdn.cr.org/crux/fonts/v1/AvertaW01-Regular.woff2?v=1.0.1", as: "font", crossOrigin: "true" },
+        { rel: "preload", href: "https://cdn.cr.org/crux/fonts/v1/AvertaW01-Bold.woff2?v=1.0.1", as: "font", crossOrigin: "true" },
+        { rel: "preload", href: "https://cdn.cr.org/crux/styles/2.0/static/icons/crux-icons.woff", as: "font", crossOrigin: "true" },
+      ].concat(links)}
     />
 
   )
 }
 
+
 SEO.propTypes = {
   pageSEO: PropTypes.instanceOf(Object),
   className: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
+  links: PropTypes.arrayOf(PropTypes.object),
 }
 SEO.defaultProps = {
   pageSEO: null,
   className: '',
-  meta: []
+  meta: [],
+  links: []
 }
 
 

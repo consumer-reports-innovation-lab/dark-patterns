@@ -70,19 +70,21 @@ const Example = ({ data: { example } }) => {
               <div className="row my-5">
                 <div className="col-12">
                   <h4>Description</h4>
-                  {parse(description)}
+                  {description && parse(description)}
                 </div>
               </div>
+              {sourceLink && (
+                <div className="row">
+                  <div className="col-12">
+                    <h4>Where can you find this?</h4>
+                    {sourceLink.startsWith('http')
+                      ? <a href={sourceLink} target="_blank">View Dark Pattern</a>
+                      : <p >{sourceLink}</p>
+                    }
+                  </div>
+                </div>
+              )}
 
-              <div className="row">
-                <div className="col-12">
-                  <h4>Where can you find this?</h4>
-                  {sourceLink.startsWith('http')
-                    ? <a href={sourceLink} target="_blank">View Dark Pattern</a>
-                    : <p >{sourceLink}</p>
-                  }
-                </div>
-              </div>
 
               <div className="row my-5">
                 <div className="col-12">
@@ -112,14 +114,16 @@ const Example = ({ data: { example } }) => {
 
 
             </div>
-            <div className="col-12 col-md-6">
-              <div className="magnify">
-                <ZoomImage overlayBgColorEnd={`rgba(0,0,0,0.7)`}>
-                  <GatsbyImage image={getImage(localFile)} alt={title} />
-                </ZoomImage>
-              </div>
 
-            </div>
+            {localFile && (
+              <div className="col-12 col-md-6">
+                <div className="magnify">
+                  <ZoomImage overlayBgColorEnd={`rgba(0,0,0,0.7)`}>
+                    <GatsbyImage image={getImage(localFile)} alt={title} />
+                  </ZoomImage>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </section>
