@@ -27,6 +27,7 @@
   &:hover,
   &:focus,
   &:active {
+    opacity: 1;
     &::before {
       transform: translateX(0);
     }
@@ -101,5 +102,5 @@
 }
 
 .text-mid {
-  color: $gray-500 !important;
+  color: $gray-700 !important;
 }
