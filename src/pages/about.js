@@ -18,19 +18,19 @@ const AboutPage = () => {
       slug: "we-ground-our-work-in-human-centered-perspectives.",
       title: "We ground our work in human-centered perspectives.",
       description: "Perspectives of everyday people is missing from dense, legal, and wonky conversations about dark patterns. This project is powered by research with individuals who suffered dark pattern-instigated harms.",
-      iconPath: "/static/img/logo-icon.png"
+      iconPath: "/img/logo-icon.png"
     },
     {
       slug: "we-collaborate-across-teams-and-functions.",
       title: "We collaborate across teams and functions.",
       description: "People across industries are working together to better understand how dark patterns hurt people. Our team includes designers, academic researchers, legal experts, policy specialists, and advocacy-minded individuals.",
-      iconPath: "/static/img/logo-icon.png"
+      iconPath: "/img/logo-icon.png"
     },
     {
       slug: "we-value-both-qualitative-and-quantitative-data-to-create-impact.",
       title: "We value both qualitative and quantitative data to create impact.",
       description: "The Dark Patterns Tip Line was founded to serve as a crowdsourcing platform where people submit dark patterns they’ve encountered. The data collected is supplemented with qualitative analysis via one-on-one interviews to better understand the human impact of these malicious tactics.",
-      iconPath: "/static/img/logo-icon.png"
+      iconPath: "/img/logo-icon.png"
     },
   ]
 
