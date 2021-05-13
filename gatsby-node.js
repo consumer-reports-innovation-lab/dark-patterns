@@ -37,7 +37,7 @@ const createExamplePages = async ({ examples, gatsbyUtilities }) =>
       gatsbyUtilities.actions.createPage({
         // Use the WordPress uri as the Gatsby page path
         // This is a good idea so that internal links and menus work 👍
-        path: `/example/${example.slug}/`,
+        path: `/sightings/${example.slug}/`,
 
         // use the blog post template as the page component
         // component: path.resolve(`./src/templates/${post.nodeType}.js`),
@@ -64,8 +64,8 @@ const createCategoryPages = async ({ categories, gatsbyUtilities }) =>
     categories.map(category => {
       if (!category) return
       // const template = category.slug.replace(/-./g, x => x[1].toUpperCase()[1]).replace(/^\w/, s => s.toUpperCase())
-      // const cleanPath = category.uri.replace('/category/', '/')
-      const cleanPath = category.uri
+      const cleanPath = category.uri.replace('/category/', '/harms/')
+      // const cleanPath = category.uri
 
       // createPage is an action passed to createPages
       // See https://www.gatsbyjs.com/docs/actions#createPage for more info

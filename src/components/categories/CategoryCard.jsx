@@ -6,7 +6,7 @@ const CategoryCard = ({ category, className }) => {
   const {name, description, uri} = category
 
   return (
-    <Link to={uri} draggable="false" >
+    <Link to={uri.replace('category', 'harms')} draggable="false" >
     <div className={`card ${className}`}>
       <div className="card-body">
         <p className="card-title">{name}</p>
