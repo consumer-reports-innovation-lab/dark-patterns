@@ -149,7 +149,7 @@ const ExampleForm = () => {
                       component={TextInput}
                       placeholder="Enter source link..."
                       hint="Where should we go to try and recreate your experience?"
-                      label="Where did you find this dark pattern? (ex. Include source or link to website, app, tweet or post)"
+                      label="Where did you find this dark pattern? (link to website, app, or post)"
                       className="mb-4"
                     />
 
@@ -173,7 +173,7 @@ const ExampleForm = () => {
                       onChange={value => setFieldValue('categories', value)}
                       hint="Choose from the categories of harms."
                       placeholder="Select category..."
-                      label="What harm did this cause you?"
+                      label="What harm did this cause you? (Required)"
                       className="mb-5"
                     />
 
@@ -192,7 +192,7 @@ const ExampleForm = () => {
                       type="text"
                       component={EmailInput}
                       placeholder="For outreach in case we have questions"
-                      hint="You can optionally share your email so we can reach out if we have any questions. We won’t ever share your email."
+                      hint="You can optionally share your email so we can reach out if we have any questions. We won’t share your email."
                       className="mb-5"
                       label="Email (Optional)"
                     />
@@ -206,7 +206,7 @@ const ExampleForm = () => {
                     >
 
                     </Field> */}
-                    <p className="mt-n3" >By submitting this form, I agree to the terms of Consumer Reports’ <a href="https://www.consumerreports.org/cro/customerservice/privacy-policy/highlights/index.htm" target="_blank">Privacy Policy</a> and <a href="https://www.consumerreports.org/cro/2015/01/user-agreement/index.htm" target="_blank">User Agreement</a>.</p>
+                    <p className="mt-n3" >By submitting this form, I agree to the terms of Consumer Reports’ <a href="https://www.consumerreports.org/cro/customerservice/privacy-policy/highlights/index.htm" target="_blank">Privacy Policy</a> and <a href="https://www.consumerreports.org/cro/2015/01/user-agreement/index.htm" target="_blank">User Agreement</a>. Read more about <a href="/how-well-use-your-submission">how we'll use your submissions</a>.</p> 
 
                     <button
                       type="submit"
