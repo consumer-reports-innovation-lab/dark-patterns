@@ -60,15 +60,14 @@ const ExampleForm = () => {
 
       if (featuredImage) {
         const media = await createMediaFromFile({ file: featuredImage[0], meta: {} })
-        draft = {...draft, featured_media: media.data.id}
-
+        draft = { ...draft, featured_media: media.data.id }
       }
 
       const example = await createDraft(draft).then(response => {
         const statusCode = response.status
         const error = statusCode >= 400 && statusCode <= 500 ? `error:` : null
         if (error) {
-          setPostError(error)
+          setPostError(true)
           setLoading(false)
         } else if (statusCode >= 200 && statusCode <= 300) {
           console.log(response)
@@ -108,7 +107,8 @@ const ExampleForm = () => {
                           {postError ? (
                             <>
                               <h3 className="text-danger">Error:</h3>
-                              <p>{postError}</p>
+                              <p>There was an error during form submission please try again.</p>
+                              <button className="btn btn-primary" onClick={() => resetForm()}>Report another tip</button>
                             </>
                           ) : (
                             <>
@@ -206,7 +206,7 @@ const ExampleForm = () => {
                     >
 
                     </Field> */}
-                    <p className="mt-n3" >By submitting this form, I agree to the terms of Consumer Reports’ <a href="https://www.consumerreports.org/cro/customerservice/privacy-policy/highlights/index.htm" target="_blank">Privacy Policy</a> and <a href="https://www.consumerreports.org/cro/2015/01/user-agreement/index.htm" target="_blank">User Agreement</a>. Read more about <a href="/how-well-use-your-submission">how we'll use your submissions</a>.</p> 
+                    <p className="mt-n3" >By submitting this form, I agree to the terms of Consumer Reports’ <a href="https://www.consumerreports.org/cro/customerservice/privacy-policy/highlights/index.htm" target="_blank">Privacy Policy</a> and <a href="https://www.consumerreports.org/cro/2015/01/user-agreement/index.htm" target="_blank">User Agreement</a>. Read more about <a href="/how-well-use-your-submission">how we'll use your submissions</a>.</p>
 
                     <button
                       type="submit"
