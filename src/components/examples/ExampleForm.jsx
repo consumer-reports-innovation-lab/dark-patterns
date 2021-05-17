@@ -63,7 +63,7 @@ const ExampleForm = () => {
         draft = { ...draft, featured_media: media.data.id }
       }
 
-      const example = await createDraft(draft).then(response => {
+      await createDraft(draft).then(response => {
         const statusCode = response.status
         const error = statusCode >= 400 && statusCode <= 500 ? `error:` : null
         if (error) {
