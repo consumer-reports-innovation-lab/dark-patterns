@@ -40,7 +40,6 @@ const ExampleForm = () => {
     affiliated_company: undefined,
     description: undefined,
     optional_email: "",
-    privacy_policy: false
   }
 
   const handleSubmit = async ({values}) => {
@@ -95,7 +94,7 @@ const ExampleForm = () => {
           handleSubmit({ values })
         }}
       >
-        {({ values, errors, isSubmitting, submitCount, setFieldValue, resetForm }) =>  (
+        {({ values, dirty, errors, isSubmitting, submitCount, setFieldValue, resetForm }) =>  (
           <Form>
             {loading ? (
               <LoadingComponent />
@@ -198,20 +197,21 @@ const ExampleForm = () => {
                       label="Email (Optional)"
                     />
 
-                    <Field
+                    {/* <Field
                       name="privacy_policy"
                       type="checkbox"
                       component={SwitchInput}
                       onChange={(e, value) => setFieldValue('privacy_policy', value.checked)}
                       label=""
                     >
-                      <span className="mt-n3" >By submitting this form, I agree to the terms of Consumer Reports’ <a href="https://www.consumerreports.org/cro/customerservice/privacy-policy/highlights/index.htm" target="_blank">Privacy Policy</a> and <a href="https://www.consumerreports.org/cro/2015/01/user-agreement/index.htm" target="_blank">User Agreement</a>.</span>
-                    </Field>
+
+                    </Field> */}
+                    <p className="mt-n3" >By submitting this form, I agree to the terms of Consumer Reports’ <a href="https://www.consumerreports.org/cro/customerservice/privacy-policy/highlights/index.htm" target="_blank">Privacy Policy</a> and <a href="https://www.consumerreports.org/cro/2015/01/user-agreement/index.htm" target="_blank">User Agreement</a>.</p>
 
                     <button
                       type="submit"
                       className="btn btn-primary my-5"
-                      disabled={values.privacy_policy ? false : true}>
+                      disabled={dirty ? false : true}>
                       Submit
                     </button>
 
