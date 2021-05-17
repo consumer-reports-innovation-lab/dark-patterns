@@ -20,8 +20,7 @@ const Intro = () => {
               </p>
             <p className="text-mid">
               <strong>
-                We need to take a stand against dark patterns—and you can help by reporting a dark pattern today. It will help us fight back against companies using manipulative dark patterns to take our private information, money, and time. You deserve respect, online and off.
-
+                We need to take a stand against dark patterns—and you can help by <Link to="/report/">reporting a dark pattern today</Link>. It will help us fight back against companies using manipulative dark patterns to take our private information, money, and time. You deserve respect, online and off.
                 </strong>
             </p>
 
