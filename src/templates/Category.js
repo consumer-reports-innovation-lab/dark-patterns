@@ -8,9 +8,16 @@ import Layout from '../containers/Layout'
 import SEO from '../containers/seo'
 
 const Category = ({ data: { category } }) => {
-  const { name, description, examples, categoryFeaturedImage } = category
-  const imageData = categoryFeaturedImage?.featuredImage?.localFile
+  const {
+    name,
+    description,
+    examples,
+    categoryFeaturedImage: {
+      featuredImage
+    }
+  } = category
 
+  const imageData = getImage(featuredImage?.localFile)
   return (
     <Layout>
       <SEO pageSEO={category.seo} />
