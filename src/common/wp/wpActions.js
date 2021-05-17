@@ -40,7 +40,6 @@ export async function createDraft(data) {
       url: `${restUrl}/example`,
       data: JSON.stringify(data)
     })
-
     return draft
 
 
@@ -48,6 +47,7 @@ export async function createDraft(data) {
     console.log(error)
   }
 
+  return { status: 400 }
 }
 
 export async function getToken() {
