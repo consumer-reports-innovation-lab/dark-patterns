@@ -63,7 +63,7 @@ const IndustryExamples = () => {
       <div className="container">
         <div className="row justify-content-center">
           <div className="col-12 col-md-10 text-center">
-            <div className="p-5 pt-0">
+            <div className="p-md-5 pt-0">
               <h2>DARK PATTERNS ARE EVERYWHERE</h2>
               <p>Dark patterns are common in websites and apps we use everyday, but they’re sometimes hard to spot because they’re designed to deceive us. Through secretly obtaining personal information and making us do things we don’t want to do, dark patterns can create inconveniences or even serious harms.</p>
 
