@@ -41,11 +41,6 @@ const ExamplesPage = () => {
       <Intro />
       <section>
         <div className="container">
-          {/* <div className="row">
-            <div className="col-12 d-flex justify-content-end">
-              <span>Sort By</span>Most Recent
-            </div>
-          </div> */}
           <div className="row">
             <div className="col-12 col-md-4 col-lg-3">
 
@@ -55,18 +50,17 @@ const ExamplesPage = () => {
                   const { id, name, description } = category.node
                   if (name === "Uncategorized") return
                   return (
-
-
                     <li key={id}>
                       <label>
-
                         <Checkbox
-                          // checked={this.state.checked}
-                          // onChange={this.handleCheckboxChange}
+                          name={id}
+                          checked={activeFilters.includes(id)}
+                          onChange={e => {
+                            updateFilters(e.target)
+                          }}
                         />
                         <span className="ms-2">{name}</span>
                       </label>
-
                     </li>
                   )
                 })}
