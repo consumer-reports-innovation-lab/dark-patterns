@@ -1,17 +1,13 @@
 import React, { useState, useEffect } from "react"
 // import PropTypes from 'prop-types'
-import { Formik, Field, Form } from "formik"
-// import FormikDebug from "../common/utils/FormikDebug"
-import {
-  // TextInput,
-  SwitchInput
-} from "../common/fields"
 import { useCategories } from '../hooks/useCategories'
 import { useExamples } from '../hooks/useExamples'
 import Intro from '../components/examples/Intro'
 import ExampleCard from "../components/examples/ExampleCard"
 import Layout from "../containers/Layout"
 import SEO from '../containers/seo'
+import Checkbox from '../common/fields/Checkbox'
+
 
 const ExamplesPage = () => {
   const pageSEO = {
@@ -38,6 +34,7 @@ const ExamplesPage = () => {
     setActiveFilters(newFilters)
   }
 
+
   return (
     <Layout>
       <SEO pageSEO={pageSEO} />
@@ -51,40 +48,32 @@ const ExamplesPage = () => {
           </div> */}
           <div className="row">
             <div className="col-12 col-md-4 col-lg-3">
-              <Formik
-                enableReinitialize
-                initialValues={{}}
-                onSubmit={(values) => console.log(values)}
-              >
-                {({ values, setFieldValue }) => (
-                  <Form>
-                    <h2>Harms</h2>
-                    <ul className="list-of-harms">
-                      {categories && categories.map(category => {
-                        const { id, name, description } = category.node
-                        if (name === "Uncategorized") return
-                        return (
-                          <li key={id}>
-                            <Field
-                              name={id}
-                              type="checkbox"
-                              component={SwitchInput}
-                              // toggle
-                              hint={description}
-                              onChange={(e, value) => {
-                                setFieldValue(id, value.checked)
-                                updateFilters(value)
-                              }}
-                              label={name}
-                            />
-                          </li>
-                        )
-                      })}
-                    </ul>
-                    {/* <FormikDebug /> */}
-                  </Form>
-                )}
-              </Formik>
+
+              <h2>Harms</h2>
+              <ul className="list-of-harms">
+                {categories && categories.map(category => {
+                  const { id, name, description } = category.node
+                  if (name === "Uncategorized") return
+                  return (
+
+
+                    <li key={id}>
+                      <label>
+
+                        <Checkbox
+                          // checked={this.state.checked}
+                          // onChange={this.handleCheckboxChange}
+                        />
+                        <span className="ms-2">{name}</span>
+                      </label>
+
+                    </li>
+                  )
+                })}
+              </ul>
+
+
+
             </div>
 
             <div className="col-12 col-md-8  col-lg-9">

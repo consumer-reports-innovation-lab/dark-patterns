@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Popup } from 'semantic-ui-react'
+// import { Popup } from 'semantic-ui-react'
 
 const style ={
   background: "#fed230",
@@ -12,14 +12,14 @@ const style ={
 const FieldHint = ({ content }) => {
   return (
     <div className="pt-1 ml-1 d-inline-block d-md-none">
-      <Popup
+      {/* <Popup
         trigger={<i className="ri-question-fill text-mid ms-2" />}
         content={content}
         position="right center"
         inverted
         style={style}
         size="tiny"
-      />
+      /> */}
     </div>
   )
 }

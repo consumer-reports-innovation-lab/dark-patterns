@@ -1,12 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Dimmer, Loader } from 'semantic-ui-react'
 
 const LoadingComponent = ({ inverted }) => {
   return (
-    <Dimmer active inverted={inverted}>
-      <Loader content="Loading..." />
-    </Dimmer>
+    <div>
+      <span className="h3">Loading...</span>
+    </div>
   )
 }
 
