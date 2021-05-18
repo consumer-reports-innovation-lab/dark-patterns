@@ -50,6 +50,29 @@ export async function createDraft(data) {
   return { status: 400 }
 }
 
+export async function createMessage(values) {
+
+  try {
+    const response = await axios({
+      method: 'post',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+        'Authorization': `Bearer ${token}`
+      },
+      url: `${restUrl}/feedaback`,
+      data: JSON.stringify(values)
+    })
+    return response
+
+  } catch (error) {
+    // console.log(error)
+    return error
+  }
+
+}
+
+
 export async function getToken() {
   try {
     const response = await axios({
@@ -58,7 +81,7 @@ export async function getToken() {
         'Content-Type': 'application/json',
         'Accept': 'application/json',
       },
-      url: `https://staging-darkpatterns.kinsta.cloud/wp-json/jwt-auth/v1/token`,
+      url: `https://darkpatterns.kinsta.cloud/wp-json/jwt-auth/v1/token`,
       data: JSON.stringify({
         username: process.env.GATSBY_WP_USERNAME,
         password: process.env.GATSBY_WP_PASSWORD

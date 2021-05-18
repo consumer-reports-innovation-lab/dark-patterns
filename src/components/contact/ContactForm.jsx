@@ -1,58 +1,121 @@
-import React from 'react'
+import React, { useState } from 'react'
 // import PropTypes from 'prop-types'
 import { Formik, Field, Form } from 'formik'
 import * as Yup from 'yup'
+import { createMessage } from '../../common/wp/wpActions'
 import {
   EmailInput,
   TextArea,
 } from '../../common/fields'
+import LoadingComponent from '../../common/ui/LoadingComponent'
+
+const ValidationSchema = Yup.object().shape({
+  // description: Yup.string()
+  //   .min(3, 'The description you entered is too short. Please Enter a longer description')
+  //   .required('Please describe the pattern you are submitting')
+})
 
 const ContactForm = () => {
+  const [loading, setLoading] = useState(false)
+  const [postError, setPostError] = useState(false)
+  const initialValues = {
+    title: '',
+    content: ''
+  }
+
+  const handleSubmit = async ({values}) => {
+    try {
+      setLoading(true)
+      await createMessage(values).then(response => {
+        const statusCode = response.status
+        const error = statusCode >= 400 && statusCode <= 500 ? `error:` : null
+        if (error) {
+          setPostError(true)
+        } else if (statusCode >= 200 && statusCode <= 300) {
+          setPostError(false)
+        }
+      })
+      setLoading(false)
+    } catch (error) {
+
+    }
+  }
 
   return (
-    <>
     <Formik
-       initialValues={{ email: '', password: '' }}
-       onSubmit={(values, { setSubmitting }) => {
-         setTimeout(() => {
-           alert(JSON.stringify(values, null, 2));
-           setSubmitting(false);
-         }, 400);
-       }}
+      enableReinitialize
+      initialValues={initialValues}
+      validationSchema={ValidationSchema}
+      onSubmit={(values, { resetForm }) => {
+        handleSubmit({ values })
+      }}
      >
-       {({
-         touched,
-         handleSubmit,
-         isSubmitting,
-       }) => (
-         <form onSubmit={handleSubmit}>
+      {({ dirty, errors, isSubmitting }) => (
+        <Form>
+          {loading ? (
+            <LoadingComponent />
+          ) : (
+            <>
+              {isSubmitting ? (
+                <div className="py-5">
+                  {postError ? (
+                    <>
+                      <h3 className="text-danger">Error:</h3>
+                      <p>There was an error please try again.</p>
+                    </>
+                  ) : (
+                    <>
+                      <h3 className="highlighter">Your message has been sent.</h3>
+                      <h4 className="ms-2 my-4 text-mid">Thank you for sharing your feedback with us.</h4>
+                    </>
+                  )}
+                </div>
+              ) : (
+                <>
+                  <Field
+                    name="title"
+                    type="text"
+                    component={EmailInput}
+                    placeholder=""
+                    hint="You can optionally share your email so we can reach out if we have any questions. We won’t share your email."
+                    className="mb-4"
+                    label="Email (Optional)"
+                  />
 
-          <Field
-            name="optional_email"
-            type="text"
-            component={EmailInput}
-            placeholder="For outreach in case we have questions"
-            hint="You can optionally share your email so we can reach out if we have any questions. We won’t share your email."
-            className="mb-4"
-            label="Email (Optional)"
-          />
+                  <Field
+                    name="content"
+                    type="text"
+                    component={TextArea}
+                    placeholder=""
+                    hint="Get in touch with us"
+                    label="Message"
+                  />
 
-          <Field
-            name="description"
-            type="text"
-            component={TextArea}
-            placeholder="Get in touch with us"
-            hint="Get in touch with us"
-          />
+                  <button
+                    type="submit"
+                    disabled={dirty ? false : true}
+                    className="btn btn-primary my-5">
+                    Send
+                  </button>
 
-           <button type="submit" className="btn btn-primary my-5">
-             Send
-           </button>
-
-         </form>
+                  {dirty && (
+                    <>
+                      {Object.entries(errors).length > 0 && (
+                        <div className='border-start border-danger border-5 px-3 text-danger mb-5'>
+                          {Object.entries(errors).map(([key, value], i) => {
+                            return <p key={key} >{value}</p>
+                          })}
+                        </div>
+                      )}
+                    </>
+                  )}
+                </>
+              )}
+            </>
+          )}
+        </Form>
        )}
      </Formik>
-    </>
   )
 }
 
