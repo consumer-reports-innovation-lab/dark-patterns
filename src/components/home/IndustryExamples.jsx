@@ -71,12 +71,12 @@ const IndustryExamples = () => {
           </div>
           <div className="col-12">
             <Tabs>
-              <TabList className="d-flex align-items-center justify-content-center mb-5">
+              <TabList className="ps-0 d-flex align-items-center justify-content-center mb-md-5 flex-column flex-md-row">
                 {industryExamples && industryExamples.map((example, index) => {
                   const { slug, name } = example
                   return (
                     <Tab
-                      className=" tab-nav-link"
+                      className=" tab-nav-link mb-3 mb-md-0"
                       tabIndex="0"
                       key={`${slug}_button`}>
                       {name}
@@ -95,8 +95,6 @@ const IndustryExamples = () => {
                         <div className="home-example-wrapper">
 
                           <div className="example-interface">
-                            {/* <span>Sync your contact listto connect with friends!</span>
-                            <span className="example-btn">Start</span> */}
                             <img
                               src={cardSrc}
                               alt=""
