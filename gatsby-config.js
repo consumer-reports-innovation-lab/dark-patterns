@@ -74,7 +74,8 @@ module.exports = {
       options: {
         siteId: '1',
         matomoUrl: 'https://darkpatterns.kinsta.cloud/wp-content/plugins/matomo/app',
-        siteUrl: 'https://darkpatternstipline.org'
+        siteUrl: 'https://darkpatternstipline.org',
+        disableCookies: true
       }
     },
     {
