@@ -195,7 +195,7 @@ const ExampleForm = () => {
                       className="mb-5"
                       label="Email (Optional)"
                     />
-                    <p className="mt-n3" >By submitting this form, I agree to the terms of Consumer Reports’ <a href="https://www.consumerreports.org/cro/customerservice/privacy-policy/highlights/index.htm" target="_blank">Privacy Policy</a> and <a href="https://www.consumerreports.org/cro/2015/01/user-agreement/index.htm" target="_blank">User Agreement</a>. Read more about <a href="/how-well-use-your-submission">how we'll use your submissions</a>.</p>
+                    <p className="mt-n3" >By submitting this form, I agree to the terms of Consumer Reports’ <a href="https://www.consumerreports.org/cro/customerservice/privacy-policy/highlights/index.htm" target="_blank">Privacy Policy</a> and <a href="https://www.consumerreports.org/cro/2015/01/user-agreement/index.htm" target="_blank">User Agreement</a>.<br />Read more about <a href="/how-well-use-your-submission">how we'll use your submissions</a>.</p>
 
                     <button
                       type="submit"

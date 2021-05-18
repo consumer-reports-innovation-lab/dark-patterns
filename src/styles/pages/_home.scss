@@ -14,7 +14,7 @@
     left: 50%;
     transform: translateX(-50%);
     width: 65%;
-    height: 95%;
+    height: 70%;
     .phone-highlight {
       &::before {
         content: "";
@@ -51,10 +51,15 @@
     background-position: bottom;
     bottom: -100px;
   }
+  @media (max-width: 991px) {
+    .phone-screen {
+      height: 60%;
+    }
+  }
   @media (min-width: 1200px) {
     .phone-screen {
-      // background-color: blue;
-      height: 110%;
+      height: 95%;
+      width: 73%;
     }
     &::before {
       width: 195%;
@@ -63,15 +68,15 @@
   @media (min-width: 1600px) {
     .phone-screen {
       // background-color: blue;
-      width: 44%;
-      height: 130%;
+      width: 50%;
+      height: 120%;
       left: calc(50% + -75px);
     }
     &::before {
       width: 195%;
     }
     &::after {
-      height: 165%;
+      height: 155%;
       left: -75px;
     }
   }
@@ -96,6 +101,12 @@
     bottom: 0;
     right: 0;
     overflow: hidden;
+    @media (max-width: 768px) {
+      width: 90%;
+      margin: 75px 0 auto 10%;
+      margin-top: 75px;
+      padding: 50px 25px 25px 25px;
+    }
     img {
       z-index: 1;
       max-height: 100%;
@@ -143,7 +154,12 @@
     transform: translateY(-50%);
     padding: 1rem 50px 1rem 1rem;
     overflow: hidden;
-
+    z-index: 1;
+    @media (max-width: 768px) {
+      top: 0 !important;
+      width: 100%;
+      transform: translateY(0);
+    }
     &::before {
       content: "";
       position: absolute;
@@ -156,6 +172,9 @@
       overflow: hidden;
       transform: translateX(-100%);
       animation: translate-in 0.5s 1.25s forwards;
+      @media (max-width: 768px) {
+        width: 90%;
+      }
     }
     &::after {
       content: "";
@@ -170,6 +189,9 @@
       transform: translateX(-50px);
       opacity: 0;
       animation: example-arrow 0.75s 1.75s forwards;
+      @media (max-width: 768px) {
+        display: none;
+      }
     }
     span {
       opacity: 0;
@@ -201,6 +223,9 @@
       opacity: 0;
       z-index: 1;
       animation: example-device 1s 0.25s forwards;
+    }
+    @media (max-width: 768px) {
+      display: none;
     }
   }
 }
