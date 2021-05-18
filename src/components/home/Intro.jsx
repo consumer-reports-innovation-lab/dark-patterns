@@ -8,7 +8,7 @@ const Intro = () => {
       <div className="container">
         <div className="row d-lg-none mb-4">
           <div className="col-12">
-            <h1 className="text-hero">Dark Patterns Tip Line</h1>
+            <h1 className="text-hero">Dark Patterns<br />Tip Line</h1>
           </div>
         </div>
         <div className="row">

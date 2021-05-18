@@ -207,18 +207,16 @@
     position: absolute;
     font-size: 1rem;
     line-height: 1.4rem;
-
     padding: 0.5rem 1rem;
     margin-left: 2rem;
     display: flex;
     align-items: center;
     border-left: 4px solid $primary;
     opacity: 0;
-    // opacity: 1;
     @include transition();
-    @media (max-width: 768px) {
-      display: none;
-    }
+  }
+  @media (max-width: 768px) {
+    display: none;
   }
 }
 .form-control {

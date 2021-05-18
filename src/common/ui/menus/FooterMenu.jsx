@@ -18,6 +18,11 @@ const FooterMenu = () => {
                 </span>
               </li>
               <li className="nav-item text-end">
+                <Link to="/contact" className="nav-link">
+                  Get in Touch
+                </Link>
+              </li>
+              <li className="nav-item text-end">
                 <Link to="/how-well-use-your-submission/" className="nav-link">
                   How We'll Use Your Submission
                 </Link>
