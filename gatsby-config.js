@@ -25,7 +25,6 @@ module.exports = {
     facebook: website.facebook,
   },
   plugins: [
-
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
@@ -70,6 +69,14 @@ module.exports = {
     //     // purgeOnly: ['/main.scss'], // applies purging only on the bulma css file
     //   },
     // }, // must be after other CSS plugins
+    {
+      resolve: 'gatsby-plugin-matomo',
+      options: {
+        siteId: '1',
+        matomoUrl: 'https://staging-darkpatterns.kinsta.cloud/wp-content/plugins/matomo/app',
+        siteUrl: 'https://darkpatterns.gatsbyjs.io'
+      }
+    },
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
