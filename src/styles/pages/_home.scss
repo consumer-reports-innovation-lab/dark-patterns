@@ -51,9 +51,15 @@
     background-position: bottom;
     bottom: -100px;
   }
+  @media (max-width: 991px) {
+    .phone-screen {
+      height: 60%;
+    }
+  }
   @media (min-width: 1200px) {
     .phone-screen {
       height: 95%;
+      width: 73%;
     }
     &::before {
       width: 195%;
@@ -62,15 +68,15 @@
   @media (min-width: 1600px) {
     .phone-screen {
       // background-color: blue;
-      width: 44%;
-      height: 130%;
+      width: 50%;
+      height: 120%;
       left: calc(50% + -75px);
     }
     &::before {
       width: 195%;
     }
     &::after {
-      height: 165%;
+      height: 155%;
       left: -75px;
     }
   }
