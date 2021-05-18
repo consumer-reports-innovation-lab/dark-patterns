@@ -14,7 +14,7 @@
     left: 50%;
     transform: translateX(-50%);
     width: 65%;
-    height: 95%;
+    height: 70%;
     .phone-highlight {
       &::before {
         content: "";
@@ -53,8 +53,7 @@
   }
   @media (min-width: 1200px) {
     .phone-screen {
-      // background-color: blue;
-      height: 110%;
+      height: 95%;
     }
     &::before {
       width: 195%;
