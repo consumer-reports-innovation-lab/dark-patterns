@@ -60,7 +60,7 @@ export async function createMessage(values) {
         'Accept': 'application/json',
         'Authorization': `Bearer ${token}`
       },
-      url: `${restUrl}/feedaback`,
+      url: `${restUrl}/feedback`,
       data: JSON.stringify(values)
     })
     return response

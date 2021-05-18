@@ -73,8 +73,9 @@ module.exports = {
       resolve: 'gatsby-plugin-matomo',
       options: {
         siteId: '1',
-        matomoUrl: 'https://staging-darkpatterns.kinsta.cloud/wp-content/plugins/matomo/app',
-        siteUrl: 'https://darkpatterns.gatsbyjs.io'
+        matomoUrl: 'https://darkpatterns.kinsta.cloud/wp-content/plugins/matomo/app',
+        siteUrl: 'https://darkpatternstipline.org',
+        disableCookies: true
       }
     },
     {
