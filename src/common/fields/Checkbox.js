@@ -30,7 +30,7 @@ const StyledCheckbox = styled.div`
   display: inline-block;
   width: 16px;
   height: 16px;
-  background: ${props => (props.checked ? '#fed230' : '#gray-300')}
+  background: ${props => (props.checked ? '#fed230' : '#dee2e6')};
   border-radius: 3px;
   transition: all 150ms;
 
@@ -47,7 +47,7 @@ const Checkbox = ({ className, checked, ...props }) => (
   <CheckboxContainer className={className}>
     <HiddenCheckbox checked={checked} {...props} />
     <StyledCheckbox checked={checked}>
-      <Icon viewBox="0 0 24 24">
+      <Icon viewBox="0 0 24 24" className="mb-1">
         <polyline points="20 6 9 17 4 12" />
       </Icon>
     </StyledCheckbox>
