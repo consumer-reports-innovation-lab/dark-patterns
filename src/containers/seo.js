@@ -29,7 +29,7 @@ const SEO = ({ pageSEO, meta, links, className }) => {
         { name: "og:site_name", content: seo.opengraphSiteName ? seo.opengraphSiteName : seo.title },
         { name: "article:publisher", content: seo.facebook.url ? seo.facebook.url : seo.siteUrl },
         { name: "article:modified_time", content: seo.opengraphModifiedTime },
-        { name: "og:image", content: seo.opengraphImage?.sourceUrl ? seo.opengraphImage?.sourceUrl : seo.shareImage },
+        { name: "og:image", content: seo.opengraphImage?.sourceUrl ? `${seo.siteUrl}${seo.opengraphImage?.sourceUrl}` : `${seo.siteUrl}${seo.shareImage}` },
         { name: "og:image:width", content: `1200px` },
         { name: "og:image:height", content: `1200px` },
         { name: "twitter:card", content: "summary_large_image" },
