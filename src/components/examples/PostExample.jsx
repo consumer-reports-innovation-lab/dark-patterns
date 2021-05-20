@@ -14,6 +14,7 @@ const PostExample = () => {
             <p>Sharing a dark pattern you spotted in the wild helps us learn more about interfaces and designs that impact real people. Your tips will help policymakers and enforcers hold companies accountable for their dishonest and harmful practices, and we may feature your submission on this site. Join the movement to call out corporations for taking what’s not theirs.</p>
             <p>We encourage uploading images or screenshots that show the dark pattern you’ve encountered. Please don’t include any personal information in your submission.</p>
             <p><em><strong>Important note:</strong> Important note: The Dark Patterns Tip Line does not provide legal help. Reporting a dark pattern here helps raise public awareness and contributes to a list of examples for policymakers, enforcers and researchers. If you find a dark pattern that you believe violates the law, you can file a complaint with your state Attorney General (AG) who enforces consumer protection statutes against unfair, misleading, and deceptive acts and practices. Learn more and get in touch with your AG here: <a href="https://www.consumerresources.org/file-a-complaint/" target="_blank">https://www.consumerresources.org/file-a-complaint/</a></em></p>
+            <h3>Report here</h3>
           </div>
         </div>
         <div className="row mt-5">
