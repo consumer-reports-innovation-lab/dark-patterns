@@ -72,6 +72,7 @@ yarn-error.log
 # Yarn Integrity file
 .yarn-integrity
 
+package.lock
 
 # Local Netlify folder
 .netlify
