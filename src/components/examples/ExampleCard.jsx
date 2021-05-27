@@ -15,20 +15,19 @@ const {
     summary,
     industry,
   },
-  featuredImage: {
-    node: {
-      localFile
-    }
-  }
+  featuredImage
 }= example
 
+  const imageData = getImage(featuredImage?.node?.localFile)
 
   return (
     <Link to={uri.replace('example', 'sightings')} >
     <div className="card">
       <div className="card-body">
         <div className="card-image">
-          <GatsbyImage image={getImage(localFile)} alt={title} />
+          {imageData && (
+            <GatsbyImage image={imageData} alt={title} />
+          )}
         </div>
         <p className="card-date">{date}</p>
         <p className="card-company">{affiliatedCompany}</p>
