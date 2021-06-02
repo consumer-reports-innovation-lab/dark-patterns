@@ -3,7 +3,10 @@ import { useStaticQuery, graphql } from "gatsby"
 export const useExamples = () => {
   const data = useStaticQuery(graphql`
       query Examples {
-        allWpExample(sort: {order: DESC, fields: date}) {
+        allWpExample(
+          filter: {status: {eq: "publish"}}
+          sort: {order: DESC, fields: date}
+        ) {
           edges {
             node {
               ...ExampleDetails
