@@ -72,15 +72,6 @@ const ContactForm = () => {
                 </div>
               ) : (
                 <>
-                  <Field
-                    name="title"
-                    type="text"
-                    component={EmailInput}
-                    placeholder=""
-                    hint="You can optionally share your email so we can reach out if we have any questions. We won’t share your email."
-                    className="mb-4"
-                    label="Email (Optional)"
-                  />
 
                   <Field
                     name="content"
