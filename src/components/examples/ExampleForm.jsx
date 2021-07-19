@@ -7,7 +7,6 @@ import {
   TextArea,
   SelectInput,
   FileUpload,
-  EmailInput,
 } from '../../common/fields'
 import FormikDebug from '../../common/utils/FormikDebug'
 import { useCategories } from '../../hooks/useCategories'
