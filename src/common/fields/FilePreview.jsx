@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import TimeAgo from 'react-timeago'
-// import { formatFileSize } from '../utils/helpers'
 
 const FilePreview = ({ file, preview, handleDelete  }) => {
   const { name, lastModifiedDate, size } = file

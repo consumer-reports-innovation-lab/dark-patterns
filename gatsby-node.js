@@ -58,7 +58,6 @@ const createExamplePages = async ({ examples, gatsbyUtilities }) =>
       })
     )
   )
-
 const createCategoryPages = async ({ categories, gatsbyUtilities }) =>
   Promise.all(
     categories.map(category => {

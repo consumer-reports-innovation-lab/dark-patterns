@@ -3,10 +3,7 @@ import React, { useState } from 'react'
 import { Formik, Field, Form } from 'formik'
 import * as Yup from 'yup'
 import { createMessage } from '../../common/wp/wpActions'
-import {
-  EmailInput,
-  TextArea,
-} from '../../common/fields'
+import { TextArea } from '../../common/fields'
 import LoadingComponent from '../../common/ui/LoadingComponent'
 
 const ValidationSchema = Yup.object().shape({
